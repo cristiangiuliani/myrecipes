@@ -58,7 +58,7 @@ See `CLAUDE.md` for the full architecture rationale and the recipe data model.
 
 Every push to `main` is built and deployed to Firebase Hosting automatically by `.github/workflows/firebase-hosting-merge.yml`. There's no manual deploy step.
 
-Auth uses **Workload Identity Federation** instead of a service account key (the GCP org blocks key creation via `iam.disableServiceAccountKeyCreation`). One-time setup, run with `gcloud` authenticated as a project owner/IAM admin on `my-recipe-cards-bbaec`:
+Auth uses **Workload Identity Federation** instead of a service account key (the GCP org blocks key creation via `iam.disableServiceAccountKeyCreation`). This has already been provisioned for `my-recipe-cards-bbaec` (project number `238961387709`) — kept here for reference and in case it ever needs to be redone (e.g. a new project or repo):
 
 ```sh
 PROJECT_ID=my-recipe-cards-bbaec
