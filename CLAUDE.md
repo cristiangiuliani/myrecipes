@@ -67,7 +67,8 @@ Add Vitest for the scaling/formatting logic specifically — that's the part wit
 ## Deployment
 
 - Firebase Hosting, project `my-recipe-cards-bbaec` (see `.firebaserc`/`firebase.json`, hosting `public` dir is `dist`, with a SPA rewrite to `index.html` since routing is client-side via `react-router-dom`).
-- `.github/workflows/firebase-hosting-merge.yml` builds and deploys to the `live` channel on every push to `main`. It needs these GitHub repo secrets (Settings → Secrets and variables → Actions), none of which are in the repo:
-  - `FIREBASE_SERVICE_ACCOUNT` — a Firebase service account JSON key with Hosting deploy permission for this project.
-  - The six `VITE_FIREBASE_*` values (same as `.env.local`), so the production build gets the real Firebase config baked in.
+- `.github/workflows/firebase-hosting-merge.yml` builds and deploys to Hosting on every push to `main`.
+- **Auth: Workload Identity Federation, not a service account JSON key.** The Google Cloud org this project sits under enforces `iam.disableServiceAccountKeyCreation`, so downloadable keys aren't an option — and WIF is the better approach anyway (no long-lived secret stored in GitHub at all). This mirrors the working setup in `/Users/cristiangiuliani/Projects/cristiangiuliani` (`.github/workflows/firebase-hosting.yml`): a Workload Identity Pool + OIDC provider scoped to this exact repo, impersonating a service account with Hosting deploy rights, via `google-github-actions/auth`.
+- One-time GCP setup required (see README for the exact `gcloud` commands) before the workflow can succeed: a Workload Identity Pool/Provider and a `github-firebase@my-recipe-cards-bbaec.iam.gserviceaccount.com` service account with `roles/firebasehosting.admin`, restricted to `cristiangiuliani/myrecipes` via the provider's attribute condition.
+- GitHub repo secrets still needed (Settings → Secrets and variables → Actions) — just the six `VITE_FIREBASE_*` values (same as `.env.local`), so the production build gets the real Firebase config baked in. No `FIREBASE_SERVICE_ACCOUNT` secret.
 - Deploys are push-triggered only — do not add manual/local `firebase deploy` as the standard path; CI is the source of truth for what's live.

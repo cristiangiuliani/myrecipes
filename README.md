@@ -56,4 +56,44 @@ See `CLAUDE.md` for the full architecture rationale and the recipe data model.
 
 ## Deployment
 
-Every push to `main` is built and deployed to Firebase Hosting automatically by `.github/workflows/firebase-hosting-merge.yml`. There's no manual deploy step — see `CLAUDE.md` for the required GitHub repo secrets.
+Every push to `main` is built and deployed to Firebase Hosting automatically by `.github/workflows/firebase-hosting-merge.yml`. There's no manual deploy step.
+
+Auth uses **Workload Identity Federation** instead of a service account key (the GCP org blocks key creation via `iam.disableServiceAccountKeyCreation`). One-time setup, run with `gcloud` authenticated as a project owner/IAM admin on `my-recipe-cards-bbaec`:
+
+```sh
+PROJECT_ID=my-recipe-cards-bbaec
+PROJECT_NUMBER=$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')
+REPO=cristiangiuliani/myrecipes
+
+# APIs needed for WIF + the service account
+gcloud services enable iamcredentials.googleapis.com --project="$PROJECT_ID"
+
+# Workload Identity Pool + OIDC provider, scoped to this exact repo
+gcloud iam workload-identity-pools create "github-pool" \
+  --project="$PROJECT_ID" --location="global" --display-name="GitHub Actions"
+
+gcloud iam workload-identity-pools providers create-oidc "github-provider" \
+  --project="$PROJECT_ID" --location="global" --workload-identity-pool="github-pool" \
+  --display-name="GitHub provider" \
+  --attribute-mapping="google.subject=assertion.sub,attribute.repository=assertion.repository" \
+  --attribute-condition="assertion.repository=='$REPO'" \
+  --issuer-uri="https://token.actions.githubusercontent.com"
+
+# Deploy service account with Hosting deploy rights
+gcloud iam service-accounts create github-firebase \
+  --project="$PROJECT_ID" --display-name="GitHub Actions Firebase deployer"
+
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+  --member="serviceAccount:github-firebase@${PROJECT_ID}.iam.gserviceaccount.com" \
+  --role="roles/firebasehosting.admin"
+
+# Let only this repo (via the provider) impersonate that service account
+gcloud iam service-accounts add-iam-policy-binding \
+  "github-firebase@${PROJECT_ID}.iam.gserviceaccount.com" \
+  --project="$PROJECT_ID" --role="roles/iam.workloadIdentityUser" \
+  --member="principalSet://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/github-pool/attribute.repository/${REPO}"
+```
+
+Then put the real `PROJECT_NUMBER` into `workload_identity_provider` in `.github/workflows/firebase-hosting-merge.yml` (currently a `PROJECT_NUMBER` placeholder). This mirrors the working setup in the `cristiangiuliani` portfolio project.
+
+GitHub repo secrets still needed (Settings → Secrets and variables → Actions) — the six `VITE_FIREBASE_*` values from `.env.local`, so the production build has the real Firebase config. No service-account secret is needed.
