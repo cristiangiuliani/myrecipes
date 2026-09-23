@@ -1,0 +1,555 @@
+[
+  {
+    "id": "kanelsnegle-001",
+    "title": "Kanelsnegle - Girelle alla Cannella Danesi",
+    "description": "Le classiche girelle danesi alla cannella, fatte completamente da zero.",
+    "origin": "Danimarca",
+    "category": "dolce lievitato",
+    "tags": [
+      "cannella",
+      "lievitati",
+      "colazione",
+      "danese",
+      "lievito di birra"
+    ],
+    "servings": {
+      "amount": 12,
+      "unit": "girelle"
+    },
+    "prepTimeMinutes": 30,
+    "restTimeMinutes": 120,
+    "cookTimeMinutes": 15,
+    "totalTimeMinutes": 165,
+    "groups": [
+      {
+        "id": "dough",
+        "name": "Impasto",
+        "ingredients": [
+          {
+            "id": "0001",
+            "name": "farina 00 o farina per pane",
+            "amount": 500,
+            "unit": "g"
+          },
+          {
+            "id": "0002",
+            "name": "latte tiepido (circa 37°C)",
+            "amount": 250,
+            "unit": "ml"
+          },
+          {
+            "id": "0003",
+            "name": "lievito di birra fresco",
+            "amount": 25,
+            "unit": "g",
+            "substitute": {
+              "name": "lievito di birra secco",
+              "amount": 7,
+              "unit": "g"
+            }
+          },
+          {
+            "id": "0004",
+            "name": "zucchero semolato",
+            "amount": 60,
+            "unit": "g"
+          },
+          {
+            "id": "0005",
+            "name": "uovo grande",
+            "amount": 1,
+            "unit": "pz"
+          },
+          {
+            "id": "0006",
+            "name": "burro, sciolto e leggermente raffreddato",
+            "amount": 75,
+            "unit": "g"
+          },
+          {
+            "id": "0007",
+            "name": "sale",
+            "amount": 1,
+            "unit": "tsp"
+          },
+          {
+            "id": "0008",
+            "name": "cardamomo in polvere",
+            "amount": 1,
+            "unit": "tsp",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "id": "filling",
+        "name": "Ripieno alla cannella",
+        "ingredients": [
+          {
+            "id": "0009",
+            "name": "burro morbido a temperatura ambiente",
+            "amount": 100,
+            "unit": "g"
+          },
+          {
+            "id": "0010",
+            "name": "zucchero di canna scuro",
+            "amount": 100,
+            "unit": "g"
+          },
+          {
+            "id": "0011",
+            "name": "cannella in polvere",
+            "amount": 2,
+            "unit": "tbsp"
+          }
+        ]
+      },
+      {
+        "id": "assembly",
+        "name": "Assemblaggio",
+        "ingredients": []
+      },
+      {
+        "id": "finishing",
+        "name": "Finitura",
+        "ingredients": [
+          {
+            "id": "0012",
+            "name": "uovo sbattuto, per spennellare",
+            "amount": 1,
+            "unit": "pz"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "s1",
+        "group": "dough",
+        "title": "Preparare l'impasto",
+        "content": "In una ciotola grande (o nella planetaria), sciogli il lievito ({0003}) nel latte tiepido ({0002}). Aggiungi zucchero ({0004}), uovo ({0005}), burro ({0006}), sale ({0007}) e cardamomo ({0008}), poi incorpora la farina ({0001}) poco alla volta.",
+        "ingredientRefs": [
+          "0001",
+          "0002",
+          "0003",
+          "0004",
+          "0005",
+          "0006",
+          "0007",
+          "0008"
+        ],
+        "timerSeconds": null
+      },
+      {
+        "id": "s2",
+        "group": "dough",
+        "title": "Lavorare l'impasto",
+        "content": "Impasta per 8-10 minuti a mano o 5-6 minuti con la planetaria (gancio per impastare), finché l'impasto diventa liscio ed elastico.",
+        "ingredientRefs": [],
+        "timerSeconds": 480
+      },
+      {
+        "id": "s3",
+        "group": "dough",
+        "title": "Prima lievitazione",
+        "content": "Copri la ciotola con un panno o pellicola e lascia lievitare in un luogo tiepido finché l'impasto raddoppia di volume.",
+        "ingredientRefs": [],
+        "timerSeconds": 4500
+      },
+      {
+        "id": "s4",
+        "group": "filling",
+        "title": "Preparare il ripieno alla cannella",
+        "content": "Mescola burro ({0009}), zucchero di canna ({0010}) e cannella ({0011}) fino a ottenere una crema morbida e spalmabile.",
+        "ingredientRefs": [
+          "0009",
+          "0010",
+          "0011"
+        ],
+        "timerSeconds": null
+      },
+      {
+        "id": "s5",
+        "group": "assembly",
+        "title": "Stendere e farcire",
+        "content": "Rovescia l'impasto sul piano di lavoro infarinato e stendilo in un rettangolo di circa 40x50 cm, spesso circa mezzo centimetro. Distribuisci il ripieno alla cannella in modo uniforme su tutta la superficie.",
+        "ingredientRefs": [],
+        "timerSeconds": null
+      },
+      {
+        "id": "s6",
+        "group": "assembly",
+        "title": "Arrotolare e tagliare",
+        "content": "Arrotola l'impasto partendo dal lato lungo, ottenendo un rotolo compatto. Taglia il rotolo in 12 fette di circa 3-4 cm di spessore.",
+        "ingredientRefs": [],
+        "timerSeconds": null
+      },
+      {
+        "id": "s7",
+        "group": "assembly",
+        "title": "Seconda lievitazione",
+        "content": "Disponi le girelle su una teglia foderata con carta forno, distanziate tra loro, oppure vicine se preferisci una torta unica. Copri e lascia lievitare finché raddoppiano.",
+        "ingredientRefs": [],
+        "timerSeconds": 2700
+      },
+      {
+        "id": "s8",
+        "group": "finishing",
+        "title": "Cottura",
+        "content": "Spennella le girelle con l'uovo sbattuto ({0012}). Cuoci nel forno preriscaldato a 200°C (180°C ventilato) nel ripiano centrale, finché sono dorate.",
+        "ingredientRefs": [
+          "0012"
+        ],
+        "timerSeconds": 900
+      }
+    ],
+    "oven": {
+      "temperatureCelsius": 200,
+      "temperatureCelsiusFan": 180,
+      "rack": "centrale"
+    },
+    "notes": "Ricetta classica danese. Per una versione più golosa, dopo la cottura spennella le girelle con uno sciroppo di zucchero e acqua (50g zucchero + 50ml acqua, scaldati finché lo zucchero si scioglie). Si conservano 2-3 giorni in un contenitore chiuso, oppure si congelano già cotte.",
+    "source": {
+      "type": "adapted",
+      "originalUrl": "https://www.valsemollen.dk/opskrifter/kanelsneglkage/",
+      "note": "Versione da zero, senza preparato pronto, adattata dalle proporzioni tradizionali per kanelsnegle."
+    }
+  },
+  {
+    "id": "rugbrod-001",
+    "title": "Rugbrød - Pane di Segale Danese",
+    "description": "Pane danese denso e nutriente, a base di segale integrale, semi e lievito. Si conserva per giorni e migliora con il riposo.",
+    "origin": "Danimarca",
+    "category": "pane",
+    "tags": [
+      "segale",
+      "pane rustico",
+      "senza impasto",
+      "danese",
+      "semi"
+    ],
+    "servings": {
+      "amount": 1,
+      "unit": "stampo (circa 25x11 cm)"
+    },
+    "prepTimeMinutes": 15,
+    "restTimeMinutes": 90,
+    "cookTimeMinutes": 90,
+    "totalTimeMinutes": 195,
+    "groups": [
+      {
+        "id": "dough",
+        "name": "Impasto",
+        "ingredients": [
+          {
+            "id": "0001",
+            "name": "lievito madre attivo",
+            "amount": 100,
+            "unit": "g",
+            "substitute": {
+              "name": "lievito di birra secco",
+              "amount": 7,
+              "unit": "g"
+            }
+          },
+          {
+            "id": "0002",
+            "name": "acqua tiepida",
+            "amount": 500,
+            "unit": "ml"
+          },
+          {
+            "id": "0003",
+            "name": "farina di segale integrale",
+            "amount": 400,
+            "unit": "g"
+          },
+          {
+            "id": "0004",
+            "name": "farina di segale grossa (cracked rye)",
+            "amount": 100,
+            "unit": "g",
+            "optional": true,
+            "substitute": {
+              "name": "farina di segale integrale extra",
+              "amount": 100,
+              "unit": "g"
+            }
+          },
+          {
+            "id": "0005",
+            "name": "semi di girasole",
+            "amount": 75,
+            "unit": "g"
+          },
+          {
+            "id": "0006",
+            "name": "semi di lino",
+            "amount": 50,
+            "unit": "g",
+            "substitute": {
+              "name": "semi di chia",
+              "amount": 50,
+              "unit": "g"
+            }
+          },
+          {
+            "id": "0007",
+            "name": "semi di zucca",
+            "amount": 50,
+            "unit": "g"
+          },
+          {
+            "id": "0008",
+            "name": "malto scuro o melassa",
+            "amount": 1,
+            "unit": "tbsp",
+            "optional": true
+          },
+          {
+            "id": "0009",
+            "name": "sale fino",
+            "amount": 2,
+            "unit": "tsp"
+          },
+          {
+            "id": "0010",
+            "name": "burro o olio per la teglia",
+            "amount": 1,
+            "unit": "tbsp"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "s1",
+        "group": "dough",
+        "title": "Preparare l'impasto",
+        "content": "In una grande ciotola mescola il lievito madre ({0001}) con l'acqua tiepida ({0002}). Aggiungi le farine ({0003}, {0004}), i semi ({0005}, {0006}, {0007}), il malto ({0008}) e il sale ({0009}). Mescola bene con un cucchiaio di legno fino a ottenere un impasto denso e appiccicoso (non va lavorato come il pane normale — è più simile a un porridge denso).",
+        "ingredientRefs": [
+          "0001",
+          "0002",
+          "0003",
+          "0004",
+          "0005",
+          "0006",
+          "0007",
+          "0008",
+          "0009"
+        ],
+        "timerSeconds": null
+      },
+      {
+        "id": "s2",
+        "group": "dough",
+        "title": "Prima lievitazione",
+        "content": "Copri la ciotola con un canovaccio umido e lascia riposare a temperatura ambiente. Con lievito madre servono circa 8 ore (anche tutta la notte, 10-12 ore, va benissimo); con lievito di birra secco bastano 1-1,5 ore.",
+        "ingredientRefs": [],
+        "timerSeconds": 28800
+      },
+      {
+        "id": "s3",
+        "group": "dough",
+        "title": "Trasferire nello stampo",
+        "content": "Imburra o oleare uno stampo da plumcake (circa 25x11 cm) con {0010}. Versa l'impasto nello stampo e livella la superficie bagnata con le mani o il dorso di un cucchiaio.",
+        "ingredientRefs": [
+          "0010"
+        ],
+        "timerSeconds": null
+      },
+      {
+        "id": "s4",
+        "group": "dough",
+        "title": "Seconda lievitazione",
+        "content": "Copri lo stampo e lascia lievitare finché l'impasto non arriva quasi al bordo. Con lievito madre servono circa 2 ore; con lievito di birra secco 45 minuti-1 ora.",
+        "ingredientRefs": [],
+        "timerSeconds": 7200
+      },
+      {
+        "id": "s5",
+        "group": "dough",
+        "title": "Cottura",
+        "content": "Cuoci nel forno preriscaldato a 175°C (statico) finché la superficie è scura e croccante e un termometro al centro segna circa 98°C. Se usi uno stampo a ciambella invece del plumcake, inizia a controllare la temperatura già da 60 minuti.",
+        "ingredientRefs": [],
+        "timerSeconds": 5400
+      },
+      {
+        "id": "s6",
+        "group": "dough",
+        "title": "Raffreddamento",
+        "content": "Lascia intiepidire 15 minuti, poi togli il pane dallo stampo e lascialo raffreddare completamente su una gratella prima di tagliarlo — è fondamentale, altrimenti si sbriciola.",
+        "ingredientRefs": [],
+        "timerSeconds": 900
+      }
+    ],
+    "oven": {
+      "temperatureCelsius": 175,
+      "temperatureCelsiusFan": null,
+      "rack": "centrale"
+    },
+    "notes": "Il rugbrød è ancora più buono il giorno dopo, avvolto e riposato: i sapori si assestano. Si taglia a fette sottili e si mangia tradizionalmente come base per lo smørrebrød (tartine aperte danesi) con burro, formaggio, pesce affumicato o affettati. Con lievito di birra al posto del lievito madre, il sapore acidulo tipico sarà meno marcato; un cucchiaio di aceto di mele o yogurt naturale nell'impasto aiuta ad avvicinarsi al sapore tradizionale. La quantità totale di semi (circa 175g) va mantenuta anche cambiando tipo di seme. Si conserva a temperatura ambiente avvolto in un canovaccio per una settimana, oppure si congela a fette.",
+    "source": {
+      "type": "original",
+      "originalUrl": null,
+      "note": "Ricetta base per rugbrød, adattabile a lievito madre o lievito di birra secco."
+    }
+  },
+  {
+    "id": "ontbijtkoek-001",
+    "title": "Ontbijtkoek - Pane Speziato Olandese",
+    "description": "Il pane speziato olandese da colazione: morbido, scuro e profumato, senza uova né burro. Si serve a fette con il burro.",
+    "origin": "Paesi Bassi",
+    "category": "dolce da forno",
+    "tags": [
+      "ontbijtkoek",
+      "olandese",
+      "colazione",
+      "speziato",
+      "segale",
+      "senza uova",
+      "senza burro"
+    ],
+    "servings": {
+      "amount": 10,
+      "unit": "fette"
+    },
+    "prepTimeMinutes": 15,
+    "restTimeMinutes": 1440,
+    "cookTimeMinutes": 70,
+    "totalTimeMinutes": 1525,
+    "groups": [
+      {
+        "id": "dough",
+        "name": "Impasto",
+        "ingredients": [
+          {
+            "id": "0001",
+            "name": "farina di segale (roggebloem)",
+            "amount": 250,
+            "unit": "g"
+          },
+          {
+            "id": "0002",
+            "name": "zucchero di canna scuro (donker basterdsuiker)",
+            "amount": 150,
+            "unit": "g"
+          },
+          {
+            "id": "0003",
+            "name": "sciroppo di zucchero scuro (stroop)",
+            "amount": 2,
+            "unit": "tbsp",
+            "substitute": {
+              "name": "miele",
+              "amount": 2,
+              "unit": "tbsp"
+            }
+          },
+          {
+            "id": "0004",
+            "name": "latte intero",
+            "amount": 250,
+            "unit": "ml"
+          },
+          {
+            "id": "0005",
+            "name": "lievito in polvere (bakpoeder)",
+            "amount": 2,
+            "unit": "tsp"
+          },
+          {
+            "id": "0006",
+            "name": "bicarbonato di sodio",
+            "amount": 0.5,
+            "unit": "tsp"
+          },
+          {
+            "id": "0007",
+            "name": "mix di spezie koek- en speculaaskruiden",
+            "amount": 1,
+            "unit": "tbsp"
+          },
+          {
+            "id": "0008",
+            "name": "sale",
+            "amount": 1,
+            "unit": "pinch"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "s1",
+        "group": "dough",
+        "title": "Preparare lo stampo",
+        "content": "Scalda il forno statico a 150 °C. Fodera con carta forno uno stampo da plumcake da 1 kg (circa 25 cm), oppure ungilo e infarinalo.",
+        "ingredientRefs": [],
+        "timerSeconds": null
+      },
+      {
+        "id": "s2",
+        "group": "dough",
+        "title": "Mescolare gli ingredienti secchi",
+        "content": "In una ciotola unisci la farina di segale setacciata ({0001}), il lievito in polvere ({0005}), il bicarbonato ({0006}), le spezie ({0007}) e il sale ({0008}). Mescola bene per distribuire le spezie.",
+        "ingredientRefs": [
+          "0001",
+          "0005",
+          "0006",
+          "0007",
+          "0008"
+        ],
+        "timerSeconds": null
+      },
+      {
+        "id": "s3",
+        "group": "dough",
+        "title": "Scaldare latte e zucchero",
+        "content": "In un pentolino scalda il latte ({0004}) con lo zucchero di canna ({0002}) e lo sciroppo ({0003}), mescolando finché lo zucchero si scioglie. Non far bollire e lascia intiepidire un paio di minuti.",
+        "ingredientRefs": [
+          "0002",
+          "0003",
+          "0004"
+        ],
+        "timerSeconds": 180
+      },
+      {
+        "id": "s4",
+        "group": "dough",
+        "title": "Formare l'impasto",
+        "content": "Versa il liquido tiepido sugli ingredienti secchi e mescola con una frusta o una spatola fino a ottenere un impasto liscio e senza grumi. Sarà piuttosto fluido: è normale.",
+        "ingredientRefs": [],
+        "timerSeconds": null
+      },
+      {
+        "id": "s5",
+        "group": "dough",
+        "title": "Cottura",
+        "content": "Versa l'impasto nello stampo e cuoci al centro del forno finché uno stecchino infilato al centro esce pulito.",
+        "ingredientRefs": [],
+        "timerSeconds": 4200
+      },
+      {
+        "id": "s6",
+        "group": "dough",
+        "title": "Raffreddare e far riposare",
+        "content": "Lascia raffreddare nello stampo 10 minuti, poi sforna su una griglia. Quando è freddo avvolgilo in pellicola o carta stagnola e lascialo riposare 1-2 giorni: diventerà più morbido e appiccicoso, come quello olandese.",
+        "ingredientRefs": [],
+        "timerSeconds": null
+      }
+    ],
+    "oven": {
+      "temperatureCelsius": 150,
+      "temperatureCelsiusFan": 130,
+      "rack": "centrale"
+    },
+    "notes": "Servi a fette spesse con burro salato, come da tradizione. Se non trovi il mix koek- en speculaaskruiden (in Olanda è in tutti i supermercati), puoi prepararlo con 2 cucchiaini di cannella, 1 cucchiaino di zenzero in polvere, ½ cucchiaino di chiodi di garofano, ½ cucchiaino di noce moscata e un pizzico di cardamomo e coriandolo. Si conserva 1-2 settimane ben avvolto e si può anche congelare a fette. Il riposo di 24 ore (restTimeMinutes) è il minimo consigliato per la consistenza tradizionale, ma la torta si può mangiare anche subito dopo il raffreddamento.",
+    "source": {
+      "type": "original",
+      "originalUrl": null,
+      "note": "Versione tradizionale olandese: farina di segale, zucchero di canna, sciroppo e spezie, senza uova né burro."
+    }
+  }
+]

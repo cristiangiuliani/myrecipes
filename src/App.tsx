@@ -1,8 +1,13 @@
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+
 function App() {
   return (
-    <div className="app">
-      <h1>My Recipes</h1>
-    </div>
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Typography variant="h4" component="h1" sx={{ fontWeight: 700 }}>
+        My Recipes
+      </Typography>
+    </Container>
   )
 }
 
