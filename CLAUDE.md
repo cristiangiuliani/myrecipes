@@ -31,10 +31,12 @@ src/
     recipes/
       api/              # repository: recipes.repository.ts (JSON now, DB later)
       hooks/            # useRecipes, useRecipe
-      components/       # RecipeCard, RecipeList, RecipeDetail
-      scaling/          # pure scaling logic + useScaledRecipe
+      components/       # RecipeCard, RecipeList, RecipeDetail (dumb components)
+      pages/            # RecipeListPage, RecipeDetailPage (wire hooks + components)
+      scaling/          # pure scaling/formatting logic + useScaledRecipe
       filters/          # tag/category filter state + components
       types.ts          # Recipe, Ingredient, Step, etc.
+      index.ts          # public barrel: types + pages used by app/routes.tsx
   shared/
     components/         # generic reusable UI (not recipe-specific)
     lib/                 # generic utilities (formatting, etc.)

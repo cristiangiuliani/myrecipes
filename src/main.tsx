@@ -7,8 +7,8 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import './index.css'
-import App from './App.tsx'
-import { theme } from './theme.ts'
+import App from './app/App.tsx'
+import { theme } from './app/theme.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
