@@ -63,3 +63,11 @@ Each feature exposes a small `index.ts` barrel; import `from '@/features/recipes
 ## Testing
 
 Add Vitest for the scaling/formatting logic specifically — that's the part with real edge cases (rounding, pieces vs. grams, `{ref}` substitution).
+
+## Deployment
+
+- Firebase Hosting, project `my-recipe-cards-bbaec` (see `.firebaserc`/`firebase.json`, hosting `public` dir is `dist`, with a SPA rewrite to `index.html` since routing is client-side via `react-router-dom`).
+- `.github/workflows/firebase-hosting-merge.yml` builds and deploys to the `live` channel on every push to `main`. It needs these GitHub repo secrets (Settings → Secrets and variables → Actions), none of which are in the repo:
+  - `FIREBASE_SERVICE_ACCOUNT` — a Firebase service account JSON key with Hosting deploy permission for this project.
+  - The six `VITE_FIREBASE_*` values (same as `.env.local`), so the production build gets the real Firebase config baked in.
+- Deploys are push-triggered only — do not add manual/local `firebase deploy` as the standard path; CI is the source of truth for what's live.

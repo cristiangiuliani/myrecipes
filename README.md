@@ -53,3 +53,7 @@ src/
 See `CLAUDE.md` for the full architecture rationale and the recipe data model.
 
 `public/data` holds the recipe JSON data files.
+
+## Deployment
+
+Every push to `main` is built and deployed to Firebase Hosting automatically by `.github/workflows/firebase-hosting-merge.yml`. There's no manual deploy step — see `CLAUDE.md` for the required GitHub repo secrets.
