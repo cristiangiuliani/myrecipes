@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Divider from '@mui/material/Divider'
@@ -17,12 +18,15 @@ import { formatMinutes, formatSeconds } from '@/shared/lib/duration'
 import type { Recipe } from '../types'
 import { getIngredientsById } from '../scaling/ingredientLookup'
 import { resolveStepContent } from '../scaling/resolveStepContent'
+import { formatQuantity } from '../scaling/formatQuantity'
+import { ServingsMultiplier } from './ServingsMultiplier'
 
 interface RecipeDetailProps {
   recipe: Recipe
 }
 
 export function RecipeDetail({ recipe }: RecipeDetailProps) {
+  const [multiplier, setMultiplier] = useState(1)
   const ingredientsById = getIngredientsById(recipe)
 
   const timeInfo = [
@@ -53,9 +57,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
       <Stack direction="row" spacing={3} useFlexGap sx={{ flexWrap: 'wrap' }}>
         <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
           <RestaurantIcon fontSize="small" color="action" />
-          <Typography variant="body2">
-            {recipe.servings.amount} {recipe.servings.unit}
-          </Typography>
+          <Typography variant="body2">{formatQuantity(recipe.servings.amount, recipe.servings.unit, multiplier)}</Typography>
         </Stack>
         {timeInfo.map((item) => (
           <Stack key={item.label} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
@@ -80,9 +82,12 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
       <Divider />
 
       <Stack spacing={3}>
-        <Typography variant="h5" component="h2">
-          Ingredienti
-        </Typography>
+        <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
+          <Typography variant="h5" component="h2">
+            Ingredienti
+          </Typography>
+          <ServingsMultiplier value={multiplier} onChange={setMultiplier} />
+        </Stack>
         {recipe.groups.map((group) =>
           group.ingredients.length === 0 ? null : (
             <Box key={group.id}>
@@ -93,12 +98,12 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
                 {group.ingredients.map((ingredient) => (
                   <ListItem key={ingredient.id} disableGutters>
                     <ListItemText
-                      primary={`${ingredient.amount} ${ingredient.unit} ${ingredient.name}`}
+                      primary={`${formatQuantity(ingredient.amount, ingredient.unit, multiplier)} ${ingredient.name}`}
                       secondary={
                         [
                           ingredient.optional ? 'opzionale' : null,
                           ingredient.substitute
-                            ? `sostituto: ${ingredient.substitute.amount} ${ingredient.substitute.unit} ${ingredient.substitute.name}`
+                            ? `sostituto: ${formatQuantity(ingredient.substitute.amount, ingredient.substitute.unit, multiplier)} ${ingredient.substitute.name}`
                             : null,
                         ]
                           .filter(Boolean)
@@ -125,7 +130,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
               <StepLabel>{step.title}</StepLabel>
               <StepContent>
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  {resolveStepContent(step, ingredientsById)}
+                  {resolveStepContent(step, ingredientsById, multiplier)}
                 </Typography>
                 {step.timerSeconds && (
                   <Chip icon={<AccessTimeIcon />} label={formatSeconds(step.timerSeconds)} size="small" variant="outlined" />
