@@ -26,6 +26,8 @@ export interface RecipeStep {
   content: string
   ingredientRefs: string[]
   timerSeconds: number | null
+  // Ids of the cooking methods this step belongs to; absent means the step applies to every method
+  methods?: string[]
 }
 
 export interface Servings {
@@ -33,10 +35,58 @@ export interface Servings {
   unit: string
 }
 
-export interface OvenInfo {
+export type OvenMode = 'statico' | 'ventilato' | 'grill'
+
+export interface OvenSettings {
   temperatureCelsius: number | null
   temperatureCelsiusFan: number | null
+  mode: OvenMode | null
   rack: string | null
+}
+
+export interface StovetopSettings {
+  cookware: string | null
+  heat: string | null
+}
+
+export interface AirfryerSettings {
+  temperatureCelsius: number | null
+  preheat: boolean | null
+}
+
+interface CookingMethodBase {
+  id: string
+  label: string
+  default: boolean
+}
+
+export interface OvenMethod extends CookingMethodBase {
+  type: 'oven'
+  settings: OvenSettings
+}
+
+export interface StovetopMethod extends CookingMethodBase {
+  type: 'stovetop'
+  settings: StovetopSettings
+}
+
+export interface AirfryerMethod extends CookingMethodBase {
+  type: 'airfryer'
+  settings: AirfryerSettings
+}
+
+// A method type the app doesn't know yet (grill, steam, ...): shown by label only
+export interface OtherMethod extends CookingMethodBase {
+  type: 'other'
+  sourceType: string
+}
+
+export type CookingMethod = OvenMethod | StovetopMethod | AirfryerMethod | OtherMethod
+export type CookingMethodType = CookingMethod['type']
+
+export interface Cooking {
+  // Never empty, and exactly one method has default: true (guaranteed by the data layer)
+  methods: CookingMethod[]
 }
 
 export interface RecipeSource {
@@ -59,7 +109,7 @@ export interface Recipe {
   totalTimeMinutes: number | null
   groups: IngredientGroup[]
   steps: RecipeStep[]
-  oven?: OvenInfo
+  cooking?: Cooking
   notes?: string
   source?: RecipeSource
 }

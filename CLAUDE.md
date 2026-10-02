@@ -52,12 +52,13 @@ Each feature exposes a small `index.ts` barrel; import `from '@/features/recipes
 - **React Context**: fine for one-off, rarely-changing concerns (e.g. theme mode). Avoid it as a general-purpose store — every consumer re-renders on any change unless contexts are split carefully.
 - **Zustand**: the fallback if something needs genuine cross-component shared state that doesn't belong in the URL (e.g. a "recently viewed" list). Not adopted yet — the app is still small enough that this hasn't come up. Decide when the need actually appears, don't pre-adopt it.
 
-## Recipe data model (from `public/data/recipes.json`)
+## Recipe data model (from `public/data/recipes.json`, an `{ updatedAt, recipes[] }` envelope)
 
-- `Recipe`: `id`, `title`, `description`, `origin`, `category`, `tags[]`, `servings: { amount, unit }` (unit isn't always "persone" — e.g. "girelle", "fette", "stampo"), `prepTimeMinutes`/`restTimeMinutes`/`cookTimeMinutes`/`totalTimeMinutes`, `groups[]`, `steps[]`, `oven`, `notes`, `source`.
+- `Recipe`: `id`, `title`, `description`, `origin`, `category`, `tags[]`, `servings: { amount, unit }` (unit isn't always "persone" — e.g. "girelle", "fette", "stampo"), `prepTimeMinutes`/`restTimeMinutes`/`cookTimeMinutes`/`totalTimeMinutes`, `groups[]`, `steps[]`, `cooking`, `notes`, `source`.
 - `groups[]`: named ingredient sections (`id`, `name`, `ingredients[]`).
 - `Ingredient`: `id`, `name`, `amount`, `unit`, optional `optional: true`, optional `substitute: { name, amount, unit }`.
-- `steps[]`: `id`, `group`, `title`, `content` (embeds `{0003}`-style ingredient refs inline), `ingredientRefs[]`, `timerSeconds`.
+- `steps[]`: `id`, `group`, `title`, `content` (embeds `{0003}`-style ingredient refs inline), `ingredientRefs[]`, `timerSeconds`, optional `methods[]` (cooking method ids; the step shows only when the selected method is listed, always when absent).
+- `cooking.methods[]`: `id`, `type` (`oven` | `stovetop` | `airfryer`, more later), `label`, `default` (exactly one), `settings` (per type, all nullable: oven `temperatureCelsius`/`temperatureCelsiusFan`/`mode`/`rack`; stovetop `cookware`/`heat`; airfryer `temperatureCelsius`/`preheat`). Legacy recipes with a single `oven` object are converted to one default oven method in the data layer (`api/normalizeRecipes.ts`); unknown types become `type: 'other'` and are shown by label.
 - Because `servings.unit` isn't always people, the servings/scaling control should default to a plain multiplier (×1.5, ×2, ÷2) with a "servings" input mode only when the unit is people-like. Scaling must update both the ingredient list and the inline `{ref}` quantities inside step text, and needs sensible rounding for countable units (`pz`, `tsp`, etc.) vs. weight/volume units (`g`, `ml`).
 
 ## Testing

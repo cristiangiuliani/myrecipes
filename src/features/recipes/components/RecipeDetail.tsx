@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import Divider from '@mui/material/Divider'
 import List from '@mui/material/List'
@@ -12,14 +13,17 @@ import StepLabel from '@mui/material/StepLabel'
 import Stepper from '@mui/material/Stepper'
 import Typography from '@mui/material/Typography'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import RestaurantIcon from '@mui/icons-material/Restaurant'
 import { formatMinutes, formatSeconds } from '@/shared/lib/duration'
 import type { Recipe } from '../types'
 import { getIngredientsById } from '../scaling/ingredientLookup'
 import { resolveStepContent } from '../scaling/resolveStepContent'
 import { formatQuantity } from '../scaling/formatQuantity'
+import { filterStepsByMethod, resolveSelectedMethod } from '../methods/cookingMethods'
 import { ServingsMultiplier } from './ServingsMultiplier'
+import { CookingModeDialog } from './CookingModeDialog'
+import { CookingMethodInfo } from './CookingMethodInfo'
 
 interface RecipeDetailProps {
   recipe: Recipe
@@ -27,7 +31,12 @@ interface RecipeDetailProps {
 
 export function RecipeDetail({ recipe }: RecipeDetailProps) {
   const [multiplier, setMultiplier] = useState(1)
+  const [cooking, setCooking] = useState(false)
+  const [selectedMethodId, setSelectedMethodId] = useState<string | null>(null)
   const ingredientsById = getIngredientsById(recipe)
+  const methods = recipe.cooking?.methods ?? []
+  const selectedMethod = resolveSelectedMethod(methods, selectedMethodId)
+  const steps = filterStepsByMethod(recipe.steps, selectedMethod?.id)
 
   const timeInfo = [
     { label: 'Preparazione', minutes: recipe.prepTimeMinutes },
@@ -67,17 +76,29 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
             </Typography>
           </Stack>
         ))}
-        {recipe.oven && (
-          <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-            <LocalFireDepartmentIcon fontSize="small" color="action" />
-            <Typography variant="body2">
-              Forno: {recipe.oven.temperatureCelsius}°C
-              {recipe.oven.temperatureCelsiusFan ? ` (${recipe.oven.temperatureCelsiusFan}°C ventilato)` : ''}
-              {recipe.oven.rack ? ` · ripiano ${recipe.oven.rack}` : ''}
-            </Typography>
-          </Stack>
-        )}
       </Stack>
+
+      {selectedMethod && (
+        <CookingMethodInfo methods={methods} selected={selectedMethod} onSelect={setSelectedMethodId} />
+      )}
+
+      {steps.length > 0 && (
+        <>
+          <Box>
+            <Button variant="contained" size="large" startIcon={<PlayArrowIcon />} onClick={() => setCooking(true)}>
+              Inizia a cucinare
+            </Button>
+          </Box>
+          <CookingModeDialog
+            key={recipe.id}
+            open={cooking}
+            onClose={() => setCooking(false)}
+            recipe={recipe}
+            steps={steps}
+            multiplier={multiplier}
+          />
+        </>
+      )}
 
       <Divider />
 
@@ -125,7 +146,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
           Preparazione
         </Typography>
         <Stepper orientation="vertical" nonLinear>
-          {recipe.steps.map((step) => (
+          {steps.map((step) => (
             <Step key={step.id} active expanded>
               <StepLabel>{step.title}</StepLabel>
               <StepContent>

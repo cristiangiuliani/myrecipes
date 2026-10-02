@@ -1,4 +1,5 @@
 import type { Recipe } from '../types'
+import { normalizeRecipes } from './normalizeRecipes'
 
 export interface RecipeRepository {
   getRecipes(): Promise<Recipe[]>
@@ -14,8 +15,8 @@ class JsonRecipeRepository implements RecipeRepository {
         if (!response.ok) {
           throw new Error(`Failed to load recipes: ${response.status}`)
         }
-        return response.json() as Promise<Recipe[]>
-      })
+        return response.json()
+      }).then(normalizeRecipes)
     }
     return this.cache
   }
