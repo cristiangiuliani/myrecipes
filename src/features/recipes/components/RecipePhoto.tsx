@@ -34,7 +34,8 @@ export function RecipePhoto({ src, alt, sx }: RecipePhotoProps) {
       component="img"
       src={src}
       alt={alt}
-      loading="lazy"
+      // Not loading="lazy": Chrome never starts lazy images while offline, even when the service worker has them cached
+      decoding="async"
       onError={() => setFailedSrc(src)}
       sx={[{ display: 'block', width: '100%', objectFit: 'cover' }, ...(Array.isArray(sx) ? sx : [sx])]}
     />

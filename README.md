@@ -1,4 +1,4 @@
-# My Recipes
+# Ricette di Famiglia
 
 A React + TypeScript app for browsing recipes from JSON data, built with Vite and deployed to Firebase.
 
@@ -55,6 +55,12 @@ See `CLAUDE.md` for the full architecture rationale and the recipe data model.
 `public/data` holds the recipe JSON data files.
 
 **Recipe photos**: drop a JPEG named after the recipe id into `public/images/recipes/`, e.g. `public/images/recipes/burrito-001.jpg` (landscape, roughly 16:9, ~1600px wide is plenty). It shows up in the recipe card and at the top of the recipe page. Recipes without a photo show a placeholder in the same spot.
+
+## Installable app (PWA)
+
+The app is a Progressive Web App (via `vite-plugin-pwa`, configured in `vite.config.ts`): it can be installed on the home screen ("Aggiungi a schermata Home" on iOS Safari, "Installa app" on Android/desktop Chrome) and works offline. The app shell is precached; recipe data is network-first with an offline fallback; photos and fonts are cached as they're viewed. New deploys activate automatically on the next app load.
+
+Icons are generated from `public/logo.svg` — after changing the logo, run `yarn generate-pwa-assets` and commit the regenerated PNGs/ICO in `public/`. The service worker is only built in production (`yarn build && yarn preview` to try it locally).
 
 ## Deployment
 

@@ -18,7 +18,7 @@ export function Header() {
         >
           <RestaurantMenuIcon />
           <Typography variant="h6" component="span" sx={{ fontWeight: 700 }}>
-            My Recipes
+            Ricette di Famiglia
           </Typography>
         </Stack>
       </Toolbar>

@@ -1,4 +1,4 @@
-# My Recipes
+# Ricette di Famiglia
 
 React + TypeScript recipe browser. Local dev on Vite, deployed to Firebase. Recipe data starts as a single JSON file and may migrate to per-recipe files or a database later — code must not assume the current storage shape leaks past the data layer.
 
@@ -61,6 +61,10 @@ Each feature exposes a small `index.ts` barrel; import `from '@/features/recipes
 - `steps[]`: `id`, `group`, `title`, `content` (embeds `{0003}`-style ingredient refs inline), `ingredientRefs[]`, `timerSeconds`, optional `methods[]` (cooking method ids; the step shows only when the selected method is listed, always when absent).
 - `cooking.methods[]`: `id`, `type` (`oven` | `stovetop` | `airfryer`, more later), `label`, `default` (exactly one), `settings` (per type, all nullable: oven `temperatureCelsius`/`temperatureCelsiusFan`/`mode`/`rack`; stovetop `cookware`/`heat`; airfryer `temperatureCelsius`/`preheat`). Legacy recipes with a single `oven` object are converted to one default oven method in the data layer (`api/normalizeRecipes.ts`); unknown types become `type: 'other'` and are shown by label.
 - Because `servings.unit` isn't always people, the servings/scaling control should default to a plain multiplier (×1.5, ×2, ÷2) with a "servings" input mode only when the unit is people-like. Scaling must update both the ingredient list and the inline `{ref}` quantities inside step text, and needs sensible rounding for countable units (`pz`, `tsp`, etc.) vs. weight/volume units (`g`, `ml`).
+
+## PWA
+
+`vite-plugin-pwa` (generateSW, `registerType: 'autoUpdate'`) in `vite.config.ts`. Runtime caching: `/data/**` NetworkFirst (recipes must stay fresh), `/images/**` StaleWhileRevalidate guarded to cache only `image/*` responses (Hosting's SPA rewrite answers a missing photo with `index.html` + 200), fonts CacheFirst. Don't put `loading="lazy"` on recipe photos — Chrome won't start lazy images while offline, so cached photos would never show. Icons come from `public/logo.svg` via `yarn generate-pwa-assets` (`pwa-assets.config.ts`).
 
 ## Testing
 
