@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import LinearProgress from '@mui/material/LinearProgress'
@@ -27,6 +28,7 @@ const ADJUST_MINUTES = [-15, -5, -1, 1, 5, 15]
 const MINUTE_MS = 60_000
 
 export function StepTimer({ timer, now, onStart, onPause, onReset, onAdjust, onSetDuration }: StepTimerProps) {
+  const { t } = useTranslation()
   const [editing, setEditing] = useState(false)
   const remainingMs = getRemainingMs(timer, now)
   const progress = ((timer.durationMs - remainingMs) / timer.durationMs) * 100
@@ -53,10 +55,10 @@ export function StepTimer({ timer, now, onStart, onPause, onReset, onAdjust, onS
               color={isDone ? 'warning.main' : 'text.primary'}
               sx={{ fontVariantNumeric: 'tabular-nums', fontWeight: 600 }}
             >
-              {isDone ? 'Tempo scaduto!' : formatClock(remainingMs)}
+              {isDone ? t('timer.expired') : formatClock(remainingMs)}
             </Typography>
             {timer.status !== 'running' && (
-              <IconButton aria-label="Modifica durata" onClick={() => setEditing(true)}>
+              <IconButton aria-label={t('timer.editDuration')} onClick={() => setEditing(true)}>
                 <EditIcon />
               </IconButton>
             )}
@@ -79,26 +81,25 @@ export function StepTimer({ timer, now, onStart, onPause, onReset, onAdjust, onS
                   disabled={!canAdjustTimer(timer, minutes * MINUTE_MS, now)}
                   onClick={() => onAdjust(minutes * MINUTE_MS)}
                 >
-                  {minutes > 0 ? '+' : '−'}
-                  {Math.abs(minutes)} min
+                  {t('timer.adjustMinutes', { sign: minutes > 0 ? '+' : '−', minutes: Math.abs(minutes) })}
                 </Button>
               ))}
             </Stack>
             <Stack direction="row" spacing={1}>
               {timer.status === 'running' ? (
                 <Button variant="contained" startIcon={<PauseIcon />} onClick={onPause}>
-                  Pausa
+                  {t('timer.pause')}
                 </Button>
               ) : (
                 !isDone && (
                   <Button variant="contained" startIcon={<PlayArrowIcon />} onClick={onStart}>
-                    {timer.status === 'paused' ? 'Riprendi' : 'Avvia timer'}
+                    {timer.status === 'paused' ? t('timer.resume') : t('timer.start')}
                   </Button>
                 )
               )}
               {timer.status !== 'idle' && (
                 <Button variant="outlined" startIcon={<ReplayIcon />} onClick={onReset}>
-                  Azzera
+                  {t('timer.reset')}
                 </Button>
               )}
             </Stack>
@@ -116,6 +117,7 @@ interface DurationEditorProps {
 }
 
 function DurationEditor({ initialMs, onSave, onCancel }: DurationEditorProps) {
+  const { t } = useTranslation()
   const initialMinutes = Math.ceil(initialMs / MINUTE_MS)
   const [hours, setHours] = useState(String(Math.floor(initialMinutes / 60)))
   const [minutes, setMinutes] = useState(String(initialMinutes % 60))
@@ -133,7 +135,7 @@ function DurationEditor({ initialMs, onSave, onCancel }: DurationEditorProps) {
     >
       <Stack direction="row" spacing={1}>
         <TextField
-          label="Ore"
+          label={t('timer.hours')}
           type="number"
           value={hours}
           onChange={(event) => setHours(event.target.value)}
@@ -142,7 +144,7 @@ function DurationEditor({ initialMs, onSave, onCancel }: DurationEditorProps) {
           autoFocus
         />
         <TextField
-          label="Minuti"
+          label={t('timer.minutes')}
           type="number"
           value={minutes}
           onChange={(event) => setMinutes(event.target.value)}
@@ -151,9 +153,9 @@ function DurationEditor({ initialMs, onSave, onCancel }: DurationEditorProps) {
         />
       </Stack>
       <Stack direction="row" spacing={1}>
-        <Button onClick={onCancel}>Annulla</Button>
+        <Button onClick={onCancel}>{t('timer.cancel')}</Button>
         <Button type="submit" variant="contained" disabled={totalMs <= 0}>
-          Imposta
+          {t('timer.set')}
         </Button>
       </Stack>
     </Stack>

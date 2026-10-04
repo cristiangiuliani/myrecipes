@@ -1,0 +1,711 @@
+{
+  "language": "nl",
+  "recipes": {
+    "kanelsnegle-001": {
+      "sourceHash": "dd90d08a9434b4d7",
+      "title": "Kanelsnegle - Deense kaneelbroodjes",
+      "description": "De klassieke Deense kaneelbroodjes, helemaal zelfgemaakt.",
+      "origin": "Denemarken",
+      "category": "gistgebak",
+      "servingsUnit": "broodjes",
+      "tags": {
+        "cannella": "kaneel",
+        "lievitati": "gistdeeg",
+        "colazione": "ontbijt",
+        "danese": "Deens",
+        "lievito di birra": "verse gist"
+      },
+      "groups": {
+        "dough": "Deeg",
+        "filling": "Kaneelvulling",
+        "assembly": "Samenstellen",
+        "finishing": "Afwerking"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "tarwebloem (type 00) of broodmeel"
+        },
+        "0002": {
+          "name": "lauwe melk (ongeveer 37°C)"
+        },
+        "0003": {
+          "name": "verse gist",
+          "substitute": "gedroogde gist"
+        },
+        "0004": {
+          "name": "kristalsuiker"
+        },
+        "0005": {
+          "name": "groot ei"
+        },
+        "0006": {
+          "name": "boter, gesmolten en iets afgekoeld"
+        },
+        "0007": {
+          "name": "zout"
+        },
+        "0008": {
+          "name": "gemalen kardemom"
+        },
+        "0009": {
+          "name": "zachte boter, op kamertemperatuur"
+        },
+        "0010": {
+          "name": "donkerbruine basterdsuiker"
+        },
+        "0011": {
+          "name": "gemalen kaneel"
+        },
+        "0012": {
+          "name": "losgeklopt ei, om te bestrijken"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Het deeg maken",
+          "content": "Los in een grote kom (of in de keukenmachine) de gist ({0003}) op in de lauwe melk ({0002}). Voeg de suiker ({0004}), het ei ({0005}), de boter ({0006}), het zout ({0007}) en de kardemom ({0008}) toe en werk dan beetje bij beetje de bloem ({0001}) erdoor."
+        },
+        "s2": {
+          "title": "Het deeg kneden",
+          "content": "Voeg alleen extra bloem toe als het echt nodig is, beetje bij beetje. Kneed daarna 8-10 minuten met de hand of 5-6 minuten in de keukenmachine (deeghaak), tot het deeg glad en elastisch is. Gebruik je volkorenmeel, dek de kom dan af en laat het deeg 15 minuten rusten voordat je gaat kneden: de zemelen nemen het vocht op en het deeg wordt minder plakkerig."
+        },
+        "s3": {
+          "title": "Eerste rijs",
+          "content": "Dek de kom af met een doek of huishoudfolie en laat het deeg op een warme plek rijzen tot het in volume is verdubbeld."
+        },
+        "s4": {
+          "title": "De kaneelvulling maken",
+          "content": "Meng de boter ({0009}), de basterdsuiker ({0010}) en de kaneel ({0011}) tot een zachte, smeerbare crème."
+        },
+        "s5": {
+          "title": "Uitrollen en vullen",
+          "content": "Stort het deeg op een met bloem bestoven werkvlak en rol het uit tot een rechthoek van ongeveer 40x50 cm, zo'n halve centimeter dik. Verdeel de kaneelvulling gelijkmatig over het hele oppervlak."
+        },
+        "s6": {
+          "title": "Oprollen en snijden",
+          "content": "Rol het deeg vanaf de lange kant op tot een stevige rol. Snijd de rol in 12 plakken van ongeveer 3-4 cm dik."
+        },
+        "s7": {
+          "title": "Tweede rijs",
+          "content": "Leg de broodjes op een met bakpapier beklede bakplaat, met ruimte ertussen, of dicht tegen elkaar als je liever één trekbrood hebt. Dek af en laat rijzen tot ze verdubbeld zijn."
+        },
+        "s8": {
+          "title": "Bakken",
+          "content": "Bestrijk de broodjes met het losgeklopte ei ({0012}). Bak ze op het middelste rooster van de voorverwarmde oven op 200°C (180°C hetelucht) tot ze goudbruin zijn."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "Klassiek Deens recept. Voor een nog lekkerdere versie bestrijk je de broodjes na het bakken met suikersiroop (50 g suiker + 50 ml water, verwarmd tot de suiker is opgelost). Ze blijven 2-3 dagen goed in een afgesloten trommel, of je kunt ze na het bakken invriezen.",
+      "sourceNote": "Zelfgemaakte versie, zonder kant-en-klare mix, gebaseerd op de traditionele verhoudingen voor kanelsnegle."
+    },
+    "rugbrod-001": {
+      "sourceHash": "17beb81b893d40c0",
+      "title": "Rugbrød - Deens roggebrood",
+      "description": "Compact, voedzaam Deens brood van volkoren rogge, zaden en zuurdesem. Het blijft dagen goed en wordt beter als het rust.",
+      "origin": "Denemarken",
+      "category": "brood",
+      "servingsUnit": "cakevorm (ongeveer 25x11 cm)",
+      "tags": {
+        "segale": "rogge",
+        "pane rustico": "rustiek brood",
+        "senza impasto": "zonder kneden",
+        "danese": "Deens",
+        "semi": "zaden"
+      },
+      "groups": {
+        "dough": "Deeg"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "actief zuurdesem",
+          "substitute": "gedroogde gist"
+        },
+        "0002": {
+          "name": "lauw water"
+        },
+        "0003": {
+          "name": "volkoren roggemeel"
+        },
+        "0004": {
+          "name": "grof roggemeel (gebroken rogge)",
+          "substitute": "extra volkoren roggemeel"
+        },
+        "0005": {
+          "name": "zonnebloempitten"
+        },
+        "0006": {
+          "name": "lijnzaad",
+          "substitute": "chiazaad"
+        },
+        "0007": {
+          "name": "pompoenpitten"
+        },
+        "0008": {
+          "name": "donkere moutstroop of melasse"
+        },
+        "0009": {
+          "name": "fijn zout"
+        },
+        "0010": {
+          "name": "boter of olie voor de vorm"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Het deeg maken",
+          "content": "Meng in een grote kom het zuurdesem ({0001}) met het lauwe water ({0002}). Voeg de meelsoorten ({0003}, {0004}), de zaden ({0005}, {0006}, {0007}), de mout ({0008}) en het zout ({0009}) toe. Roer goed met een houten lepel tot een compact, plakkerig deeg (niet kneden zoals gewoon brood — het lijkt meer op dikke pap)."
+        },
+        "s2": {
+          "title": "Eerste rijs",
+          "content": "Dek de kom af met een vochtige theedoek en laat 1-1,5 uur op kamertemperatuur staan (met gedroogde gist). Met zuurdesem duurt het ongeveer 8 uur (een hele nacht, 10-12 uur, kan ook)."
+        },
+        "s3": {
+          "title": "In de vorm doen",
+          "content": "Vet een cakevorm (ongeveer 25x11 cm) in met {0010}. Giet het deeg in de vorm en strijk de bovenkant glad met natte handen of de bolle kant van een lepel."
+        },
+        "s4": {
+          "title": "Tweede rijs",
+          "content": "Dek de vorm af en laat rijzen tot het deeg bijna tot de rand komt: 45 minuten tot 1 uur met gedroogde gist (ongeveer 2 uur met zuurdesem)."
+        },
+        "s5": {
+          "title": "Bakken",
+          "content": "Bak het brood in de voorverwarmde oven op 175°C (boven- en onderwarmte) tot de bovenkant donker en knapperig is en een thermometer in het midden ongeveer 98°C aangeeft. Begin na 70-75 minuten te controleren; in totaal duurt het bakken ongeveer 90 minuten."
+        },
+        "s6": {
+          "title": "Laten afkoelen",
+          "content": "Laat 15 minuten afkoelen, haal het brood dan uit de vorm en laat het helemaal afkoelen op een rooster voordat je het snijdt — dat is essentieel, anders brokkelt het."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "Rugbrød is de dag erna nog lekkerder, ingepakt en gerust: de smaken komen tot rust. Snijd het in dunne plakken; traditioneel is het de basis voor smørrebrød (Deense open sandwiches) met boter, kaas, gerookte vis of vleeswaren. Met gedroogde gist in plaats van zuurdesem is de typische zurige smaak minder uitgesproken; een eetlepel appelazijn of naturel yoghurt in het deeg brengt je dichter bij de traditionele smaak. Houd de totale hoeveelheid zaden (ongeveer 175 g) gelijk, ook als je andere zaden gebruikt. Het blijft een week goed op kamertemperatuur, gewikkeld in een theedoek, of je kunt het in plakken invriezen.",
+      "sourceNote": "Basisrecept voor rugbrød, met zuurdesem of gedroogde gist."
+    },
+    "ontbijtkoek-001": {
+      "sourceHash": "45ec14d785f3edf4",
+      "title": "Ontbijtkoek - Nederlandse kruidkoek",
+      "description": "De Nederlandse ontbijtkoek: zacht, donker en geurig, zonder eieren of boter. Lekker in plakken met boter.",
+      "origin": "Nederland",
+      "category": "gebak",
+      "servingsUnit": "plakken",
+      "tags": {
+        "olandese": "Nederlands",
+        "colazione": "ontbijt",
+        "speziato": "gekruid",
+        "segale": "rogge",
+        "senza uova": "zonder ei",
+        "senza burro": "zonder boter"
+      },
+      "groups": {
+        "dough": "Beslag"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "roggebloem"
+        },
+        "0002": {
+          "name": "donkerbruine basterdsuiker"
+        },
+        "0003": {
+          "name": "stroop",
+          "substitute": "honing"
+        },
+        "0004": {
+          "name": "volle melk"
+        },
+        "0005": {
+          "name": "bakpoeder"
+        },
+        "0006": {
+          "name": "zuiveringszout"
+        },
+        "0007": {
+          "name": "koek- en speculaaskruiden"
+        },
+        "0008": {
+          "name": "zout"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "De vorm voorbereiden",
+          "content": "Verwarm de oven voor op 150°C (boven- en onderwarmte). Bekleed een cakevorm van 1 kg (ongeveer 25 cm) met bakpapier, of vet hem in en bestuif hem met bloem."
+        },
+        "s2": {
+          "title": "De droge ingrediënten mengen",
+          "content": "Meng in een kom de gezeefde roggebloem ({0001}), het bakpoeder ({0005}), het zuiveringszout ({0006}), de kruiden ({0007}) en het zout ({0008}). Meng goed zodat de kruiden gelijkmatig verdeeld zijn."
+        },
+        "s3": {
+          "title": "Melk en suiker verwarmen",
+          "content": "Verwarm in een steelpannetje de melk ({0004}) met de basterdsuiker ({0002}) en de stroop ({0003}), al roerend tot de suiker is opgelost. Niet laten koken, en een paar minuten laten afkoelen."
+        },
+        "s4": {
+          "title": "Het beslag maken",
+          "content": "Giet de lauwe vloeistof op de droge ingrediënten en meng met een garde of spatel tot een glad beslag zonder klontjes. Het is vrij dun: dat hoort zo."
+        },
+        "s5": {
+          "title": "Bakken",
+          "content": "Giet het beslag in de vorm en bak de koek in het midden van de oven tot een prikker die je in het midden steekt er schoon uitkomt."
+        },
+        "s6": {
+          "title": "Laten afkoelen en rusten",
+          "content": "Laat de koek 10 minuten in de vorm afkoelen en stort hem dan op een rooster. Pak hem als hij koud is in huishoudfolie of aluminiumfolie en laat hem 1-2 dagen rusten: hij wordt zachter en plakkeriger, net als echte Hollandse ontbijtkoek."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "Serveer in dikke plakken met roomboter, zoals het hoort. Kun je geen koek- en speculaaskruiden vinden (in Nederland heeft elke supermarkt ze), maak dan zelf een mix van 2 tl kaneel, 1 tl gemberpoeder, ½ tl kruidnagel, ½ tl nootmuskaat en een snufje kardemom en koriander. Goed ingepakt blijft de koek 1-2 weken goed en je kunt hem ook in plakken invriezen. De rusttijd van 24 uur (restTimeMinutes) is het aanbevolen minimum voor de traditionele structuur, maar je kunt de koek ook meteen na het afkoelen eten.",
+      "sourceNote": "Traditionele Nederlandse versie: roggebloem, basterdsuiker, stroop en kruiden, zonder eieren of boter."
+    },
+    "burrito-001": {
+      "sourceHash": "1cc88a81c75b55e9",
+      "title": "Burritos de Carne Deshebrada - Burrito uit Noord-Mexico",
+      "description": "De traditionele burrito uit het noorden van Mexico (Chihuahua en Sonora): een grote zelfgemaakte bloemtortilla, gevuld met draadjesvlees in rode chilisaus en frijoles refritos. Weinig ingrediënten, geen rijst of salade.",
+      "origin": "Mexico",
+      "category": "hoofdgerecht",
+      "tags": {
+        "messicano": "Mexicaans",
+        "tortillas": "tortilla's",
+        "manzo": "rundvlees",
+        "fagioli": "bonen"
+      },
+      "groups": {
+        "tortillas": "Bloemtortilla's",
+        "meat": "Vlees",
+        "salsa": "Rode chilisaus (chile colorado)",
+        "beans": "Frijoles refritos (gebakken bonen)",
+        "assembly": "Samenstellen"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "tarwebloem (type 00)"
+        },
+        "0002": {
+          "name": "reuzel (manteca)",
+          "substitute": "zachte boter"
+        },
+        "0003": {
+          "name": "zout"
+        },
+        "0004": {
+          "name": "bakpoeder"
+        },
+        "0005": {
+          "name": "warm water (ongeveer 50°C)"
+        },
+        "0006": {
+          "name": "rundvlees om te stoven (riblappen of sukadelappen)"
+        },
+        "0007": {
+          "name": "witte ui, gehalveerd"
+        },
+        "0008": {
+          "name": "teentjes knoflook"
+        },
+        "0009": {
+          "name": "laurierblaadjes"
+        },
+        "0010": {
+          "name": "zout"
+        },
+        "0011": {
+          "name": "gedroogde guajillo-pepers",
+          "substitute": "zoete paprikapoeder + 1 tl chilipoeder"
+        },
+        "0012": {
+          "name": "gedroogde ancho-pepers"
+        },
+        "0013": {
+          "name": "teentjes knoflook"
+        },
+        "0014": {
+          "name": "oregano (bij voorkeur Mexicaanse)"
+        },
+        "0015": {
+          "name": "gemalen komijn"
+        },
+        "0016": {
+          "name": "kookvocht van het vlees"
+        },
+        "0017": {
+          "name": "neutrale olie of reuzel"
+        },
+        "0018": {
+          "name": "gekookte pinto- of borlottibonen, met een beetje kookvocht"
+        },
+        "0019": {
+          "name": "reuzel of neutrale olie"
+        },
+        "0020": {
+          "name": "witte ui, fijngesneden"
+        },
+        "0021": {
+          "name": "geraspte Chihuahua-kaas",
+          "substitute": "jonge gouda of Monterey Jack"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Het vlees garen",
+          "content": "Doe het rundvlees ({0006}) in een grote pan met de ui ({0007}), knoflook ({0008}), laurier ({0009}) en zout ({0010}). Zet het onder water en laat het op laag vuur, met de deksel op een kier, zachtjes koken tot het vlees met een vork makkelijk uit elkaar valt. Bewaar het kookvocht."
+        },
+        "s2": {
+          "title": "Pepers roosteren en weken",
+          "content": "Verwijder de steeltjes en zaadjes van de pepers ({0011}, {0012}). Rooster ze 20-30 seconden per kant in een droge koekenpan tot ze gaan geuren (niet zwart laten worden, anders worden ze bitter). Doe ze in een kom, overgiet ze met kokend water en laat ze weken."
+        },
+        "s3": {
+          "title": "De saus pureren",
+          "content": "Giet de pepers af en pureer ze met de knoflook ({0013}), oregano ({0014}), komijn ({0015}) en het kookvocht ({0016}) tot een gladde saus. Wrijf de saus door een zeef om de velletjes te verwijderen. Gebruik je paprikapoeder in plaats van pepers, verwarm het dan 30 seconden in de olie en pureer het daarna met de andere ingrediënten."
+        },
+        "s4": {
+          "title": "Het tortilladeeg kneden",
+          "content": "Meng terwijl het vlees gaart de bloem ({0001}), het zout ({0003}) en het bakpoeder ({0004}). Voeg de reuzel ({0002}) toe en wrijf die met je vingertoppen door de bloem tot een zanderig mengsel. Giet het warme water ({0005}) er beetje bij beetje bij en kneed tot het deeg glad, soepel en niet plakkerig is."
+        },
+        "s5": {
+          "title": "Het deeg laten rusten",
+          "content": "Verdeel het deeg in 8 bolletjes (elk ongeveer 105 g), dek ze af met een theedoek of huishoudfolie en laat ze rusten: het gluten ontspant en ze zijn veel makkelijker uit te rollen."
+        },
+        "s6": {
+          "title": "Vlees in de saus",
+          "content": "Trek het vlees met twee vorken uit elkaar. Verhit de olie ({0017}) in een grote koekenpan, bak het vlees 2-3 minuten, voeg dan de chilisaus toe en laat het op middelhoog vuur inkoken tot de saus dikker wordt en het vlees omhult. De vulling moet smaakvol zijn maar niet nat, anders wordt de tortilla doorweekt. Proef en breng op smaak met zout."
+        },
+        "s7": {
+          "title": "Frijoles refritos",
+          "content": "Verhit de reuzel ({0019}) in een koekenpan en fruit de ui ({0020}) 3 minuten. Voeg de bonen ({0018}) met een beetje kookvocht toe en prak ze fijn met een stamper of een vork. Laat al roerend garen tot een dikke, smeerbare puree."
+        },
+        "s8": {
+          "title": "Tortilla's uitrollen en bakken",
+          "content": "Rol elk bolletje op een licht met bloem bestoven werkvlak uit tot een heel dunne lap van ongeveer 30 cm. Bak ze in een grote, droge, goed hete koekenpan ongeveer 30-45 seconden per kant, tot er bubbels en goudbruine vlekjes ontstaan. Bewaar ze op een stapel in een schone theedoek: zo blijven ze zacht en soepel."
+        },
+        "s9": {
+          "title": "De burritos oprollen",
+          "content": "Smeer een laag frijoles in het midden van een warme tortilla, leg er vlees op en eventueel wat kaas ({0021}). Vouw de twee zijkanten naar binnen en rol strak op vanaf de onderkant."
+        },
+        "s10": {
+          "title": "Dichtschroeien in de pan",
+          "content": "Leg de burritos met de naad naar beneden in een hete koekenpan en verwarm ze 1 minuut, keer ze dan om en verwarm ze nog een minuut tot ze licht goudbruin zijn."
+        },
+        "s10-af": {
+          "title": "Krokant bakken in de airfryer",
+          "content": "Bestrijk de burritos licht met olie en leg ze met de naad naar beneden in het op 180°C voorverwarmde mandje, zonder dat ze elkaar overlappen. Bak ze tot de tortilla goudbruin en krokant is."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Koekenpan"
+        },
+        "airfryer": {
+          "label": "Airfryer"
+        }
+      },
+      "notes": "De burrito komt uit het noorden van Mexico (Ciudad Juárez, Chihuahua, Sonora) en is veel eenvoudiger dan de Amerikaanse versie: een bloemtortilla, één of twee vullingen (guisado) en verder niets. Rijst, sla, zure room en guacamole allemaal samen zijn typisch voor de 'Mission style'-burritos uit San Francisco en voor Tex-Mex. In Nederland vind je gedroogde chilipepers in Mexicaanse/Latijns-Amerikaanse winkels of online; Mexicaanse oregano is citrusachtiger dan mediterrane. Traditionele varianten van de vulling: machaca met ei (gedroogd draadjesvlees), chile verde met varkensvlees, picadillo. Vlees en bonen blijven 3-4 dagen goed in de koelkast; opgerolde burritos kun je los verpakt invriezen en opwarmen in de koekenpan of de oven.",
+      "sourceNote": "Recept in norteño-stijl (Chihuahua), met zelfgemaakte bloemtortilla's en een vulling van carne deshebrada in chile colorado."
+    },
+    "flatbread-001": {
+      "sourceHash": "0132593c0afb184d",
+      "title": "Noordse flatbrød in drie varianten - Platbrood van rogge en gerst",
+      "description": "Kleine platte broodjes uit de pan, met rogge-, gerst- en tarwemeel. Lekker naturel of op smaak gebracht: honing en tijm, daslook en bonenkruid, of hazelnoten en cranberry's.",
+      "origin": "Denemarken",
+      "category": "brood",
+      "servingsUnit": "flatbrød (8-10)",
+      "tags": {
+        "vichinga": "Vikingen",
+        "flatbread": "flatbrød",
+        "pane piatto": "platbrood",
+        "segale": "rogge",
+        "orzo": "gerst",
+        "senza lievito": "ongerezen",
+        "in padella": "uit de pan",
+        "danese": "Deens",
+        "yogurt": "yoghurt"
+      },
+      "groups": {
+        "dough": "Basisdeeg",
+        "honey-thyme": "Variant honing en tijm (optioneel)",
+        "ramsons": "Variant daslook en bonenkruid (optioneel)",
+        "hazelnut-cranberry": "Variant hazelnoot en cranberry (optioneel)"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "roggemeel"
+        },
+        "0002": {
+          "name": "gerstemeel"
+        },
+        "0003": {
+          "name": "tarwebloem of volkoren tarwemeel"
+        },
+        "0004": {
+          "name": "yoghurt, bier of wei"
+        },
+        "0005": {
+          "name": "zout"
+        },
+        "0006": {
+          "name": "water, naar behoefte"
+        },
+        "0007": {
+          "name": "honing"
+        },
+        "0008": {
+          "name": "tijm, fijngehakt"
+        },
+        "0009": {
+          "name": "daslook, fijngehakt"
+        },
+        "0010": {
+          "name": "bonenkruid, fijngehakt"
+        },
+        "0011": {
+          "name": "gedroogde cranberry's, gehakt"
+        },
+        "0012": {
+          "name": "hazelnoten, gehakt"
+        },
+        "0013": {
+          "name": "honing"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Het deeg maken",
+          "content": "Meng in een kom de meelsoorten ({0001}, {0002}, {0003}) en het zout ({0005}). Voeg de yoghurt, het bier of de wei ({0004}) en beetje bij beetje het water ({0006}) toe, zoveel als nodig. Kneed goed tot een elastisch deeg dat niet aan de kom plakt."
+        },
+        "s2": {
+          "title": "Rusten",
+          "content": "Laat het deeg 30 minuten rusten."
+        },
+        "s3": {
+          "title": "Op smaak brengen (optioneel)",
+          "content": "Je kunt het deeg zo gebruiken, of een van de varianten toevoegen voordat je de broodjes vormt. Honing en tijm: {0007} en {0008}. Daslook en bonenkruid: {0009} en {0010}. Hazelnoten en cranberry's: {0011} en {0012}, met eventueel een beetje honing ({0013})."
+        },
+        "s4": {
+          "title": "De flatbrød vormen",
+          "content": "Vorm 8-10 kleine platte broodjes van ongeveer 1 cm dik."
+        },
+        "s5": {
+          "title": "Bakken",
+          "content": "Bak de broodjes op middelhoog vuur in een koekenpan (of op een gietijzeren bakplaat) en keer ze steeds om tot ze aan beide kanten goudbruin en gaar zijn. Als ze klaar zijn, klinken ze hol als je erop tikt."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Koekenpan",
+          "cookware": "koekenpan of gietijzeren bakplaat"
+        }
+      },
+      "notes": "Je kunt de meelsoorten, vloeistoffen en kruiden naar smaak variëren. Traditioneel worden ze gebakken boven gloeiende kolen, op een gietijzeren plaat of in een pan. Daslook is seizoensgebonden (voorjaar); bonenkruid heet in het Engels summer savory.",
+      "sourceNote": "Uit het gefotografeerde kookboek (p. 128, 'Flatbread in three ways', Deense/Engelse tekst). Het boek geeft geen baktijd: de waarde van cookTimeMinutes is een schatting."
+    },
+    "purjolokssoppa-001": {
+      "sourceHash": "c375021593c36271",
+      "title": "Purjolökssoppa - Zweedse prei-aardappelsoep",
+      "description": "Romige, troostende soep van prei en aardappel uit de Zweedse keuken, met croutons van roggebrood en geroosterde zaden.",
+      "origin": "Zweden",
+      "category": "soep",
+      "servingsUnit": "porties",
+      "tags": {
+        "porri": "prei",
+        "vellutata": "gebonden soep",
+        "zuppa": "soep",
+        "svedese": "Zweeds",
+        "nordica": "Scandinavisch",
+        "patate": "aardappelen",
+        "autunno": "herfst",
+        "pane di segale": "roggebrood"
+      },
+      "groups": {
+        "soup": "Soep",
+        "garnish": "Garnering"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "grote preien, schoongemaakt en in ringen (alleen het witte en lichtgroene deel)"
+        },
+        "0002": {
+          "name": "boter"
+        },
+        "0003": {
+          "name": "kruimige aardappelen, geschild en in blokjes"
+        },
+        "0004": {
+          "name": "groente- of kippenbouillon"
+        },
+        "0005": {
+          "name": "kookroom"
+        },
+        "0006": {
+          "name": "zout"
+        },
+        "0007": {
+          "name": "gemalen witte peper"
+        },
+        "0008": {
+          "name": "geraspte nootmuskaat"
+        },
+        "0009": {
+          "name": "sneetjes roggebrood, in blokjes"
+        },
+        "0010": {
+          "name": "gemengde zaden (zonnebloem, pompoen)"
+        },
+        "0011": {
+          "name": "verse bieslook, fijngesneden"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "De prei smoren",
+          "content": "Smelt de boter ({0002}) in een grote pan op laag tot middelhoog vuur. Voeg de prei ({0001}) toe en laat hem al roerend smoren, zonder te kleuren, tot hij zacht en glazig is."
+        },
+        "s2": {
+          "title": "Aardappelen en bouillon toevoegen",
+          "content": "Voeg de aardappelen ({0003}) toe en giet de bouillon ({0004}) erbij. Breng aan de kook, zet het vuur lager en laat met de deksel op de pan zachtjes koken tot de aardappelen gaar zijn."
+        },
+        "s3": {
+          "title": "Pureren",
+          "content": "Haal de pan van het vuur en pureer de soep met een staafmixer tot een gladde, fluweelzachte soep."
+        },
+        "s4": {
+          "title": "Afmaken met room",
+          "content": "Zet de pan terug op laag vuur en voeg de room ({0005}), het zout ({0006}), de witte peper ({0007}) en de nootmuskaat ({0008}) toe. Roer en verwarm zonder te laten koken. Proef en breng op smaak met zout."
+        },
+        "s5": {
+          "title": "De croutons maken",
+          "content": "Rooster in een koekenpan met antiaanbaklaag het roggebrood ({0009}) met een scheutje olie of een klontje boter tot het goudbruin en knapperig is."
+        },
+        "s6": {
+          "title": "Serveren",
+          "content": "Schep de soep in kommen en garneer met de croutons, de zaden ({0010}) en de bieslook ({0011})."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Pan",
+          "cookware": "grote pan"
+        }
+      },
+      "notes": "Voor een lichtere versie laat je de room weg en voeg je een extra stukje aardappel toe voor de romigheid. Ook heerlijk koud, als een Scandinavische vichyssoise. De soep blijft 3-4 dagen goed in de koelkast en is (zonder croutons) een paar maanden in te vriezen.",
+      "sourceNote": "Basisrecept voor Zweedse preisoep (purjolökssoppa), gegarneerd met roggebrood en zaden."
+    },
+    "risotto-spinaci-001": {
+      "sourceHash": "909ccbd67f84c784",
+      "title": "Spinazierisotto all'onda - Romige risotto uit Veneto",
+      "description": "Romige, smaakvolle risotto op zijn Venetiaans, met Vialone Nano-rijst en spinaziepuree, afgemaakt met Grana en Griekse yoghurt (in plaats van oma's smeerkaasje).",
+      "origin": "Italië (Veneto)",
+      "category": "voorgerecht (primo)",
+      "servingsUnit": "porties",
+      "tags": {
+        "spinaci": "spinazie",
+        "veneto": "Venetiaans",
+        "riso": "rijst",
+        "vegetariano": "vegetarisch",
+        "yogurt greco": "Griekse yoghurt",
+        "nord Italia": "Noord-Italië"
+      },
+      "groups": {
+        "spinach": "Spinazie",
+        "risotto": "Risotto",
+        "finishing": "Afmaken (mantecatura)"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "verse spinazie",
+          "substitute": "diepvriesspinazie"
+        },
+        "0002": {
+          "name": "Vialone Nano-rijst",
+          "substitute": "Carnaroli-rijst"
+        },
+        "0003": {
+          "name": "vlees- of gemengde bouillon, kokend heet",
+          "substitute": "groentebouillon, kokend heet"
+        },
+        "0004": {
+          "name": "witte ui, heel fijngesnipperd"
+        },
+        "0005": {
+          "name": "extra vierge olijfolie"
+        },
+        "0006": {
+          "name": "boter, in twee delen"
+        },
+        "0007": {
+          "name": "droge witte wijn"
+        },
+        "0008": {
+          "name": "geraspte Grana Padano of Parmezaanse kaas"
+        },
+        "0009": {
+          "name": "Griekse yoghurt, op kamertemperatuur"
+        },
+        "0010": {
+          "name": "zout"
+        },
+        "0011": {
+          "name": "gemalen peper"
+        },
+        "0012": {
+          "name": "geraspte nootmuskaat"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "De spinazie blancheren",
+          "content": "Blancheer de spinazie ({0001}) 1-2 minuten in gezouten water, giet af, laat afkoelen en knijp goed uit."
+        },
+        "s2": {
+          "title": "De spinaziepuree maken",
+          "content": "Pureer twee derde van de spinazie met een soeplepel bouillon ({0003}) en hak de rest grof."
+        },
+        "s3": {
+          "title": "De ui fruiten",
+          "content": "Laat in een brede pan de ui ({0004}) met de olie ({0005}) en de helft van de boter ({0006}) op zacht vuur glazig worden, zonder te kleuren."
+        },
+        "s4": {
+          "title": "De rijst roosteren",
+          "content": "Voeg de rijst ({0002}) toe en rooster hem al roerend tot de korrels heet en glazig zijn."
+        },
+        "s5": {
+          "title": "Blussen met wijn",
+          "content": "Blus af met de wijn ({0007}) en laat die helemaal verdampen."
+        },
+        "s6": {
+          "title": "De risotto garen",
+          "content": "Voeg de hete bouillon soeplepel voor soeplepel toe, roer vaak en wacht tot de bouillon is opgenomen voordat je meer toevoegt. De rijst moet zacht en altijd een beetje nat blijven. Houd de bouillon steeds heet."
+        },
+        "s7": {
+          "title": "De spinazie toevoegen",
+          "content": "Roer in de laatste 4 minuten van de gaartijd de spinaziepuree en de gehakte spinazie erdoor."
+        },
+        "s8": {
+          "title": "Afmaken (mantecatura)",
+          "content": "Zet het vuur uit en roer de rest van de boter (koud, in stukjes), de Grana ({0008}) en de Griekse yoghurt ({0009}) erdoor. Roer krachtig: op dit moment geeft de rijst zijn zetmeel af en wordt hij romig. Breng op smaak met zout ({0010}), peper ({0011}) en nootmuskaat ({0012}), en proef voordat je zout toevoegt."
+        },
+        "s9": {
+          "title": "Laten rusten en serveren",
+          "content": "Dek af en laat 2 minuten rusten. Serveer meteen op licht voorverwarmde borden: de risotto moet 'all'onda' zijn, dat wil zeggen dat hij als een golf beweegt als je het bord kantelt."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Pan",
+          "cookware": "brede pan",
+          "heat": "zacht / laag tot middelhoog"
+        }
+      },
+      "notes": "Venetiaanse stijl: Vialone Nano-rijst en een 'all'onda'-structuur, zachter en vloeibaarder dan de Lombardische. Familietraditie: oma deed er een smeerkaasje door voor de romigheid; hier is dat vervangen door anderhalve eetlepel Griekse yoghurt, die een frissere, licht zurige toets geeft die goed bij spinazie past. Voeg de yoghurt alleen van het vuur af en op kamertemperatuur toe, anders kan hij schiften en klonteren. Met de yoghurt kun je de boter terugbrengen tot 30-35 g voor een lichtere versie. De yoghurt voegt zuur toe: proef voordat je zout toevoegt. Voor een rijkere versie kun je bij het afmaken een lepel mascarpone of gorgonzola toevoegen.",
+      "sourceNote": "Spinazierisotto in Venetiaanse stijl, met de familievariant (Griekse yoghurt in plaats van oma's smeerkaasje)."
+    }
+  }
+}

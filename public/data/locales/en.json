@@ -1,0 +1,709 @@
+{
+  "language": "en",
+  "recipes": {
+    "kanelsnegle-001": {
+      "sourceHash": "dd90d08a9434b4d7",
+      "title": "Kanelsnegle - Danish Cinnamon Rolls",
+      "description": "The classic Danish cinnamon rolls, made completely from scratch.",
+      "origin": "Denmark",
+      "category": "sweet yeast bake",
+      "servingsUnit": "rolls",
+      "tags": {
+        "cannella": "cinnamon",
+        "lievitati": "yeast baking",
+        "colazione": "breakfast",
+        "danese": "Danish",
+        "lievito di birra": "fresh yeast"
+      },
+      "groups": {
+        "dough": "Dough",
+        "filling": "Cinnamon filling",
+        "assembly": "Assembly",
+        "finishing": "Finishing"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "00 flour or bread flour"
+        },
+        "0002": {
+          "name": "lukewarm milk (about 37°C)"
+        },
+        "0003": {
+          "name": "fresh yeast",
+          "substitute": "active dry yeast"
+        },
+        "0004": {
+          "name": "granulated sugar"
+        },
+        "0005": {
+          "name": "large egg"
+        },
+        "0006": {
+          "name": "butter, melted and slightly cooled"
+        },
+        "0007": {
+          "name": "salt"
+        },
+        "0008": {
+          "name": "ground cardamom"
+        },
+        "0009": {
+          "name": "soft butter, at room temperature"
+        },
+        "0010": {
+          "name": "dark brown sugar"
+        },
+        "0011": {
+          "name": "ground cinnamon"
+        },
+        "0012": {
+          "name": "beaten egg, for brushing"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Make the dough",
+          "content": "In a large bowl (or a stand mixer), dissolve the yeast ({0003}) in the lukewarm milk ({0002}). Add the sugar ({0004}), egg ({0005}), butter ({0006}), salt ({0007}) and cardamom ({0008}), then work in the flour ({0001}) a little at a time."
+        },
+        "s2": {
+          "title": "Knead the dough",
+          "content": "Only add more flour if you really need to, a little at a time. Then knead for 8-10 minutes by hand or 5-6 minutes in a stand mixer (dough hook), until the dough is smooth and elastic. If you use wholemeal flour, cover the bowl and let the dough rest for 15 minutes before kneading: the bran absorbs the liquid and the dough becomes less sticky."
+        },
+        "s3": {
+          "title": "First rise",
+          "content": "Cover the bowl with a cloth or cling film and leave to rise in a warm place until the dough has doubled in size."
+        },
+        "s4": {
+          "title": "Make the cinnamon filling",
+          "content": "Mix the butter ({0009}), brown sugar ({0010}) and cinnamon ({0011}) into a soft, spreadable cream."
+        },
+        "s5": {
+          "title": "Roll out and fill",
+          "content": "Turn the dough out onto a floured work surface and roll it into a rectangle of about 40x50 cm, roughly half a centimetre thick. Spread the cinnamon filling evenly over the whole surface."
+        },
+        "s6": {
+          "title": "Roll up and cut",
+          "content": "Roll up the dough from the long side into a tight log. Cut the log into 12 slices about 3-4 cm thick."
+        },
+        "s7": {
+          "title": "Second rise",
+          "content": "Place the rolls on a baking tray lined with baking paper, spaced apart, or close together if you prefer a single pull-apart cake. Cover and leave to rise until doubled."
+        },
+        "s8": {
+          "title": "Bake",
+          "content": "Brush the rolls with the beaten egg ({0012}). Bake on the middle rack of the oven, preheated to 200°C (180°C fan), until golden."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "A classic Danish recipe. For an even more indulgent version, brush the rolls after baking with a sugar syrup (50 g sugar + 50 ml water, heated until the sugar dissolves). They keep for 2-3 days in an airtight container, or can be frozen once baked.",
+      "sourceNote": "From-scratch version, without a ready-made mix, adapted from the traditional proportions for kanelsnegle."
+    },
+    "rugbrod-001": {
+      "sourceHash": "17beb81b893d40c0",
+      "title": "Rugbrød - Danish Rye Bread",
+      "description": "Dense, nourishing Danish bread made with wholegrain rye, seeds and sourdough. It keeps for days and gets better with rest.",
+      "origin": "Denmark",
+      "category": "bread",
+      "servingsUnit": "loaf tin (about 25x11 cm)",
+      "tags": {
+        "segale": "rye",
+        "pane rustico": "rustic bread",
+        "senza impasto": "no-knead",
+        "danese": "Danish",
+        "semi": "seeds"
+      },
+      "groups": {
+        "dough": "Dough"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "active sourdough starter",
+          "substitute": "active dry yeast"
+        },
+        "0002": {
+          "name": "lukewarm water"
+        },
+        "0003": {
+          "name": "wholegrain rye flour"
+        },
+        "0004": {
+          "name": "coarse rye (cracked rye)",
+          "substitute": "extra wholegrain rye flour"
+        },
+        "0005": {
+          "name": "sunflower seeds"
+        },
+        "0006": {
+          "name": "flaxseeds",
+          "substitute": "chia seeds"
+        },
+        "0007": {
+          "name": "pumpkin seeds"
+        },
+        "0008": {
+          "name": "dark malt syrup or molasses"
+        },
+        "0009": {
+          "name": "fine salt"
+        },
+        "0010": {
+          "name": "butter or oil for the tin"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Make the dough",
+          "content": "In a large bowl, mix the sourdough starter ({0001}) with the lukewarm water ({0002}). Add the flours ({0003}, {0004}), the seeds ({0005}, {0006}, {0007}), the malt ({0008}) and the salt ({0009}). Stir well with a wooden spoon into a dense, sticky dough (don't knead it like ordinary bread — it's more like a thick porridge)."
+        },
+        "s2": {
+          "title": "First rise",
+          "content": "Cover the bowl with a damp tea towel and leave at room temperature for 1-1.5 hours (with dry yeast). With sourdough it takes about 8 hours instead (overnight, 10-12 hours, is fine too)."
+        },
+        "s3": {
+          "title": "Transfer to the tin",
+          "content": "Grease a loaf tin (about 25x11 cm) with {0010}. Pour in the dough and smooth the top with wet hands or the back of a spoon."
+        },
+        "s4": {
+          "title": "Second rise",
+          "content": "Cover the tin and leave to rise until the dough almost reaches the rim: 45 minutes to 1 hour with dry yeast (about 2 hours with sourdough)."
+        },
+        "s5": {
+          "title": "Bake",
+          "content": "Bake in the oven, preheated to 175°C (conventional), until the top is dark and crisp and a thermometer in the centre reads about 98°C. Start checking after 70-75 minutes; the full bake takes about 90 minutes."
+        },
+        "s6": {
+          "title": "Cool",
+          "content": "Leave to cool for 15 minutes, then turn the bread out of the tin and let it cool completely on a wire rack before slicing — this is essential, otherwise it crumbles."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "Rugbrød is even better the next day, wrapped and rested: the flavours settle. Slice it thinly; traditionally it's the base for smørrebrød (Danish open sandwiches) with butter, cheese, smoked fish or cold cuts. With dry yeast instead of sourdough the typical tangy flavour will be milder; a tablespoon of apple cider vinegar or plain yogurt in the dough brings it closer to the traditional taste. Keep the total amount of seeds (about 175 g) the same even if you change the type of seed. It keeps at room temperature wrapped in a tea towel for a week, or can be frozen in slices.",
+      "sourceNote": "Basic rugbrød recipe, adaptable to sourdough or active dry yeast."
+    },
+    "ontbijtkoek-001": {
+      "sourceHash": "45ec14d785f3edf4",
+      "title": "Ontbijtkoek - Dutch Spiced Breakfast Cake",
+      "description": "The Dutch spiced breakfast cake: soft, dark and fragrant, without eggs or butter. Served in slices with butter.",
+      "origin": "The Netherlands",
+      "category": "bake",
+      "servingsUnit": "slices",
+      "tags": {
+        "olandese": "Dutch",
+        "colazione": "breakfast",
+        "speziato": "spiced",
+        "segale": "rye",
+        "senza uova": "egg-free",
+        "senza burro": "butter-free"
+      },
+      "groups": {
+        "dough": "Batter"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "rye flour (roggebloem)"
+        },
+        "0002": {
+          "name": "dark brown sugar (donker basterdsuiker)"
+        },
+        "0003": {
+          "name": "dark sugar syrup (stroop)",
+          "substitute": "honey"
+        },
+        "0004": {
+          "name": "whole milk"
+        },
+        "0005": {
+          "name": "baking powder (bakpoeder)"
+        },
+        "0006": {
+          "name": "bicarbonate of soda"
+        },
+        "0007": {
+          "name": "koek- en speculaaskruiden spice mix"
+        },
+        "0008": {
+          "name": "salt"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Prepare the tin",
+          "content": "Heat the oven to 150°C (conventional). Line a 1 kg loaf tin (about 25 cm) with baking paper, or grease and flour it."
+        },
+        "s2": {
+          "title": "Mix the dry ingredients",
+          "content": "In a bowl, combine the sifted rye flour ({0001}), baking powder ({0005}), bicarbonate of soda ({0006}), spices ({0007}) and salt ({0008}). Mix well to spread the spices evenly."
+        },
+        "s3": {
+          "title": "Warm the milk and sugar",
+          "content": "In a small saucepan, warm the milk ({0004}) with the brown sugar ({0002}) and syrup ({0003}), stirring until the sugar dissolves. Don't let it boil, and leave it to cool for a couple of minutes."
+        },
+        "s4": {
+          "title": "Make the batter",
+          "content": "Pour the warm liquid over the dry ingredients and mix with a whisk or spatula into a smooth batter without lumps. It will be quite runny: that's normal."
+        },
+        "s5": {
+          "title": "Bake",
+          "content": "Pour the batter into the tin and bake in the middle of the oven until a skewer inserted in the centre comes out clean."
+        },
+        "s6": {
+          "title": "Cool and rest",
+          "content": "Leave to cool in the tin for 10 minutes, then turn out onto a wire rack. Once cold, wrap it in cling film or foil and let it rest for 1-2 days: it becomes softer and stickier, just like the Dutch kind."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "Serve in thick slices with salted butter, as tradition has it. If you can't find koek- en speculaaskruiden (every Dutch supermarket has it), make your own with 2 tsp cinnamon, 1 tsp ground ginger, ½ tsp cloves, ½ tsp nutmeg and a pinch each of cardamom and coriander. It keeps for 1-2 weeks well wrapped and can also be frozen in slices. The 24-hour rest (restTimeMinutes) is the recommended minimum for the traditional texture, but you can also eat the cake as soon as it has cooled.",
+      "sourceNote": "Traditional Dutch version: rye flour, brown sugar, syrup and spices, without eggs or butter."
+    },
+    "burrito-001": {
+      "sourceHash": "1cc88a81c75b55e9",
+      "title": "Burritos de Carne Deshebrada - Northern Mexican Burrito",
+      "description": "The traditional burrito from northern Mexico (Chihuahua and Sonora): a large homemade flour tortilla filled with shredded beef in red chile sauce and refried beans. Few ingredients, no rice or salad.",
+      "origin": "Mexico",
+      "category": "main dish",
+      "tags": {
+        "messicano": "Mexican",
+        "manzo": "beef",
+        "fagioli": "beans"
+      },
+      "groups": {
+        "tortillas": "Flour tortillas",
+        "meat": "Meat",
+        "salsa": "Red chile sauce (chile colorado)",
+        "beans": "Refried beans (frijoles refritos)",
+        "assembly": "Assembly"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "00 flour"
+        },
+        "0002": {
+          "name": "lard (manteca)",
+          "substitute": "softened butter"
+        },
+        "0003": {
+          "name": "salt"
+        },
+        "0004": {
+          "name": "baking powder"
+        },
+        "0005": {
+          "name": "hot water (about 50°C)"
+        },
+        "0006": {
+          "name": "braising beef (chuck or brisket; in the Netherlands riblappen or sukadelappen)"
+        },
+        "0007": {
+          "name": "white onion, halved"
+        },
+        "0008": {
+          "name": "garlic cloves"
+        },
+        "0009": {
+          "name": "bay leaves"
+        },
+        "0010": {
+          "name": "salt"
+        },
+        "0011": {
+          "name": "dried guajillo chiles",
+          "substitute": "sweet paprika + 1 tsp chili powder"
+        },
+        "0012": {
+          "name": "dried ancho chiles"
+        },
+        "0013": {
+          "name": "garlic cloves"
+        },
+        "0014": {
+          "name": "oregano (Mexican if possible)"
+        },
+        "0015": {
+          "name": "ground cumin"
+        },
+        "0016": {
+          "name": "broth from cooking the meat"
+        },
+        "0017": {
+          "name": "vegetable oil or lard"
+        },
+        "0018": {
+          "name": "cooked pinto or borlotti beans, with some of their liquid"
+        },
+        "0019": {
+          "name": "lard or vegetable oil"
+        },
+        "0020": {
+          "name": "white onion, finely chopped"
+        },
+        "0021": {
+          "name": "grated Chihuahua cheese",
+          "substitute": "young gouda (jong) or Monterey Jack"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Cook the meat",
+          "content": "Put the beef ({0006}) in a large pot with the onion ({0007}), garlic ({0008}), bay leaves ({0009}) and salt ({0010}). Cover with water and simmer over low heat with the lid ajar until the meat shreds easily with a fork. Keep the broth."
+        },
+        "s2": {
+          "title": "Toast and soak the chiles",
+          "content": "Remove the stems and seeds from the chiles ({0011}, {0012}). Toast them in a dry pan for 20-30 seconds per side until fragrant (don't let them blacken, or they turn bitter). Put them in a bowl, cover with boiling water and leave them to soak."
+        },
+        "s3": {
+          "title": "Blend the sauce",
+          "content": "Drain the chiles and blend them with the garlic ({0013}), oregano ({0014}), cumin ({0015}) and cooking broth ({0016}) until smooth. Pass the sauce through a sieve to remove the skins. If you use paprika instead of chiles, warm it in the oil for 30 seconds, then blend it with the other ingredients."
+        },
+        "s4": {
+          "title": "Make the tortilla dough",
+          "content": "While the meat cooks, mix the flour ({0001}), salt ({0003}) and baking powder ({0004}). Add the lard ({0002}) and rub it in with your fingertips until the mixture looks sandy. Pour in the hot water ({0005}) a little at a time and knead until the dough is smooth, soft and not sticky."
+        },
+        "s5": {
+          "title": "Rest the dough",
+          "content": "Divide the dough into 8 balls (about 105 g each), cover them with a tea towel or cling film and let them rest: the gluten relaxes and they roll out much more easily."
+        },
+        "s6": {
+          "title": "Meat in sauce",
+          "content": "Shred the meat with two forks. Heat the oil ({0017}) in a large pan, brown the meat for 2-3 minutes, then add the chile sauce and cook over medium heat until the sauce thickens and coats the meat. The filling should be rich but not runny, or it will soak the tortilla. Taste and adjust the salt."
+        },
+        "s7": {
+          "title": "Refried beans",
+          "content": "Heat the lard ({0019}) in a pan and fry the onion ({0020}) for 3 minutes. Add the beans ({0018}) with some of their liquid and mash them with a potato masher or a fork. Cook, stirring, until they turn into a thick, spreadable paste."
+        },
+        "s8": {
+          "title": "Roll out and cook the tortillas",
+          "content": "On a lightly floured surface, roll each ball into a very thin round of about 30 cm. Cook in a large, dry, very hot pan for about 30-45 seconds per side, until bubbles and golden spots appear. Keep them stacked inside a clean tea towel so they stay soft and pliable."
+        },
+        "s9": {
+          "title": "Roll the burritos",
+          "content": "Spread a layer of beans in the middle of a warm tortilla, add the meat and, if you like, some cheese ({0021}). Fold the two sides in and roll up tightly from the bottom."
+        },
+        "s10": {
+          "title": "Seal in the pan",
+          "content": "Place the burritos seam side down in a hot pan and heat them for 1 minute, then turn them and heat for another minute until lightly golden."
+        },
+        "s10-af": {
+          "title": "Crisp in the air fryer",
+          "content": "Brush the burritos lightly with oil and place them seam side down in the basket, preheated to 180°C, without overlapping. Cook until the tortilla is golden and crisp on the outside."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Frying pan"
+        },
+        "airfryer": {
+          "label": "Air fryer"
+        }
+      },
+      "notes": "The burrito comes from northern Mexico (Ciudad Juárez, Chihuahua, Sonora) and is much simpler than the American version: a flour tortilla, one or two fillings (guisado) and nothing else. Rice, lettuce, sour cream and guacamole all together are typical of San Francisco 'Mission style' burritos and of Tex-Mex. In the Netherlands, dried chiles can be found in Mexican/Latin American shops or online; Mexican oregano is more citrusy than Mediterranean oregano. Traditional filling variations: machaca with eggs (shredded dried beef), chile verde with pork, picadillo. The meat and beans keep for 3-4 days in the fridge; rolled burritos can be frozen individually wrapped and reheated in a pan or in the oven.",
+      "sourceNote": "Norteño-style recipe (Chihuahua), with homemade flour tortillas and a filling of carne deshebrada in chile colorado."
+    },
+    "flatbread-001": {
+      "sourceHash": "0132593c0afb184d",
+      "title": "Nordic Flatbrød in Three Variations - Rye and Barley Flatbread",
+      "description": "Small flatbreads cooked in a pan, made with rye, barley and wheat flour. Make them plain or flavoured: honey and thyme, wild garlic and savory, or hazelnuts and cranberries.",
+      "origin": "Denmark",
+      "category": "bread",
+      "servingsUnit": "flatbrød (8-10)",
+      "tags": {
+        "vichinga": "Viking",
+        "flatbread": "flatbrød",
+        "pane piatto": "flatbread",
+        "segale": "rye",
+        "orzo": "barley",
+        "senza lievito": "unleavened",
+        "in padella": "pan-cooked",
+        "danese": "Danish"
+      },
+      "groups": {
+        "dough": "Basic dough",
+        "honey-thyme": "Honey and thyme variation (optional)",
+        "ramsons": "Wild garlic and savory variation (optional)",
+        "hazelnut-cranberry": "Hazelnut and cranberry variation (optional)"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "rye flour"
+        },
+        "0002": {
+          "name": "barley flour"
+        },
+        "0003": {
+          "name": "plain or wholemeal wheat flour"
+        },
+        "0004": {
+          "name": "yogurt, beer or whey"
+        },
+        "0005": {
+          "name": "salt"
+        },
+        "0006": {
+          "name": "water, as needed"
+        },
+        "0007": {
+          "name": "honey"
+        },
+        "0008": {
+          "name": "thyme, finely chopped"
+        },
+        "0009": {
+          "name": "wild garlic (ramsons), finely chopped"
+        },
+        "0010": {
+          "name": "summer savory, finely chopped"
+        },
+        "0011": {
+          "name": "dried cranberries, chopped"
+        },
+        "0012": {
+          "name": "hazelnuts, chopped"
+        },
+        "0013": {
+          "name": "honey"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Make the dough",
+          "content": "In a bowl, mix the flours ({0001}, {0002}, {0003}) and the salt ({0005}). Add the yogurt, beer or whey ({0004}) and the water ({0006}) a little at a time, as much as needed. Knead well into an elastic dough that doesn't stick to the bowl."
+        },
+        "s2": {
+          "title": "Rest",
+          "content": "Let the dough rest for 30 minutes."
+        },
+        "s3": {
+          "title": "Flavour (optional)",
+          "content": "You can use the dough as it is, or add one of the variations before shaping the breads. Honey and thyme: {0007} and {0008}. Wild garlic and savory: {0009} and {0010}. Hazelnuts and cranberries: {0011} and {0012}, with a little honey ({0013}) if you like."
+        },
+        "s4": {
+          "title": "Shape the flatbrød",
+          "content": "Shape 8-10 small flatbreads about 1 cm thick."
+        },
+        "s5": {
+          "title": "Cook",
+          "content": "Cook the breads over medium heat in a frying pan (or on a cast-iron griddle), turning them continuously until golden and cooked through on both sides. When they're done, they should sound hollow when tapped."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Frying pan",
+          "cookware": "frying pan or cast-iron griddle"
+        }
+      },
+      "notes": "Feel free to vary the flours, liquids and herbs. Traditionally they are cooked over embers, on a cast-iron griddle or in a pan. In the Netherlands wild garlic is called daslook (seasonal, in spring); summer savory is 'bonenkruid'.",
+      "sourceNote": "From the photographed cookbook (p. 128, 'Flatbread in three ways', Danish/English text). The book gives no cooking time: the cookTimeMinutes value is an estimate."
+    },
+    "purjolokssoppa-001": {
+      "sourceHash": "c375021593c36271",
+      "title": "Purjolökssoppa - Swedish Leek and Potato Soup",
+      "description": "A creamy, comforting leek and potato soup from Swedish cooking, served with rye croutons and toasted seeds.",
+      "origin": "Sweden",
+      "category": "soup",
+      "servingsUnit": "servings",
+      "tags": {
+        "porri": "leeks",
+        "vellutata": "cream soup",
+        "zuppa": "soup",
+        "svedese": "Swedish",
+        "nordica": "Nordic",
+        "patate": "potatoes",
+        "autunno": "autumn",
+        "pane di segale": "rye bread"
+      },
+      "groups": {
+        "soup": "Soup",
+        "garnish": "Garnish"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "large leeks, cleaned and sliced (white and light green parts only)"
+        },
+        "0002": {
+          "name": "butter"
+        },
+        "0003": {
+          "name": "floury potatoes, peeled and diced"
+        },
+        "0004": {
+          "name": "vegetable or chicken stock"
+        },
+        "0005": {
+          "name": "single cream"
+        },
+        "0006": {
+          "name": "salt"
+        },
+        "0007": {
+          "name": "ground white pepper"
+        },
+        "0008": {
+          "name": "grated nutmeg"
+        },
+        "0009": {
+          "name": "slices of rye bread, diced"
+        },
+        "0010": {
+          "name": "mixed seeds (sunflower, pumpkin)"
+        },
+        "0011": {
+          "name": "fresh chives, chopped"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Sweat the leeks",
+          "content": "Melt the butter ({0002}) in a large pot over medium-low heat. Add the leeks ({0001}) and sweat them, stirring often and without browning, until soft and translucent."
+        },
+        "s2": {
+          "title": "Add potatoes and stock",
+          "content": "Add the potatoes ({0003}) and pour in the stock ({0004}). Bring to the boil, then lower the heat and simmer, covered, until the potatoes are tender."
+        },
+        "s3": {
+          "title": "Blend",
+          "content": "Take off the heat and blend with a stick blender into a smooth, velvety soup."
+        },
+        "s4": {
+          "title": "Finish with cream",
+          "content": "Put the pot back over low heat and add the cream ({0005}), salt ({0006}), white pepper ({0007}) and nutmeg ({0008}). Stir and heat through without boiling. Taste and adjust the salt."
+        },
+        "s5": {
+          "title": "Make the croutons",
+          "content": "In a non-stick pan, toast the rye bread ({0009}) with a drizzle of oil or a little butter until golden and crisp."
+        },
+        "s6": {
+          "title": "Serve",
+          "content": "Ladle the soup into bowls and top with the croutons, seeds ({0010}) and chives ({0011})."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Pot",
+          "cookware": "large pot"
+        }
+      },
+      "notes": "For a lighter version, leave out the cream and add an extra piece of potato for creaminess. It's also great cold, like a Scandinavian vichyssoise. It keeps for 3-4 days in the fridge and freezes well (without the croutons) for a couple of months.",
+      "sourceNote": "Basic recipe for Swedish leek soup (purjolökssoppa), garnished with rye bread and seeds."
+    },
+    "risotto-spinaci-001": {
+      "sourceHash": "909ccbd67f84c784",
+      "title": "Spinach Risotto all'Onda - Creamy Venetian Risotto",
+      "description": "A creamy, flavourful Venetian-style risotto with Vialone Nano rice and spinach purée, finished with Grana and Greek yogurt (in place of grandma's cheese spread).",
+      "origin": "Italy (Veneto)",
+      "category": "first course",
+      "servingsUnit": "servings",
+      "tags": {
+        "spinaci": "spinach",
+        "veneto": "Venetian",
+        "riso": "rice",
+        "vegetariano": "vegetarian",
+        "yogurt greco": "Greek yogurt",
+        "nord Italia": "northern Italy"
+      },
+      "groups": {
+        "spinach": "Spinach",
+        "risotto": "Risotto",
+        "finishing": "Finishing (mantecatura)"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "fresh spinach",
+          "substitute": "frozen spinach"
+        },
+        "0002": {
+          "name": "Vialone Nano rice",
+          "substitute": "Carnaroli rice"
+        },
+        "0003": {
+          "name": "meat or mixed stock, boiling hot",
+          "substitute": "vegetable stock, boiling hot"
+        },
+        "0004": {
+          "name": "white onion, very finely chopped"
+        },
+        "0005": {
+          "name": "extra virgin olive oil"
+        },
+        "0006": {
+          "name": "butter, divided in half"
+        },
+        "0007": {
+          "name": "dry white wine"
+        },
+        "0008": {
+          "name": "grated Grana Padano or Parmesan"
+        },
+        "0009": {
+          "name": "Greek yogurt, at room temperature"
+        },
+        "0010": {
+          "name": "salt"
+        },
+        "0011": {
+          "name": "ground pepper"
+        },
+        "0012": {
+          "name": "grated nutmeg"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Blanch the spinach",
+          "content": "Blanch the spinach ({0001}) for 1-2 minutes in salted water, drain, cool and squeeze out well."
+        },
+        "s2": {
+          "title": "Make the spinach purée",
+          "content": "Blend two thirds of the spinach with a ladle of stock ({0003}) and roughly chop the rest."
+        },
+        "s3": {
+          "title": "Soften the onion",
+          "content": "In a wide pan, gently soften the onion ({0004}) with the oil ({0005}) and half the butter ({0006}) over low heat, without letting it colour."
+        },
+        "s4": {
+          "title": "Toast the rice",
+          "content": "Add the rice ({0002}) and toast it, stirring, until the grains are hot and translucent."
+        },
+        "s5": {
+          "title": "Deglaze with the wine",
+          "content": "Pour in the wine ({0007}) and let it evaporate completely."
+        },
+        "s6": {
+          "title": "Cook the risotto",
+          "content": "Add the hot stock one ladle at a time, stirring often and waiting until it has been absorbed before adding more. The rice should stay soft and always a little brothy. Keep the stock hot the whole time."
+        },
+        "s7": {
+          "title": "Add the spinach",
+          "content": "In the last 4 minutes of cooking, stir in the spinach purée and the chopped spinach."
+        },
+        "s8": {
+          "title": "Finish (mantecatura)",
+          "content": "Turn off the heat and stir in the remaining butter (cold, in small pieces), the Grana ({0008}) and the Greek yogurt ({0009}). Stir vigorously: this is when the rice releases its starch and turns creamy. Season with salt ({0010}), pepper ({0011}) and nutmeg ({0012}), tasting before you add salt."
+        },
+        "s9": {
+          "title": "Rest and serve",
+          "content": "Cover and leave to rest for 2 minutes. Serve straight away on lightly warmed plates: the risotto should be 'all'onda' — it should ripple like a wave when you tilt the plate."
+        }
+      },
+      "methods": {
+        "stovetop": {
+          "label": "Pot",
+          "cookware": "wide pan",
+          "heat": "gentle / medium-low"
+        }
+      },
+      "notes": "Venetian style: Vialone Nano rice and an 'all'onda' consistency, softer and runnier than the Lombard style. A family tradition: grandma stirred in a cheese spread for creaminess; here it's replaced by 1½ tablespoons of Greek yogurt, which adds a fresher, slightly tangy note that goes well with spinach. Only add the yogurt off the heat and at room temperature, or it may split and turn lumpy. With the yogurt you can reduce the butter to 30-35 g for a lighter version. The yogurt adds acidity: taste before salting. For a richer version, add a spoonful of mascarpone or gorgonzola when finishing.",
+      "sourceNote": "Venetian-style spinach risotto, with the family twist (Greek yogurt instead of grandma's cheese spread)."
+    }
+  }
+}

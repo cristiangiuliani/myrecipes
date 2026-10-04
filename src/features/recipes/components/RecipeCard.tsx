@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import { formatMinutes } from '@/shared/lib/duration'
 import type { Recipe } from '../types'
+import { formatQuantity } from '../scaling/formatQuantity'
+import { useQuantityFormat } from '../scaling/useQuantityFormat'
 import { RecipePhoto } from './RecipePhoto'
 
 interface RecipeCardProps {
@@ -16,6 +18,7 @@ interface RecipeCardProps {
 
 export function RecipeCard({ recipe }: RecipeCardProps) {
   const totalTime = formatMinutes(recipe.totalTimeMinutes)
+  const quantityFormat = useQuantityFormat()
 
   return (
     <Card variant="outlined" sx={{ height: '100%' }}>
@@ -59,7 +62,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
                 </Stack>
               )}
               <Typography variant="body2" color="text.secondary">
-                {recipe.servings.amount} {recipe.servings.unit}
+                {formatQuantity(recipe.servings.amount, recipe.servings.unit, 1, quantityFormat)}
               </Typography>
             </Stack>
 

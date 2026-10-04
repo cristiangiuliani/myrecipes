@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { recipeRepository } from '../api/recipes.repository'
+import { useLanguage } from '@/shared/i18n'
 import type { Recipe } from '../types'
 
 interface UseRecipeResult {
@@ -9,6 +10,7 @@ interface UseRecipeResult {
 }
 
 export function useRecipe(id: string | undefined): UseRecipeResult {
+  const language = useLanguage()
   const [recipe, setRecipe] = useState<Recipe | undefined>(undefined)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
@@ -22,7 +24,7 @@ export function useRecipe(id: string | undefined): UseRecipeResult {
     let cancelled = false
     setLoading(true)
     recipeRepository
-      .getRecipeById(id)
+      .getRecipeById(id, language)
       .then((data) => {
         if (!cancelled) setRecipe(data)
       })
@@ -35,7 +37,7 @@ export function useRecipe(id: string | undefined): UseRecipeResult {
     return () => {
       cancelled = true
     }
-  }, [id])
+  }, [id, language])
 
   return { recipe, loading, error }
 }

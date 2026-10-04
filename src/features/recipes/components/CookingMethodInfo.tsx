@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import Stack from '@mui/material/Stack'
 import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
@@ -23,6 +24,7 @@ interface CookingMethodInfoProps {
 }
 
 export function CookingMethodInfo({ methods, selected, onSelect }: CookingMethodInfoProps) {
+  const { t } = useTranslation()
   const SelectedIcon = ICONS[selected.type]
 
   return (
@@ -35,7 +37,7 @@ export function CookingMethodInfo({ methods, selected, onSelect }: CookingMethod
           value={selected.id}
           // Clicking the active button yields null: keep the current method selected
           onChange={(_, methodId: string | null) => methodId && onSelect(methodId)}
-          aria-label="Metodo di cottura"
+          aria-label={t('cooking.methodSelector')}
           sx={{ flexWrap: 'wrap' }}
         >
           {methods.map((method) => {
@@ -51,7 +53,7 @@ export function CookingMethodInfo({ methods, selected, onSelect }: CookingMethod
       )}
       <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
         <SelectedIcon fontSize="small" color="action" />
-        <Typography variant="body2">{describeCookingMethod(selected)}</Typography>
+        <Typography variant="body2">{describeCookingMethod(selected, t)}</Typography>
       </Stack>
     </Stack>
   )

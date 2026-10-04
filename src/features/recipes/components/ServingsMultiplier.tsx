@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import Stack from '@mui/material/Stack'
 import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
@@ -10,10 +11,11 @@ interface ServingsMultiplierProps {
 }
 
 export function ServingsMultiplier({ value, onChange }: ServingsMultiplierProps) {
+  const { t } = useTranslation()
   return (
     <Stack spacing={1}>
       <Typography variant="subtitle2" color="text.secondary">
-        Moltiplica dosi
+        {t('detail.servingsMultiplier')}
       </Typography>
       <ToggleButtonGroup
         value={value}

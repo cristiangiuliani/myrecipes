@@ -7,6 +7,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import './index.css'
+import '@/shared/i18n'
 import App from './app/App.tsx'
 import { theme } from './app/theme.ts'
 

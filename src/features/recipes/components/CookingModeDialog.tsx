@@ -1,4 +1,5 @@
 import { useState, type KeyboardEvent } from 'react'
+import { useTranslation } from 'react-i18next'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import Dialog from '@mui/material/Dialog'
@@ -20,6 +21,7 @@ import { formatClock } from '@/shared/lib/duration'
 import type { Recipe, RecipeStep } from '../types'
 import { getIngredientsById } from '../scaling/ingredientLookup'
 import { resolveStepContent } from '../scaling/resolveStepContent'
+import { useQuantityFormat } from '../scaling/useQuantityFormat'
 import { getRemainingMs } from '../cooking/timer'
 import { useStepTimers } from '../cooking/useStepTimers'
 import { useWakeLock } from '../cooking/useWakeLock'
@@ -36,6 +38,8 @@ interface CookingModeDialogProps {
 }
 
 export function CookingModeDialog({ open, onClose, recipe, steps, multiplier }: CookingModeDialogProps) {
+  const { t } = useTranslation()
+  const quantityFormat = useQuantityFormat()
   const theme = useTheme()
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
   const [requestedStepIndex, setStepIndex] = useState(0)
@@ -82,11 +86,11 @@ export function CookingModeDialog({ open, onClose, recipe, steps, multiplier }: 
     >
       <DialogTitle id="cooking-mode-title" sx={{ pr: 7 }}>
         <Typography variant="overline" component="p" color="text.secondary">
-          Passo {stepIndex + 1} di {steps.length}
+          {t('cookingMode.stepOf', { current: stepIndex + 1, total: steps.length })}
         </Typography>
         {step.title}
       </DialogTitle>
-      <IconButton aria-label="Chiudi" onClick={onClose} sx={{ position: 'absolute', right: 8, top: 8 }}>
+      <IconButton aria-label={t('cookingMode.close')} onClick={onClose} sx={{ position: 'absolute', right: 8, top: 8 }}>
         <CloseIcon />
       </IconButton>
       <LinearProgress variant="determinate" value={((stepIndex + 1) / steps.length) * 100} />
@@ -94,7 +98,7 @@ export function CookingModeDialog({ open, onClose, recipe, steps, multiplier }: 
       <DialogContent>
         <Stack spacing={3} sx={{ pt: 2 }}>
           <Typography variant="h6" component="p" sx={{ fontWeight: 400, lineHeight: 1.6 }}>
-            {resolveStepContent(step, ingredientsById, multiplier)}
+            {resolveStepContent(step, ingredientsById, multiplier, quantityFormat)}
           </Typography>
 
           {timer && (
@@ -116,7 +120,7 @@ export function CookingModeDialog({ open, onClose, recipe, steps, multiplier }: 
           {otherActiveSteps.length > 0 && (
             <Stack spacing={1}>
               <Typography variant="subtitle2" color="text.secondary">
-                Altri timer
+                {t('cookingMode.otherTimers')}
               </Typography>
               <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
                 {otherActiveSteps.map((other) => {
@@ -126,7 +130,7 @@ export function CookingModeDialog({ open, onClose, recipe, steps, multiplier }: 
                     <Chip
                       key={other.id}
                       icon={<TimerIcon />}
-                      label={`${other.title} · ${isDone ? 'scaduto' : formatClock(getRemainingMs(otherTimer, now))}`}
+                      label={`${other.title} · ${isDone ? t('cookingMode.expired') : formatClock(getRemainingMs(otherTimer, now))}`}
                       color={isDone ? 'warning' : 'default'}
                       variant={isDone ? 'filled' : 'outlined'}
                       onClick={() => goTo(steps.indexOf(other))}
@@ -141,15 +145,15 @@ export function CookingModeDialog({ open, onClose, recipe, steps, multiplier }: 
 
       <DialogActions sx={{ justifyContent: 'space-between', px: 3, pb: 2 }}>
         <Button startIcon={<ArrowBackIcon />} disabled={isFirst} onClick={() => goTo(stepIndex - 1)}>
-          Indietro
+          {t('cookingMode.back')}
         </Button>
         {isLast ? (
           <Button variant="contained" startIcon={<CheckIcon />} onClick={finish}>
-            Fine
+            {t('cookingMode.finish')}
           </Button>
         ) : (
           <Button variant="contained" endIcon={<ArrowForwardIcon />} onClick={() => goTo(stepIndex + 1)}>
-            Avanti
+            {t('cookingMode.next')}
           </Button>
         )}
       </DialogActions>

@@ -7,8 +7,9 @@ export interface IngredientSubstitute {
 export interface Ingredient {
   id: string
   name: string
-  amount: number
-  unit: string
+  // null for "as much as needed" (q.b.)
+  amount: number | null
+  unit: string | null
   optional?: boolean
   substitute?: IngredientSubstitute
 }

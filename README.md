@@ -56,6 +56,30 @@ See `CLAUDE.md` for the full architecture rationale and the recipe data model.
 
 **Recipe photos**: drop a JPEG named after the recipe id into `public/images/recipes/`, e.g. `public/images/recipes/burrito-001.jpg` (landscape, roughly 16:9, ~1600px wide is plenty). It shows up in the recipe card and at the top of the recipe page. Recipes without a photo show a placeholder in the same spot.
 
+## Languages
+
+The app is available in Italian (default), English and Dutch — pick one from the header menu; the choice is remembered on the device.
+
+- **App text** (buttons, labels, units, cooking descriptions) lives in `src/shared/i18n/locales/{it,en,nl}.ts`.
+- **Recipe text**: `public/data/recipes.json` is written in Italian and stays the single source for amounts, timers and settings. Translations live in one file per language, `public/data/locales/en.json` and `public/data/locales/nl.json`, keyed by recipe id. They only hold text, referenced by the recipe's existing ids, and anything left out — a field, a recipe, or the whole file — shows in Italian. Minimal example (`public/data/locales/en.json`):
+
+```json
+{
+  "language": "en",
+  "recipes": {
+    "burrito-001": {
+      "title": "…",
+      "groups": { "meat": "Meat" },
+      "ingredients": { "0001": { "name": "00 flour" }, "0002": { "name": "lard", "substitute": "softened butter" } },
+      "steps": { "s1": { "title": "Cook the meat", "content": "Put the beef ({0006}) in a large pot…" } },
+      "methods": { "stovetop": { "label": "Frying pan" } }
+    }
+  }
+}
+```
+
+Keep the `{0006}`-style ingredient references in translated step text so quantities still scale. Each translated recipe carries a `sourceHash` (a fingerprint of the Italian it was translated from): `yarn check-translations` lists missing or outdated translations whenever `recipes.json` changes, and `node scripts/check-translations.mjs --stamp <language> <recipeId>` marks an updated one as current. Adding a language means a new dictionary in `src/shared/i18n/locales/`, an entry in `LANGUAGES`, and (optionally) a `public/data/locales/<code>.json`. See `CLAUDE.md` for every field.
+
 ## Installable app (PWA)
 
 The app is a Progressive Web App (via `vite-plugin-pwa`, configured in `vite.config.ts`): it can be installed on the home screen ("Aggiungi a schermata Home" on iOS Safari, "Installa app" on Android/desktop Chrome) and works offline. The app shell is precached; recipe data is network-first with an offline fallback; photos and fonts are cached as they're viewed. New deploys activate automatically on the next app load.

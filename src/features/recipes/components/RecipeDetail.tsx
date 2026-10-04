@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
@@ -20,6 +21,7 @@ import type { Recipe } from '../types'
 import { getIngredientsById } from '../scaling/ingredientLookup'
 import { resolveStepContent } from '../scaling/resolveStepContent'
 import { formatQuantity } from '../scaling/formatQuantity'
+import { useQuantityFormat } from '../scaling/useQuantityFormat'
 import { filterStepsByMethod, resolveSelectedMethod } from '../methods/cookingMethods'
 import { ServingsMultiplier } from './ServingsMultiplier'
 import { CookingModeDialog } from './CookingModeDialog'
@@ -31,6 +33,8 @@ interface RecipeDetailProps {
 }
 
 export function RecipeDetail({ recipe }: RecipeDetailProps) {
+  const { t } = useTranslation()
+  const quantityFormat = useQuantityFormat()
   const [multiplier, setMultiplier] = useState(1)
   const [cooking, setCooking] = useState(false)
   const [selectedMethodId, setSelectedMethodId] = useState<string | null>(null)
@@ -40,10 +44,10 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
   const steps = filterStepsByMethod(recipe.steps, selectedMethod?.id)
 
   const timeInfo = [
-    { label: 'Preparazione', minutes: recipe.prepTimeMinutes },
-    { label: 'Riposo', minutes: recipe.restTimeMinutes },
-    { label: 'Cottura', minutes: recipe.cookTimeMinutes },
-    { label: 'Totale', minutes: recipe.totalTimeMinutes },
+    { label: t('detail.prepTime'), minutes: recipe.prepTimeMinutes },
+    { label: t('detail.restTime'), minutes: recipe.restTimeMinutes },
+    { label: t('detail.cookTime'), minutes: recipe.cookTimeMinutes },
+    { label: t('detail.totalTime'), minutes: recipe.totalTimeMinutes },
   ].filter((item) => item.minutes !== null && item.minutes !== undefined)
 
   return (
@@ -73,7 +77,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
       <Stack direction="row" spacing={3} useFlexGap sx={{ flexWrap: 'wrap' }}>
         <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
           <RestaurantIcon fontSize="small" color="action" />
-          <Typography variant="body2">{formatQuantity(recipe.servings.amount, recipe.servings.unit, multiplier)}</Typography>
+          <Typography variant="body2">{formatQuantity(recipe.servings.amount, recipe.servings.unit, multiplier, quantityFormat)}</Typography>
         </Stack>
         {timeInfo.map((item) => (
           <Stack key={item.label} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
@@ -93,7 +97,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
         <>
           <Box>
             <Button variant="contained" size="large" startIcon={<PlayArrowIcon />} onClick={() => setCooking(true)}>
-              Inizia a cucinare
+              {t('detail.startCooking')}
             </Button>
           </Box>
           <CookingModeDialog
@@ -112,7 +116,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
       <Stack spacing={3}>
         <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
           <Typography variant="h5" component="h2">
-            Ingredienti
+            {t('detail.ingredients')}
           </Typography>
           <ServingsMultiplier value={multiplier} onChange={setMultiplier} />
         </Stack>
@@ -126,12 +130,18 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
                 {group.ingredients.map((ingredient) => (
                   <ListItem key={ingredient.id} disableGutters>
                     <ListItemText
-                      primary={`${formatQuantity(ingredient.amount, ingredient.unit, multiplier)} ${ingredient.name}`}
+                      primary={
+                        ingredient.amount === null
+                          ? ingredient.name
+                          : `${formatQuantity(ingredient.amount, ingredient.unit, multiplier, quantityFormat)} ${ingredient.name}`
+                      }
                       secondary={
                         [
-                          ingredient.optional ? 'opzionale' : null,
+                          ingredient.optional ? t('detail.optional') : null,
                           ingredient.substitute
-                            ? `sostituto: ${formatQuantity(ingredient.substitute.amount, ingredient.substitute.unit, multiplier)} ${ingredient.substitute.name}`
+                            ? t('detail.substitute', {
+                                substitute: `${formatQuantity(ingredient.substitute.amount, ingredient.substitute.unit, multiplier, quantityFormat)} ${ingredient.substitute.name}`,
+                              })
                             : null,
                         ]
                           .filter(Boolean)
@@ -150,7 +160,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
 
       <Stack spacing={2}>
         <Typography variant="h5" component="h2">
-          Preparazione
+          {t('detail.steps')}
         </Typography>
         <Stepper orientation="vertical" nonLinear>
           {steps.map((step) => (
@@ -158,7 +168,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
               <StepLabel>{step.title}</StepLabel>
               <StepContent>
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  {resolveStepContent(step, ingredientsById, multiplier)}
+                  {resolveStepContent(step, ingredientsById, multiplier, quantityFormat)}
                 </Typography>
                 {step.timerSeconds && (
                   <Chip icon={<AccessTimeIcon />} label={formatSeconds(step.timerSeconds)} size="small" variant="outlined" />
@@ -174,7 +184,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
           <Divider />
           <Stack spacing={1}>
             <Typography variant="h5" component="h2">
-              Note
+              {t('detail.notes')}
             </Typography>
             <Typography variant="body2" color="text.secondary">
               {recipe.notes}
@@ -185,7 +195,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
 
       {recipe.source?.originalUrl && (
         <Typography variant="caption" color="text.secondary">
-          Fonte:{' '}
+          {t('detail.source')}{' '}
           <a href={recipe.source.originalUrl} target="_blank" rel="noreferrer">
             {recipe.source.originalUrl}
           </a>

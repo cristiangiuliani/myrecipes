@@ -1,3 +1,4 @@
+import type { TFunction } from 'i18next'
 import type { AirfryerSettings, CookingMethod, OvenSettings, RecipeStep, StovetopSettings } from '../types'
 
 export function getDefaultMethod(methods: CookingMethod[]): CookingMethod | undefined {
@@ -23,42 +24,52 @@ function joinParts(head: string, details: (string | null)[]): string {
   return [head, ...details.filter((part): part is string => !!part)].join(', ')
 }
 
+// Only plain values ("padella", "medio-alto") are looked up; free text ("padella o piastra di ferro") is shown as written
+const VALUE_KEY_PATTERN = /^[\p{L}\d-]+$/u
+
+function translateValue(t: TFunction, group: 'rackValues' | 'heatValues' | 'cookwareValues', value: string): string {
+  return VALUE_KEY_PATTERN.test(value) ? t(`cooking.${group}.${value}`, { defaultValue: value }) : value
+}
+
 // e.g. "Forno statico 200°C (180°C ventilato), ripiano centrale"
-function describeOven({ temperatureCelsius, temperatureCelsiusFan, mode, rack }: OvenSettings): string {
-  let head = mode ? `Forno ${mode}` : 'Forno'
+function describeOven({ temperatureCelsius, temperatureCelsiusFan, mode, rack }: OvenSettings, t: TFunction): string {
+  let head = t(`cooking.oven.${mode ?? 'plain'}`)
   if (mode === 'ventilato') {
     const temperature = temperatureCelsiusFan ?? temperatureCelsius
-    if (temperature !== null) head += ` ${temperature}°C`
+    if (temperature !== null) head += ` ${t('cooking.temperature', { value: temperature })}`
   } else if (temperatureCelsius !== null) {
-    head += ` ${temperatureCelsius}°C`
-    if (temperatureCelsiusFan !== null) head += ` (${temperatureCelsiusFan}°C ventilato)`
+    head += ` ${t('cooking.temperature', { value: temperatureCelsius })}`
+    if (temperatureCelsiusFan !== null) head += ` ${t('cooking.fanTemperature', { value: temperatureCelsiusFan })}`
   } else if (temperatureCelsiusFan !== null) {
-    head += ` ${temperatureCelsiusFan}°C ventilato`
+    head += ` ${t('cooking.fanOnly', { value: temperatureCelsiusFan })}`
   }
-  return joinParts(head, [rack ? `ripiano ${rack}` : null])
+  return joinParts(head, [rack ? t('cooking.rack', { rack: translateValue(t, 'rackValues', rack) }) : null])
 }
 
 // e.g. "Padella, fuoco medio-alto"
-function describeStovetop({ cookware, heat }: StovetopSettings): string {
-  if (!cookware) return heat ? `Fornello, fuoco ${heat}` : 'Fornello'
-  return joinParts(capitalize(cookware), [heat ? `fuoco ${heat}` : null])
+function describeStovetop({ cookware, heat }: StovetopSettings, t: TFunction): string {
+  const heatText = heat ? t('cooking.heat', { heat: translateValue(t, 'heatValues', heat) }) : null
+  const head = cookware ? capitalize(translateValue(t, 'cookwareValues', cookware)) : t('cooking.stovetop')
+  return joinParts(head, [heatText])
 }
 
 // e.g. "Friggitrice ad aria 180°C, preriscaldata"
-function describeAirfryer({ temperatureCelsius, preheat }: AirfryerSettings): string {
-  const head = temperatureCelsius !== null ? `Friggitrice ad aria ${temperatureCelsius}°C` : 'Friggitrice ad aria'
-  const preheatText = preheat === true ? 'preriscaldata' : preheat === false ? 'senza preriscaldare' : null
+function describeAirfryer({ temperatureCelsius, preheat }: AirfryerSettings, t: TFunction): string {
+  let head = t('cooking.airfryer')
+  if (temperatureCelsius !== null) head += ` ${t('cooking.temperature', { value: temperatureCelsius })}`
+  const preheatText = preheat === true ? t('cooking.preheated') : preheat === false ? t('cooking.notPreheated') : null
   return joinParts(head, [preheatText])
 }
 
-export function describeCookingMethod(method: CookingMethod): string {
+// `t` comes from the UI layer, so this stays a pure function of its inputs
+export function describeCookingMethod(method: CookingMethod, t: TFunction): string {
   switch (method.type) {
     case 'oven':
-      return describeOven(method.settings)
+      return describeOven(method.settings, t)
     case 'stovetop':
-      return describeStovetop(method.settings)
+      return describeStovetop(method.settings, t)
     case 'airfryer':
-      return describeAirfryer(method.settings)
+      return describeAirfryer(method.settings, t)
     case 'other':
       return method.label
   }

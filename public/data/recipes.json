@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T13:01:06+02:00",
+  "updatedAt": "2026-10-04T19:14:13+02:00",
   "recipes": [
     {
       "id": "kanelsnegle-001",
@@ -147,7 +147,7 @@
           "id": "s2",
           "group": "dough",
           "title": "Lavorare l'impasto",
-          "content": "Se usi farina integrale, prima di impastare copri la ciotola e lascia riposare l'impasto 15 minuti: la crusca assorbe il liquido e l'impasto diventa meno appiccicoso. Aggiungi altra farina solo se serve davvero, poca alla volta. Poi impasta per 8-10 minuti a mano o 5-6 minuti con la planetaria (gancio per impastare), finché l'impasto diventa liscio ed elastico.",
+          "content": "Aggiungi altra farina solo se serve davvero, poca alla volta. Poi impasta per 8-10 minuti a mano o 5-6 minuti con la planetaria (gancio per impastare), finché l'impasto diventa liscio ed elastico. Se usi farina integrale, prima di impastare copri la ciotola e lascia riposare l'impasto 15 minuti: la crusca assorbe il liquido e l'impasto diventa meno appiccicoso. ",
           "ingredientRefs": [],
           "timerSeconds": 480
         },
@@ -944,13 +944,13 @@
     },
     {
       "id": "flatbread-001",
-      "title": "Flatbrød Nordici in Tre Varianti - Pane Piatto di Segale e Orzo",
+      "title": "Flatbread Nordici in Tre Varianti - Pane Piatto di Segale e Orzo",
       "description": "Piccoli pani piatti cotti in padella, con farina di segale, orzo e grano. Si fanno semplici oppure aromatizzati: miele e timo, aglio orsino e santoreggia, nocciole e mirtilli rossi.",
       "origin": "Danimarca",
       "category": "pane",
       "tags": [
         "vichinga",
-        "flatbrød",
+        "flatbread",
         "pane piatto",
         "segale",
         "orzo",
@@ -961,7 +961,7 @@
       ],
       "servings": {
         "amount": 8,
-        "unit": "flatbrød (8-10)"
+        "unit": "flatbread (8-10)"
       },
       "prepTimeMinutes": 20,
       "restTimeMinutes": 30,
@@ -1121,7 +1121,7 @@
         {
           "id": "s4",
           "group": "dough",
-          "title": "Formare i flatbrød",
+          "title": "Formare i flatbread",
           "content": "Forma 8-10 piccoli pani piatti spessi circa 1 cm.",
           "ingredientRefs": [],
           "timerSeconds": null
@@ -1349,6 +1349,250 @@
         "type": "original",
         "originalUrl": null,
         "note": "Ricetta base di vellutata svedese di porri (purjolökssoppa), con guarnizione di pane di segale e semi."
+      }
+    },
+    {
+      "id": "risotto-spinaci-001",
+      "title": "Risotto agli Spinaci all'Onda - Risotto Veneto Cremoso",
+      "description": "Risotto cremoso e saporito alla veneta, con riso Vialone Nano, crema di spinaci e mantecatura con Grana e yogurt greco (al posto del formaggino della nonna).",
+      "origin": "Italia (Veneto)",
+      "category": "primo piatto",
+      "tags": [
+        "risotto",
+        "spinaci",
+        "veneto",
+        "riso",
+        "all'onda",
+        "vegetariano",
+        "yogurt greco",
+        "nord Italia"
+      ],
+      "servings": {
+        "amount": 4,
+        "unit": "porzioni"
+      },
+      "prepTimeMinutes": 10,
+      "restTimeMinutes": 2,
+      "cookTimeMinutes": 25,
+      "totalTimeMinutes": 37,
+      "groups": [
+        {
+          "id": "spinach",
+          "name": "Spinaci",
+          "ingredients": [
+            {
+              "id": "0001",
+              "name": "spinaci freschi",
+              "amount": 400,
+              "unit": "g",
+              "substitute": {
+                "name": "spinaci surgelati",
+                "amount": 300,
+                "unit": "g"
+              }
+            }
+          ]
+        },
+        {
+          "id": "risotto",
+          "name": "Risotto",
+          "ingredients": [
+            {
+              "id": "0002",
+              "name": "riso Vialone Nano",
+              "amount": 320,
+              "unit": "g",
+              "substitute": {
+                "name": "riso Carnaroli",
+                "amount": 320,
+                "unit": "g"
+              }
+            },
+            {
+              "id": "0003",
+              "name": "brodo di carne o misto, bollente",
+              "amount": 1.2,
+              "unit": "l",
+              "substitute": {
+                "name": "brodo vegetale, bollente",
+                "amount": 1.2,
+                "unit": "l"
+              }
+            },
+            {
+              "id": "0004",
+              "name": "cipolla bianca, tritata finissima",
+              "amount": 0.5,
+              "unit": "pz"
+            },
+            {
+              "id": "0005",
+              "name": "olio extravergine d'oliva",
+              "amount": 1,
+              "unit": "tbsp"
+            },
+            {
+              "id": "0006",
+              "name": "burro, diviso a metà",
+              "amount": 50,
+              "unit": "g"
+            },
+            {
+              "id": "0007",
+              "name": "vino bianco secco",
+              "amount": 80,
+              "unit": "ml"
+            }
+          ]
+        },
+        {
+          "id": "finishing",
+          "name": "Mantecatura",
+          "ingredients": [
+            {
+              "id": "0008",
+              "name": "Grana Padano o parmigiano grattugiato",
+              "amount": 60,
+              "unit": "g"
+            },
+            {
+              "id": "0009",
+              "name": "yogurt greco a temperatura ambiente",
+              "amount": 1.5,
+              "unit": "tbsp"
+            },
+            {
+              "id": "0010",
+              "name": "sale",
+              "amount": 1,
+              "unit": "pinch"
+            },
+            {
+              "id": "0011",
+              "name": "pepe macinato",
+              "amount": 1,
+              "unit": "pinch"
+            },
+            {
+              "id": "0012",
+              "name": "noce moscata grattugiata",
+              "amount": 1,
+              "unit": "pinch"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "group": "spinach",
+          "title": "Sbollentare gli spinaci",
+          "content": "Sbollenta gli spinaci ({0001}) 1-2 minuti in acqua salata, scolali, raffreddali e strizzali bene.",
+          "ingredientRefs": [
+            "0001"
+          ],
+          "timerSeconds": 120
+        },
+        {
+          "id": "s2",
+          "group": "spinach",
+          "title": "Preparare la crema di spinaci",
+          "content": "Frulla due terzi degli spinaci con un mestolo di brodo ({0003}) e trita grossolanamente il resto.",
+          "ingredientRefs": [
+            "0003"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s3",
+          "group": "risotto",
+          "title": "Appassire la cipolla",
+          "content": "In una pentola larga fai appassire la cipolla ({0004}) con l'olio ({0005}) e metà del burro ({0006}) a fuoco dolce, senza farla colorare.",
+          "ingredientRefs": [
+            "0004",
+            "0005",
+            "0006"
+          ],
+          "timerSeconds": 300
+        },
+        {
+          "id": "s4",
+          "group": "risotto",
+          "title": "Tostare il riso",
+          "content": "Aggiungi il riso ({0002}) e tostalo mescolando, finché i chicchi sono caldi e traslucidi.",
+          "ingredientRefs": [
+            "0002"
+          ],
+          "timerSeconds": 120
+        },
+        {
+          "id": "s5",
+          "group": "risotto",
+          "title": "Sfumare con il vino",
+          "content": "Sfuma con il vino ({0007}) e lascia evaporare completamente.",
+          "ingredientRefs": [
+            "0007"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s6",
+          "group": "risotto",
+          "title": "Cuocere il risotto",
+          "content": "Aggiungi il brodo caldo un mestolo alla volta, mescolando spesso e aspettando che si assorba prima di aggiungerne altro. Il riso deve restare morbido e sempre un po' brodoso. Tieni il brodo sempre caldo.",
+          "ingredientRefs": [],
+          "timerSeconds": 1020
+        },
+        {
+          "id": "s7",
+          "group": "risotto",
+          "title": "Unire gli spinaci",
+          "content": "Negli ultimi 4 minuti di cottura unisci la crema di spinaci e quelli tritati.",
+          "ingredientRefs": [],
+          "timerSeconds": 240
+        },
+        {
+          "id": "s8",
+          "group": "finishing",
+          "title": "Mantecare",
+          "content": "Spegni il fuoco e manteca con il burro rimasto (freddo, a pezzetti), il Grana ({0008}) e lo yogurt greco ({0009}). Mescola energicamente: è in questo momento che il riso rilascia l'amido e diventa cremoso. Aggiusta di sale ({0010}), pepe ({0011}) e noce moscata ({0012}), assaggiando prima di salare.",
+          "ingredientRefs": [
+            "0008",
+            "0009",
+            "0010",
+            "0011",
+            "0012"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s9",
+          "group": "finishing",
+          "title": "Riposo e servizio",
+          "content": "Copri e lascia riposare 2 minuti. Servi subito in piatti leggermente scaldati: il risotto deve essere 'all'onda', cioè muoversi se inclini il piatto.",
+          "ingredientRefs": [],
+          "timerSeconds": 120
+        }
+      ],
+      "cooking": {
+        "methods": [
+          {
+            "id": "stovetop",
+            "type": "stovetop",
+            "label": "Pentola",
+            "default": true,
+            "settings": {
+              "cookware": "pentola larga",
+              "heat": "dolce / medio-basso"
+            }
+          }
+        ]
+      },
+      "notes": "Stile veneto: riso Vialone Nano e consistenza 'all'onda', più morbida e fluida di quella lombarda. Tradizione di famiglia: la nonna univa un formaggino per la cremosità; qui è sostituito da 1 cucchiaio e mezzo di yogurt greco, che dà una nota più fresca e leggermente acidula che sta bene con gli spinaci. Aggiungi lo yogurt solo fuori dal fuoco e a temperatura ambiente, altrimenti rischia di impazzire e fare grumi. Con lo yogurt puoi ridurre il burro a 30-35 g per una versione più leggera. Lo yogurt aggiunge acidità: assaggia prima di salare. Per una versione più ricca puoi aggiungere una cucchiaiata di mascarpone o gorgonzola nella mantecatura.",
+      "source": {
+        "type": "original",
+        "originalUrl": null,
+        "note": "Risotto agli spinaci in stile veneto, con la variante di famiglia (yogurt greco al posto del formaggino della nonna)."
       }
     }
   ]
