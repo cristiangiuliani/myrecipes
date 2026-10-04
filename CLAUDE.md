@@ -55,6 +55,7 @@ Each feature exposes a small `index.ts` barrel; import `from '@/features/recipes
 ## Recipe data model (from `public/data/recipes.json`, an `{ updatedAt, recipes[] }` envelope)
 
 - `Recipe`: `id`, `title`, `description`, `origin`, `category`, `tags[]`, `servings: { amount, unit }` (unit isn't always "persone" — e.g. "girelle", "fette", "stampo"), `prepTimeMinutes`/`restTimeMinutes`/`cookTimeMinutes`/`totalTimeMinutes`, `groups[]`, `steps[]`, `cooking`, `notes`, `source`.
+- Photos aren't in the JSON: they're `public/images/recipes/<id>.jpg`, resolved to `Recipe.imageUrl` by the data layer (so a DB/Storage URL can replace the convention later). A missing file must degrade gracefully (placeholder in the photo slot, both on cards and on the detail page).
 - `groups[]`: named ingredient sections (`id`, `name`, `ingredients[]`).
 - `Ingredient`: `id`, `name`, `amount`, `unit`, optional `optional: true`, optional `substitute: { name, amount, unit }`.
 - `steps[]`: `id`, `group`, `title`, `content` (embeds `{0003}`-style ingredient refs inline), `ingredientRefs[]`, `timerSeconds`, optional `methods[]` (cooking method ids; the step shows only when the selected method is listed, always when absent).
@@ -67,7 +68,7 @@ Add Vitest for the scaling/formatting logic specifically — that's the part wit
 
 ## Deployment
 
-- Firebase Hosting, project `my-recipe-cards-bbaec` (see `.firebaserc`/`firebase.json`, hosting `public` dir is `dist`, with a SPA rewrite to `index.html` since routing is client-side via `react-router-dom`).
+- Firebase Hosting, project `my-recipe-cards-bbaec`, deployed to the **`ricette-di-famiglia` site** (https://ricette-di-famiglia.web.app, set via `hosting.site` in `firebase.json` — not the project's default site) (see `.firebaserc`/`firebase.json`, hosting `public` dir is `dist`, with a SPA rewrite to `index.html` since routing is client-side via `react-router-dom`).
 - `.github/workflows/firebase-hosting-merge.yml` builds and deploys to Hosting on every push to `main`.
 - **Auth: Workload Identity Federation, not a service account JSON key.** The Google Cloud org this project sits under enforces `iam.disableServiceAccountKeyCreation`, so downloadable keys aren't an option — and WIF is the better approach anyway (no long-lived secret stored in GitHub at all). This mirrors the working setup in `/Users/cristiangiuliani/Projects/cristiangiuliani` (`.github/workflows/firebase-hosting.yml`): a Workload Identity Pool + OIDC provider scoped to this exact repo, impersonating a service account with Hosting deploy rights, via `google-github-actions/auth`.
 - The GCP side is already provisioned (pool `github-pool`, provider `github-provider`, service account `github-firebase@my-recipe-cards-bbaec.iam.gserviceaccount.com` with `roles/firebasehosting.admin`, restricted to `cristiangiuliani/myrecipes` via the provider's attribute condition) — see README for the exact `gcloud` commands if it ever needs to be redone.

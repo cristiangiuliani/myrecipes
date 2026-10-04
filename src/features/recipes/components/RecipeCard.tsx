@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import { formatMinutes } from '@/shared/lib/duration'
 import type { Recipe } from '../types'
+import { RecipePhoto } from './RecipePhoto'
 
 interface RecipeCardProps {
   recipe: Recipe
@@ -18,7 +19,12 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
 
   return (
     <Card variant="outlined" sx={{ height: '100%' }}>
-      <CardActionArea component={RouterLink} to={`/recipes/${recipe.id}`} sx={{ height: '100%', alignItems: 'stretch' }}>
+      <CardActionArea
+        component={RouterLink}
+        to={`/recipes/${recipe.id}`}
+        sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-start' }}
+      >
+        <RecipePhoto src={recipe.imageUrl} alt={recipe.title} sx={{ aspectRatio: '16 / 9' }} />
         <CardContent>
           <Stack spacing={1.5}>
             <Stack direction="row" spacing={1} useFlexGap sx={{ alignItems: 'center', flexWrap: 'wrap' }}>

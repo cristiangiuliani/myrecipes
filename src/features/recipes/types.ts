@@ -112,4 +112,6 @@ export interface Recipe {
   cooking?: Cooking
   notes?: string
   source?: RecipeSource
+  // Photo location resolved by the data layer; the file may not exist yet
+  imageUrl: string
 }

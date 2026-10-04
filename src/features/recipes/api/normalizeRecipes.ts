@@ -14,6 +14,11 @@ type RawObject = Record<string, unknown>
 
 const OVEN_MODES: OvenMode[] = ['statico', 'ventilato', 'grill']
 
+// Photos are static files named after the recipe id, e.g. public/images/recipes/burrito-001.jpg
+function recipeImageUrl(id: string): string {
+  return `/images/recipes/${encodeURIComponent(id)}.jpg`
+}
+
 const DEFAULT_LABELS: Record<string, string> = {
   oven: 'Forno',
   stovetop: 'Fornello',
@@ -126,6 +131,7 @@ function normalizeRecipe(raw: RawObject): Recipe {
     ...recipe,
     steps: Array.isArray(recipe.steps) ? recipe.steps.map(normalizeStep) : [],
     cooking: normalizeCooking(raw),
+    imageUrl: recipeImageUrl(String(recipe.id)),
   }
 }
 

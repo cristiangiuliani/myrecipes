@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T19:09:40+02:00",
+  "updatedAt": "2026-10-04T13:01:06+02:00",
   "recipes": [
     {
       "id": "kanelsnegle-001",
@@ -940,6 +940,415 @@
         "type": "original",
         "originalUrl": null,
         "note": "Ricetta in stile norteño (Chihuahua), con tortillas di farina fatte in casa e ripieno di carne deshebrada al chile colorado."
+      }
+    },
+    {
+      "id": "flatbread-001",
+      "title": "Flatbrød Nordici in Tre Varianti - Pane Piatto di Segale e Orzo",
+      "description": "Piccoli pani piatti cotti in padella, con farina di segale, orzo e grano. Si fanno semplici oppure aromatizzati: miele e timo, aglio orsino e santoreggia, nocciole e mirtilli rossi.",
+      "origin": "Danimarca",
+      "category": "pane",
+      "tags": [
+        "vichinga",
+        "flatbrød",
+        "pane piatto",
+        "segale",
+        "orzo",
+        "senza lievito",
+        "in padella",
+        "danese",
+        "yogurt"
+      ],
+      "servings": {
+        "amount": 8,
+        "unit": "flatbrød (8-10)"
+      },
+      "prepTimeMinutes": 20,
+      "restTimeMinutes": 30,
+      "cookTimeMinutes": 15,
+      "totalTimeMinutes": 65,
+      "groups": [
+        {
+          "id": "dough",
+          "name": "Impasto base",
+          "ingredients": [
+            {
+              "id": "0001",
+              "name": "farina di segale",
+              "amount": 100,
+              "unit": "g"
+            },
+            {
+              "id": "0002",
+              "name": "farina d'orzo",
+              "amount": 100,
+              "unit": "g"
+            },
+            {
+              "id": "0003",
+              "name": "farina di grano tenero o integrale",
+              "amount": 120,
+              "unit": "g"
+            },
+            {
+              "id": "0004",
+              "name": "yogurt, birra o siero di latte",
+              "amount": 200,
+              "unit": "ml"
+            },
+            {
+              "id": "0005",
+              "name": "sale",
+              "amount": 2,
+              "unit": "tsp"
+            },
+            {
+              "id": "0006",
+              "name": "acqua, quanto basta",
+              "amount": null,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "id": "honey-thyme",
+          "name": "Variante miele e timo (opzionale)",
+          "ingredients": [
+            {
+              "id": "0007",
+              "name": "miele",
+              "amount": 1,
+              "unit": "tbsp",
+              "optional": true
+            },
+            {
+              "id": "0008",
+              "name": "timo, tritato finemente",
+              "amount": 2,
+              "unit": "tbsp",
+              "optional": true
+            }
+          ]
+        },
+        {
+          "id": "ramsons",
+          "name": "Variante aglio orsino e santoreggia (opzionale)",
+          "ingredients": [
+            {
+              "id": "0009",
+              "name": "aglio orsino (ramsons), tritato finemente",
+              "amount": 3,
+              "unit": "tbsp",
+              "optional": true
+            },
+            {
+              "id": "0010",
+              "name": "santoreggia estiva, tritata finemente",
+              "amount": 2,
+              "unit": "tbsp",
+              "optional": true
+            }
+          ]
+        },
+        {
+          "id": "hazelnut-cranberry",
+          "name": "Variante nocciole e mirtilli rossi (opzionale)",
+          "ingredients": [
+            {
+              "id": "0011",
+              "name": "mirtilli rossi secchi, tritati",
+              "amount": 1,
+              "unit": "manciata",
+              "optional": true
+            },
+            {
+              "id": "0012",
+              "name": "nocciole, tritate",
+              "amount": 1,
+              "unit": "manciata",
+              "optional": true
+            },
+            {
+              "id": "0013",
+              "name": "miele",
+              "amount": 1,
+              "unit": "tsp",
+              "optional": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "group": "dough",
+          "title": "Preparare l'impasto",
+          "content": "In una ciotola mescola le farine ({0001}, {0002}, {0003}) e il sale ({0005}). Aggiungi yogurt, birra o siero ({0004}) e l'acqua ({0006}) poca alla volta, quanto serve. Impasta bene fino a ottenere un impasto elastico che non si attacca alla ciotola.",
+          "ingredientRefs": [
+            "0001",
+            "0002",
+            "0003",
+            "0004",
+            "0005",
+            "0006"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s2",
+          "group": "dough",
+          "title": "Riposo",
+          "content": "Lascia riposare l'impasto per 30 minuti.",
+          "ingredientRefs": [],
+          "timerSeconds": 1800
+        },
+        {
+          "id": "s3",
+          "group": "dough",
+          "title": "Aromatizzare (facoltativo)",
+          "content": "Puoi usare l'impasto così com'è, oppure aggiungere una delle varianti prima di formare i pani. Miele e timo: {0007} e {0008}. Aglio orsino e santoreggia: {0009} e {0010}. Nocciole e mirtilli rossi: {0011} e {0012}, con un po' di miele ({0013}) se vuoi.",
+          "ingredientRefs": [
+            "0007",
+            "0008",
+            "0009",
+            "0010",
+            "0011",
+            "0012",
+            "0013"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s4",
+          "group": "dough",
+          "title": "Formare i flatbrød",
+          "content": "Forma 8-10 piccoli pani piatti spessi circa 1 cm.",
+          "ingredientRefs": [],
+          "timerSeconds": null
+        },
+        {
+          "id": "s5",
+          "group": "dough",
+          "title": "Cottura",
+          "methods": [
+            "stovetop"
+          ],
+          "content": "Cuoci i pani a fuoco medio in una padella (o su una piastra di ferro), girandoli continuamente finché sono dorati e cotti su entrambi i lati. Quando sono pronti, battendoci sopra devono suonare vuoti.",
+          "ingredientRefs": [],
+          "timerSeconds": null
+        }
+      ],
+      "cooking": {
+        "methods": [
+          {
+            "id": "stovetop",
+            "type": "stovetop",
+            "label": "Padella",
+            "default": true,
+            "settings": {
+              "cookware": "padella o piastra di ferro",
+              "heat": "medio"
+            }
+          }
+        ]
+      },
+      "notes": "Puoi variare i tipi di farina, i liquidi e le erbe a piacere. Nella versione tradizionale la cottura avviene sulla brace, su piastra di ferro o in padella. In Olanda l'aglio orsino si chiama daslook (stagionale, primavera); la santoreggia estiva è 'bonenkruid'.",
+      "source": {
+        "type": "adapted",
+        "originalUrl": null,
+        "note": "Dal libro di ricette fotografato (p. 128, 'Flatbread in three ways', testo danese/inglese). Il libro non indica i tempi di cottura: il valore di cookTimeMinutes è una stima."
+      }
+    },
+    {
+      "id": "purjolokssoppa-001",
+      "title": "Purjolökssoppa - Vellutata Svedese di Porri e Patate",
+      "description": "Vellutata cremosa e confortante di porri e patate, tipica della cucina svedese, servita con crostini di segale e semi tostati.",
+      "origin": "Svezia",
+      "category": "zuppa",
+      "tags": [
+        "porri",
+        "vellutata",
+        "zuppa",
+        "svedese",
+        "nordica",
+        "patate",
+        "autunno",
+        "pane di segale"
+      ],
+      "servings": {
+        "amount": 4,
+        "unit": "porzioni"
+      },
+      "prepTimeMinutes": 15,
+      "restTimeMinutes": 0,
+      "cookTimeMinutes": 40,
+      "totalTimeMinutes": 55,
+      "groups": [
+        {
+          "id": "soup",
+          "name": "Vellutata",
+          "ingredients": [
+            {
+              "id": "0001",
+              "name": "porri grandi, puliti e affettati (solo bianco e verde chiaro)",
+              "amount": 4,
+              "unit": "pz"
+            },
+            {
+              "id": "0002",
+              "name": "burro",
+              "amount": 50,
+              "unit": "g"
+            },
+            {
+              "id": "0003",
+              "name": "patate farinose, pelate e a cubetti",
+              "amount": 400,
+              "unit": "g"
+            },
+            {
+              "id": "0004",
+              "name": "brodo vegetale o di pollo",
+              "amount": 1,
+              "unit": "l"
+            },
+            {
+              "id": "0005",
+              "name": "panna fresca liquida",
+              "amount": 100,
+              "unit": "ml",
+              "optional": true
+            },
+            {
+              "id": "0006",
+              "name": "sale",
+              "amount": 1,
+              "unit": "tsp"
+            },
+            {
+              "id": "0007",
+              "name": "pepe bianco macinato",
+              "amount": 0.25,
+              "unit": "tsp"
+            },
+            {
+              "id": "0008",
+              "name": "noce moscata grattugiata",
+              "amount": 1,
+              "unit": "pinch"
+            }
+          ]
+        },
+        {
+          "id": "garnish",
+          "name": "Guarnizione",
+          "ingredients": [
+            {
+              "id": "0009",
+              "name": "fette di pane di segale, a cubetti",
+              "amount": 2,
+              "unit": "fette"
+            },
+            {
+              "id": "0010",
+              "name": "semi misti (girasole, zucca)",
+              "amount": 2,
+              "unit": "tbsp"
+            },
+            {
+              "id": "0011",
+              "name": "erba cipollina fresca tritata",
+              "amount": 1,
+              "unit": "tbsp"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "group": "soup",
+          "title": "Stufare i porri",
+          "content": "In una pentola capiente sciogli il burro ({0002}) a fuoco medio-basso. Aggiungi i porri ({0001}) e fai stufare mescolando spesso, senza far colorare, finché diventano morbidi e traslucidi.",
+          "ingredientRefs": [
+            "0001",
+            "0002"
+          ],
+          "timerSeconds": 600
+        },
+        {
+          "id": "s2",
+          "group": "soup",
+          "title": "Aggiungere patate e brodo",
+          "content": "Unisci le patate ({0003}) e versa il brodo ({0004}). Porta a ebollizione, poi abbassa la fiamma e lascia sobbollire coperto finché le patate sono tenere.",
+          "ingredientRefs": [
+            "0003",
+            "0004"
+          ],
+          "timerSeconds": 1200
+        },
+        {
+          "id": "s3",
+          "group": "soup",
+          "title": "Frullare",
+          "content": "Togli dal fuoco e frulla con un frullatore a immersione fino a ottenere una crema liscia e vellutata.",
+          "ingredientRefs": [],
+          "timerSeconds": null
+        },
+        {
+          "id": "s4",
+          "group": "soup",
+          "title": "Mantecare con la panna",
+          "content": "Rimetti la pentola sul fuoco basso, aggiungi la panna ({0005}), il sale ({0006}), il pepe bianco ({0007}) e la noce moscata ({0008}). Mescola e scalda senza far bollire. Assaggia e regola di sale.",
+          "ingredientRefs": [
+            "0005",
+            "0006",
+            "0007",
+            "0008"
+          ],
+          "timerSeconds": 180
+        },
+        {
+          "id": "s5",
+          "group": "garnish",
+          "title": "Preparare i crostini",
+          "content": "In una padella antiaderente tosta il pane di segale ({0009}) con un filo di olio o burro finché è dorato e croccante.",
+          "ingredientRefs": [
+            "0009"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s6",
+          "group": "garnish",
+          "title": "Servire",
+          "content": "Versa la vellutata nei piatti e guarnisci con i crostini, i semi ({0010}) e l'erba cipollina ({0011}).",
+          "ingredientRefs": [
+            "0010",
+            "0011"
+          ],
+          "timerSeconds": null
+        }
+      ],
+      "cooking": {
+        "methods": [
+          {
+            "id": "stovetop",
+            "type": "stovetop",
+            "label": "Pentola",
+            "default": true,
+            "settings": {
+              "cookware": "pentola capiente",
+              "heat": "medio-basso"
+            }
+          }
+        ]
+      },
+      "notes": "Per una versione più leggera puoi omettere la panna e aggiungere un pezzetto di patata in più per la cremosità. Ottima anche fredda, come una vichyssoise scandinava. Si conserva 3-4 giorni in frigo e si congela bene (senza i crostini) per un paio di mesi.",
+      "source": {
+        "type": "original",
+        "originalUrl": null,
+        "note": "Ricetta base di vellutata svedese di porri (purjolökssoppa), con guarnizione di pane di segale e semi."
       }
     }
   ]

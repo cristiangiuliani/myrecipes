@@ -24,6 +24,7 @@ import { filterStepsByMethod, resolveSelectedMethod } from '../methods/cookingMe
 import { ServingsMultiplier } from './ServingsMultiplier'
 import { CookingModeDialog } from './CookingModeDialog'
 import { CookingMethodInfo } from './CookingMethodInfo'
+import { RecipePhoto } from './RecipePhoto'
 
 interface RecipeDetailProps {
   recipe: Recipe
@@ -47,6 +48,12 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
 
   return (
     <Stack spacing={4}>
+      <RecipePhoto
+        src={recipe.imageUrl}
+        alt={recipe.title}
+        sx={{ aspectRatio: '16 / 9', maxHeight: 420, borderRadius: 2 }}
+      />
+
       <Stack spacing={1.5}>
         <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
           <Chip label={recipe.category} color="primary" size="small" />

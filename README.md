@@ -54,9 +54,11 @@ See `CLAUDE.md` for the full architecture rationale and the recipe data model.
 
 `public/data` holds the recipe JSON data files.
 
+**Recipe photos**: drop a JPEG named after the recipe id into `public/images/recipes/`, e.g. `public/images/recipes/burrito-001.jpg` (landscape, roughly 16:9, ~1600px wide is plenty). It shows up in the recipe card and at the top of the recipe page. Recipes without a photo show a placeholder in the same spot.
+
 ## Deployment
 
-Every push to `main` is built and deployed to Firebase Hosting automatically by `.github/workflows/firebase-hosting-merge.yml`. There's no manual deploy step.
+Every push to `main` is built and deployed to Firebase Hosting (site `ricette-di-famiglia` → https://ricette-di-famiglia.web.app, inside project `my-recipe-cards-bbaec`) automatically by `.github/workflows/firebase-hosting-merge.yml`. There's no manual deploy step.
 
 Auth uses **Workload Identity Federation** instead of a service account key (the GCP org blocks key creation via `iam.disableServiceAccountKeyCreation`). This has already been provisioned for `my-recipe-cards-bbaec` (project number `238961387709`) — kept here for reference and in case it ever needs to be redone (e.g. a new project or repo):
 
