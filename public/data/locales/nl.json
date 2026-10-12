@@ -706,6 +706,114 @@
       },
       "notes": "Venetiaanse stijl: Vialone Nano-rijst en een 'all'onda'-structuur, zachter en vloeibaarder dan de Lombardische. Familietraditie: oma deed er een smeerkaasje door voor de romigheid; hier is dat vervangen door anderhalve eetlepel Griekse yoghurt, die een frissere, licht zurige toets geeft die goed bij spinazie past. Voeg de yoghurt alleen van het vuur af en op kamertemperatuur toe, anders kan hij schiften en klonteren. Met de yoghurt kun je de boter terugbrengen tot 30-35 g voor een lichtere versie. De yoghurt voegt zuur toe: proef voordat je zout toevoegt. Voor een rijkere versie kun je bij het afmaken een lepel mascarpone of gorgonzola toevoegen.",
       "sourceNote": "Spinazierisotto in Venetiaanse stijl, met de familievariant (Griekse yoghurt in plaats van oma's smeerkaasje)."
+    },
+    "focaccia-001": {
+      "sourceHash": "848e741260801c0c",
+      "title": "Zachte focaccia van de bakker - Italiaanse focaccia",
+      "description": "Hoge, zachte focaccia zoals bij de Italiaanse bakker, met zuurdesem en een lange rijs in de koelkast. Kan ook met gist (dezelfde dag klaar) of met speltbloem.",
+      "origin": "Italië",
+      "category": "brood",
+      "servingsUnit": "porties (bakplaat 30x40 cm)",
+      "tags": {
+        "focaccia": "focaccia",
+        "italiana": "Italiaans",
+        "pasta madre": "zuurdesem",
+        "lievito di birra": "gist",
+        "farro": "spelt",
+        "salamoia": "pekel",
+        "rosmarino": "rozemarijn",
+        "lievitati": "gerezen deeg"
+      },
+      "groups": {
+        "dough": "Deeg",
+        "topping": "Bakplaat en pekel"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "tarwebloem (minstens 11-12 g eiwit)",
+          "substitute": "speltbloem"
+        },
+        "0002": {
+          "name": "actieve zuurdesemstarter",
+          "substitute": "gedroogde gist (of 15 g verse gist)"
+        },
+        "0003": {
+          "name": "water"
+        },
+        "0004": {
+          "name": "fijn zout"
+        },
+        "0005": {
+          "name": "extra vierge olijfolie"
+        },
+        "0006": {
+          "name": "honing of suiker"
+        },
+        "0007": {
+          "name": "extra vierge olijfolie voor de bakplaat"
+        },
+        "0008": {
+          "name": "water voor de pekel"
+        },
+        "0009": {
+          "name": "extra vierge olijfolie voor de pekel"
+        },
+        "0010": {
+          "name": "grof zout"
+        },
+        "0011": {
+          "name": "takjes rozemarijn"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Eerste menging en rust",
+          "content": "Los de zuurdesem of gist ({0002}) op in het water ({0003}) met de honing ({0006}). Voeg de bloem ({0001}) toe en roer alleen tot er geen droge bloem meer over is, zonder te kneden. Dek af en laat 30 minuten rusten."
+        },
+        "s2": {
+          "title": "Zout en olie",
+          "content": "Voeg het zout ({0004}) en de olie ({0005}) toe en kneed 6-8 minuten, tot het deeg glad en elastisch is. Met speltbloem kneed je maar 3-4 minuten, anders valt het uit elkaar."
+        },
+        "s3": {
+          "title": "Vouwen",
+          "content": "Doe een vouwronde: trek een rand van het deeg omhoog en vouw hem naar het midden, en draai de kom tot je helemaal rond bent. Met gist doe je 3 rondes, elke 20 minuten één (1 uur). Met zuurdesem doe je 4 rondes, elke 30 minuten één (2 uur). Houd de kom tussen de rondes afgedekt."
+        },
+        "s4": {
+          "title": "Eerste rijs",
+          "content": "Laat afgedekt rijzen op kamertemperatuur. Met gist duurt het 1,5-2 uur, tot het deeg verdubbeld is. Met zuurdesem 1-2 uur, tot het ongeveer de helft in volume is gegroeid. Met spelt eerder controleren: dat rijst sneller."
+        },
+        "s5": {
+          "title": "Koelkast (alleen met zuurdesem)",
+          "content": "Met zuurdesem zet je de afgedekte kom tot de volgende dag in de koelkast, 12-18 uur. Met gist sla je deze stap over."
+        },
+        "s6": {
+          "title": "Op de bakplaat",
+          "content": "Giet de olie ({0007}) in een bakplaat van 30x40 cm, leg het deeg erin en trek het voorzichtig met je vingers uit. Als het terugveert, wacht 15 minuten en probeer opnieuw."
+        },
+        "s7": {
+          "title": "Tweede rijs",
+          "content": "Dek af en laat rijzen tot het deeg luchtig is, vol bubbels zit en trilt als je de bakplaat beweegt: 1-1,5 uur met gist, 3-4 uur met zuurdesem. Zet in het laatste halfuur de oven aan op 230°C (boven- en onderwarmte)."
+        },
+        "s8": {
+          "title": "Pekel en kuiltjes",
+          "content": "Klop het water ({0008}) met de olie ({0009}) tot een emulsie. Druk met ingevette vingers tot op de bodem kuiltjes in het deeg, giet de pekel erover en bestrooi met het grove zout ({0010}) en de rozemarijn ({0011})."
+        },
+        "s9": {
+          "title": "Bakken",
+          "content": "Bak op de onderste richel van de oven op 230°C (boven- en onderwarmte) in 20-25 minuten, tot de focaccia goudbruin is van boven en knapperig van onder."
+        },
+        "s10": {
+          "title": "Rusten",
+          "content": "Haal uit de oven en laat 10 minuten afkoelen op een rooster voordat je hem aansnijdt, zo blijft de bodem knapperig."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "Met gist (5 g gedroogd of 15 g vers) gebruik je 500 g bloem en 375 ml water, omdat de bloem en het water uit de zuurdesem ontbreken; hij is dezelfde dag klaar in ongeveer 4-5 uur (bijv. deeg maken om 13 uur, de oven in rond 17:30). Verse gist verkruimelen en oplossen in het water; gedroogde gist kun je ook door de bloem mengen. Met zuurdesem duurt het twee dagen: bijv. deeg maken om 14 uur, de koelkast in rond 18 uur; de volgende dag om 9:30 op de bakplaat en rond 13 uur de oven in. Met speltbloem gebruik je minder water (290 ml met zuurdesem, 340 ml met gist), kneed je kort en controleer je de rijs eerder: spelt gaat snel van klaar naar ingezakt, dus beter iets te vroeg bakken dan te laat. Heeft de tarwebloem minder dan 11 g eiwit, gebruik dan 25 ml minder water. De tijden gelden voor een keuken van ongeveer 22°C: is het koeler, tel dan 30-60 minuten op bij elke rijs, of zet het deeg in de uitgeschakelde oven met het lampje aan.",
+      "sourceNote": "Zachte focaccia in de stijl van een Italiaanse bakker. Basisrecept met tarwebloem en zuurdesem, met varianten met gist (gedroogd of vers) en speltbloem."
     }
   }
 }

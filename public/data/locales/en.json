@@ -704,6 +704,114 @@
       },
       "notes": "Venetian style: Vialone Nano rice and an 'all'onda' consistency, softer and runnier than the Lombard style. A family tradition: grandma stirred in a cheese spread for creaminess; here it's replaced by 1½ tablespoons of Greek yogurt, which adds a fresher, slightly tangy note that goes well with spinach. Only add the yogurt off the heat and at room temperature, or it may split and turn lumpy. With the yogurt you can reduce the butter to 30-35 g for a lighter version. The yogurt adds acidity: taste before salting. For a richer version, add a spoonful of mascarpone or gorgonzola when finishing.",
       "sourceNote": "Venetian-style spinach risotto, with the family twist (Greek yogurt instead of grandma's cheese spread)."
+    },
+    "focaccia-001": {
+      "sourceHash": "848e741260801c0c",
+      "title": "Soft Bakery Focaccia - Italian Focaccia",
+      "description": "Thick, soft focaccia just like in Italian bakeries, made with sourdough starter and a long cold rise in the fridge. It can also be made with yeast (ready the same day) or with spelt flour.",
+      "origin": "Italy",
+      "category": "bread",
+      "servingsUnit": "servings (30x40 cm tray)",
+      "tags": {
+        "focaccia": "focaccia",
+        "italiana": "Italian",
+        "pasta madre": "sourdough",
+        "lievito di birra": "yeast",
+        "farro": "spelt",
+        "salamoia": "brine",
+        "rosmarino": "rosemary",
+        "lievitati": "leavened bakes"
+      },
+      "groups": {
+        "dough": "Dough",
+        "topping": "Tray and brine"
+      },
+      "ingredients": {
+        "0001": {
+          "name": "wheat flour (tarwebloem, at least 11-12 g protein)",
+          "substitute": "spelt flour (speltbloem)"
+        },
+        "0002": {
+          "name": "active sourdough starter",
+          "substitute": "dry yeast (or 15 g fresh yeast)"
+        },
+        "0003": {
+          "name": "water"
+        },
+        "0004": {
+          "name": "fine salt"
+        },
+        "0005": {
+          "name": "extra virgin olive oil"
+        },
+        "0006": {
+          "name": "honey or sugar"
+        },
+        "0007": {
+          "name": "extra virgin olive oil for the tray"
+        },
+        "0008": {
+          "name": "water for the brine"
+        },
+        "0009": {
+          "name": "extra virgin olive oil for the brine"
+        },
+        "0010": {
+          "name": "coarse salt"
+        },
+        "0011": {
+          "name": "rosemary sprigs"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "First mix and rest",
+          "content": "Dissolve the starter or yeast ({0002}) in the water ({0003}) with the honey ({0006}). Add the flour ({0001}) and stir just until no dry flour remains, without kneading. Cover and leave to rest for 30 minutes."
+        },
+        "s2": {
+          "title": "Salt and oil",
+          "content": "Add the salt ({0004}) and the oil ({0005}) and knead for 6-8 minutes, until the dough is smooth and elastic. With spelt flour knead for only 3-4 minutes, or it will fall apart."
+        },
+        "s3": {
+          "title": "Folds",
+          "content": "Do a set of folds: pull one edge of the dough up and fold it into the middle, turning the bowl until you have gone all the way round. With yeast do 3 sets, one every 20 minutes (1 hour). With sourdough do 4 sets, one every 30 minutes (2 hours). Keep the bowl covered between sets."
+        },
+        "s4": {
+          "title": "First rise",
+          "content": "Leave to rise, covered, at room temperature. With yeast it takes 1.5-2 hours, until the dough has doubled. With sourdough 1-2 hours, until it has grown by about half. With spelt check earlier: it rises faster."
+        },
+        "s5": {
+          "title": "Fridge (sourdough only)",
+          "content": "With sourdough, put the covered bowl in the fridge until the next day, for 12-18 hours. With yeast, skip this step."
+        },
+        "s6": {
+          "title": "Into the tray",
+          "content": "Pour the oil ({0007}) into a 30x40 cm tray, lay the dough in it and gently stretch it out with your fingers. If it springs back, wait 15 minutes and try again."
+        },
+        "s7": {
+          "title": "Second rise",
+          "content": "Cover and leave to rise until puffy, full of bubbles and wobbly when you shake the tray: 1-1.5 hours with yeast, 3-4 hours with sourdough. During the last half hour, preheat the oven to 230°C (conventional, no fan)."
+        },
+        "s8": {
+          "title": "Brine and dimples",
+          "content": "Whisk the water ({0008}) with the oil ({0009}) until emulsified. With oiled fingers, press the dough all the way to the bottom to make dimples, pour the brine over it and sprinkle with the coarse salt ({0010}) and the rosemary ({0011})."
+        },
+        "s9": {
+          "title": "Bake",
+          "content": "Bake on the bottom rack of the conventional oven at 230°C for 20-25 minutes, until golden on top and crisp underneath."
+        },
+        "s10": {
+          "title": "Rest",
+          "content": "Take it out of the oven and let it cool on a wire rack for 10 minutes before cutting, so the bottom stays crisp."
+        }
+      },
+      "methods": {
+        "oven": {
+          "label": "Oven"
+        }
+      },
+      "notes": "With yeast (5 g dry or 15 g fresh) use 500 g flour and 375 ml water, to make up for the flour and water in the starter; it's ready the same day in about 4-5 hours (e.g. mix at 1 pm, into the oven around 5:30 pm). Crumble fresh yeast and dissolve it in the water; dry yeast can also be mixed into the flour. With sourdough it takes two days: e.g. mix at 2 pm, into the fridge around 6 pm; the next day into the tray at 9:30 am and into the oven around 1 pm. With spelt flour (speltbloem) use less water (290 ml with sourdough, 340 ml with yeast), knead briefly and check the rise earlier: spelt goes quickly from ready to collapsed, so better to bake a little early than too late. If the tarwebloem has less than 11 g protein, use 25 ml less water. The times assume a kitchen at about 22°C: if it's cooler, add 30-60 minutes to each rise, or put the dough in the switched-off oven with the light on.",
+      "sourceNote": "Soft focaccia in the style of an Italian bakery. Base recipe with tarwebloem and sourdough starter, with yeast (dry or fresh) and spelt flour variations."
     }
   }
 }
