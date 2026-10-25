@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T13:19:00+01:00",
+  "updatedAt": "2026-10-25T13:31:00+01:00",
   "recipes": [
     {
       "id": "kanelsnegle-001",
@@ -147,7 +147,7 @@
           "id": "s2",
           "group": "dough",
           "title": "Lavorare l'impasto",
-          "content": "Aggiungi altra farina solo se serve davvero, poca alla volta. Poi impasta per 8-10 minuti a mano o 5-6 minuti con la planetaria (gancio per impastare), finché l'impasto diventa liscio ed elastico. Se usi farina integrale, prima di impastare copri la ciotola e lascia riposare l'impasto 15 minuti: la crusca assorbe il liquido e l'impasto diventa meno appiccicoso. ",
+          "content": "Se usi farina integrale, prima di impastare copri la ciotola e lascia riposare l'impasto 15 minuti: la crusca assorbe il liquido e l'impasto diventa meno appiccicoso. Aggiungi altra farina solo se serve davvero, poca alla volta. Poi impasta per 8-10 minuti a mano o 5-6 minuti con la planetaria (gancio per impastare), finché l'impasto diventa liscio ed elastico.",
           "ingredientRefs": [],
           "timerSeconds": 480
         },
@@ -1593,6 +1593,246 @@
         "type": "original",
         "originalUrl": null,
         "note": "Risotto agli spinaci in stile veneto, con la variante di famiglia (yogurt greco al posto del formaggino della nonna)."
+      }
+    },
+    {
+      "id": "focaccia-001",
+      "title": "Focaccia Morbida da Forno - Focaccia Italiana",
+      "description": "La focaccia alta e soffice come quella dei forni italiani, con pasta madre e lunga lievitazione in frigo. Si può fare anche con lievito di birra (pronta in giornata) o con farina di farro.",
+      "origin": "Italia",
+      "category": "pane",
+      "tags": [
+        "focaccia",
+        "italiana",
+        "pasta madre",
+        "lievito di birra",
+        "farro",
+        "salamoia",
+        "rosmarino",
+        "lievitati"
+      ],
+      "servings": {
+        "amount": 6,
+        "unit": "porzioni (teglia 30x40 cm)"
+      },
+      "prepTimeMinutes": 15,
+      "restTimeMinutes": 270,
+      "cookTimeMinutes": 25,
+      "totalTimeMinutes": 310,
+      "groups": [
+        {
+          "id": "dough",
+          "name": "Impasto",
+          "ingredients": [
+            {
+              "id": "0001",
+              "name": "tarwebloem (farina di frumento, almeno 11-12 g di proteine)",
+              "amount": 450,
+              "unit": "g",
+              "substitute": {
+                "name": "speltbloem (farina di farro spelta)",
+                "amount": 450,
+                "unit": "g"
+              }
+            },
+            {
+              "id": "0002",
+              "name": "pasta madre attiva",
+              "amount": 100,
+              "unit": "g",
+              "substitute": {
+                "name": "lievito di birra secco (oppure 15 g di lievito di birra fresco)",
+                "amount": 5,
+                "unit": "g"
+              }
+            },
+            {
+              "id": "0003",
+              "name": "acqua",
+              "amount": 325,
+              "unit": "ml"
+            },
+            {
+              "id": "0004",
+              "name": "sale fino",
+              "amount": 10,
+              "unit": "g"
+            },
+            {
+              "id": "0005",
+              "name": "olio extravergine d'oliva",
+              "amount": 2,
+              "unit": "tbsp"
+            },
+            {
+              "id": "0006",
+              "name": "miele o zucchero",
+              "amount": 5,
+              "unit": "g",
+              "optional": true
+            }
+          ]
+        },
+        {
+          "id": "topping",
+          "name": "Teglia e salamoia",
+          "ingredients": [
+            {
+              "id": "0007",
+              "name": "olio extravergine d'oliva per la teglia",
+              "amount": 40,
+              "unit": "ml"
+            },
+            {
+              "id": "0008",
+              "name": "acqua per la salamoia",
+              "amount": 40,
+              "unit": "ml"
+            },
+            {
+              "id": "0009",
+              "name": "olio extravergine d'oliva per la salamoia",
+              "amount": 40,
+              "unit": "ml"
+            },
+            {
+              "id": "0010",
+              "name": "sale grosso",
+              "amount": 1,
+              "unit": "tsp"
+            },
+            {
+              "id": "0011",
+              "name": "rametti di rosmarino",
+              "amount": 2,
+              "unit": "pz",
+              "optional": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "group": "dough",
+          "title": "Primo impasto e riposo",
+          "content": "Sciogli la pasta madre o il lievito ({0002}) nell'acqua ({0003}) con il miele ({0006}). Aggiungi la farina ({0001}) e mescola solo finché non resta farina asciutta, senza impastare. Copri e lascia riposare 30 minuti.",
+          "ingredientRefs": [
+            "0001",
+            "0002",
+            "0003",
+            "0006"
+          ],
+          "timerSeconds": 1800
+        },
+        {
+          "id": "s2",
+          "group": "dough",
+          "title": "Sale e olio",
+          "content": "Aggiungi il sale ({0004}) e l'olio ({0005}) e impasta 6-8 minuti, finché l'impasto è liscio ed elastico. Con la farina di farro impasta solo 3-4 minuti, altrimenti si sfalda.",
+          "ingredientRefs": [
+            "0004",
+            "0005"
+          ],
+          "timerSeconds": 420
+        },
+        {
+          "id": "s3",
+          "group": "dough",
+          "title": "Pieghe",
+          "content": "Fai una serie di pieghe: tira un lembo verso l'alto e ripiegalo al centro, girando la ciotola fino a fare il giro completo. Con lievito di birra fai 3 serie, una ogni 20 minuti (1 ora). Con pasta madre fai 4 serie, una ogni 30 minuti (2 ore). Tieni la ciotola coperta tra una serie e l'altra.",
+          "ingredientRefs": [],
+          "timerSeconds": 3600,
+          "timerSecondsLievitoMadre": 7200
+        },
+        {
+          "id": "s4",
+          "group": "dough",
+          "title": "Prima lievitazione",
+          "content": "Lascia lievitare coperto a temperatura ambiente. Con lievito di birra servono 1,5-2 ore, finché l'impasto raddoppia. Con pasta madre 1-2 ore, finché cresce di circa metà del volume. Con il farro controlla prima: lievita più in fretta.",
+          "ingredientRefs": [],
+          "timerSeconds": 6300,
+          "timerSecondsLievitoMadre": 5400
+        },
+        {
+          "id": "s5",
+          "group": "dough",
+          "title": "Frigo (solo con pasta madre)",
+          "content": "Con pasta madre metti la ciotola coperta in frigo fino al giorno dopo, per 12-18 ore. Con lievito di birra salta questo passaggio.",
+          "ingredientRefs": [],
+          "timerSeconds": null,
+          "timerSecondsLievitoMadre": 54000
+        },
+        {
+          "id": "s6",
+          "group": "topping",
+          "title": "In teglia",
+          "content": "Versa l'olio ({0007}) in una teglia 30x40 cm, adagia l'impasto e allargalo delicatamente con le dita. Se si ritira, aspetta 15 minuti e riprova.",
+          "ingredientRefs": [
+            "0007"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s7",
+          "group": "topping",
+          "title": "Seconda lievitazione",
+          "content": "Copri e lascia lievitare finché è gonfia, piena di bolle e tremola se muovi la teglia: 1-1,5 ore con lievito di birra, 3-4 ore con pasta madre. Nell'ultima mezz'ora accendi il forno statico a 230°C.",
+          "ingredientRefs": [],
+          "timerSeconds": 4500,
+          "timerSecondsLievitoMadre": 12600
+        },
+        {
+          "id": "s8",
+          "group": "topping",
+          "title": "Salamoia e fossette",
+          "content": "Sbatti l'acqua ({0008}) con l'olio ({0009}) fino a emulsionarli. Con le dita unte premi l'impasto fino al fondo per fare le fossette, versa la salamoia sopra e cospargi con il sale grosso ({0010}) e il rosmarino ({0011}).",
+          "ingredientRefs": [
+            "0008",
+            "0009",
+            "0010",
+            "0011"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s9",
+          "group": "topping",
+          "title": "Cottura",
+          "content": "Cuoci nel ripiano basso del forno statico a 230°C per 20-25 minuti, finché è dorata sopra e croccante sotto.",
+          "ingredientRefs": [],
+          "timerSeconds": 1320
+        },
+        {
+          "id": "s10",
+          "group": "topping",
+          "title": "Riposo",
+          "content": "Sforna e lasciala intiepidire su una griglia per 10 minuti prima di tagliarla, così il fondo resta croccante.",
+          "ingredientRefs": [],
+          "timerSeconds": 600
+        }
+      ],
+      "cooking": {
+        "methods": [
+          {
+            "id": "oven",
+            "type": "oven",
+            "label": "Forno",
+            "default": true,
+            "settings": {
+              "temperatureCelsius": 230,
+              "temperatureCelsiusFan": null,
+              "mode": "statico",
+              "rack": "basso"
+            }
+          }
+        ]
+      },
+      "notes": "Con lievito di birra (secco 5 g o fresco 15 g) usa 500 g di farina e 375 ml di acqua, perché manca la farina e l'acqua contenute nella pasta madre; è pronta in giornata in circa 4-5 ore (es. impasto alle 13, in forno verso le 17:30). Il lievito fresco va sbriciolato e sciolto nell'acqua; quello secco si può anche mescolare alla farina. Con pasta madre servono due giorni: es. impasto alle 14, in frigo verso le 18; il giorno dopo in teglia alle 9:30 e in forno verso le 13. Con farina di farro (speltbloem) usa meno acqua (290 ml con pasta madre, 340 ml con lievito di birra), impasta poco e controlla la lievitazione prima: il farro passa in fretta da pronto a sgonfio, meglio infornare un po' prima che troppo tardi. Se la tarwebloem ha meno di 11 g di proteine, togli 25 ml d'acqua. I tempi valgono per una cucina a circa 22°C: se fa più fresco aggiungi 30-60 minuti a ogni lievitazione, oppure metti l'impasto nel forno spento con la luce accesa.",
+      "source": {
+        "type": "original",
+        "originalUrl": null,
+        "note": "Focaccia morbida in stile forno italiano. Ricetta base con tarwebloem e pasta madre, con varianti lievito di birra (secco o fresco) e farina di farro. restTimeMinutes e timerSeconds si riferiscono alla versione con lievito di birra; timerSecondsLievitoMadre alla versione con pasta madre (come nel rugbrød)."
       }
     },
     {
