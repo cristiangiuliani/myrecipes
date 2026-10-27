@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T13:31:00+01:00",
+  "updatedAt": "2026-10-27T16:46:00+01:00",
   "recipes": [
     {
       "id": "kanelsnegle-001",
@@ -2041,6 +2041,389 @@
         "type": "original",
         "originalUrl": null,
         "note": "Crostata di marmellata tradizionale italiana con pasta frolla al burro, adattata con tarwebloem, zucchero semolato e un pizzico di bakpoeder."
+      }
+    },
+    {
+      "id": "pagnotta-multicereale-001",
+      "title": "Pagnotta Multicereale con Pasta Madre - Pane Rustico Italiano",
+      "description": "Pagnotta rustica a lunga lievitazione con pasta madre e cinque farine: tarwebloem, tarwe integrale, farro, segale e orzo. Crosta scura e croccante, mollica umida e profumata. Lievitazione finale in frigo per una notte.",
+      "origin": "Italia",
+      "category": "pane",
+      "tags": [
+        "pagnotta",
+        "pane rustico",
+        "pasta madre",
+        "multicereale",
+        "integrale",
+        "farro",
+        "segale",
+        "orzo",
+        "semi di papavero",
+        "lievitati"
+      ],
+      "servings": {
+        "amount": 1,
+        "unit": "pagnotta (circa 950 g)"
+      },
+      "prepTimeMinutes": 30,
+      "restTimeMinutes": 1515,
+      "cookTimeMinutes": 50,
+      "totalTimeMinutes": 1595,
+      "groups": [
+        {
+          "id": "starter",
+          "name": "Rinfresco della pasta madre",
+          "ingredients": [
+            {
+              "id": "0001",
+              "name": "pasta madre presa dal frigo",
+              "amount": 50,
+              "unit": "g"
+            },
+            {
+              "id": "0002",
+              "name": "tarwebloem",
+              "amount": 100,
+              "unit": "g"
+            },
+            {
+              "id": "0003",
+              "name": "acqua tiepida (50 ml se la pasta madre è solida)",
+              "amount": 100,
+              "unit": "ml"
+            }
+          ]
+        },
+        {
+          "id": "dough",
+          "name": "Impasto",
+          "ingredients": [
+            {
+              "id": "0004",
+              "name": "tarwebloem",
+              "amount": 200,
+              "unit": "g"
+            },
+            {
+              "id": "0005",
+              "name": "farina di tarwe integrale (volkoren tarwemeel)",
+              "amount": 175,
+              "unit": "g"
+            },
+            {
+              "id": "0006",
+              "name": "farina di farro (speltmeel)",
+              "amount": 50,
+              "unit": "g"
+            },
+            {
+              "id": "0007",
+              "name": "farina di segale",
+              "amount": 40,
+              "unit": "g"
+            },
+            {
+              "id": "0008",
+              "name": "farina d'orzo",
+              "amount": 35,
+              "unit": "g"
+            },
+            {
+              "id": "0009",
+              "name": "acqua",
+              "amount": 360,
+              "unit": "ml"
+            },
+            {
+              "id": "0010",
+              "name": "acqua di riserva, se l'impasto è rigido",
+              "amount": 20,
+              "unit": "ml",
+              "optional": true
+            },
+            {
+              "id": "0011",
+              "name": "pasta madre rinfrescata",
+              "amount": 100,
+              "unit": "g"
+            },
+            {
+              "id": "0012",
+              "name": "sale fino",
+              "amount": 10,
+              "unit": "g"
+            }
+          ]
+        },
+        {
+          "id": "shaping",
+          "name": "Formatura",
+          "ingredients": [
+            {
+              "id": "0013",
+              "name": "farina di riso o di segale per spolverare",
+              "amount": 2,
+              "unit": "tbsp"
+            },
+            {
+              "id": "0014",
+              "name": "semi di papavero",
+              "amount": 2,
+              "unit": "tbsp",
+              "optional": true
+            }
+          ]
+        },
+        {
+          "id": "baking",
+          "name": "Cottura",
+          "ingredients": []
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "group": "starter",
+          "title": "Rinfrescare la pasta madre",
+          "content": "Mescola la pasta madre ({0001}) con la tarwebloem ({0002}) e l'acqua tiepida ({0003}). Copri e lascia a temperatura ambiente finché è raddoppiata e piena di bolle. Se dopo molti giorni in frigo è pigra e non raddoppia, ripeti il rinfresco. Ne servono 100 g: il resto torna in frigo.",
+          "ingredientRefs": [
+            "0001",
+            "0002",
+            "0003"
+          ],
+          "timerSeconds": 18000
+        },
+        {
+          "id": "s2",
+          "group": "dough",
+          "title": "Autolisi",
+          "content": "In una ciotola grande mescola le farine ({0004}, {0005}, {0006}, {0007}, {0008}) con l'acqua ({0009}), senza l'acqua di riserva, solo finché non resta farina asciutta. Copri e lascia riposare.",
+          "ingredientRefs": [
+            "0004",
+            "0005",
+            "0006",
+            "0007",
+            "0008",
+            "0009"
+          ],
+          "timerSeconds": 2700
+        },
+        {
+          "id": "s3",
+          "group": "dough",
+          "title": "Pasta madre e sale",
+          "content": "Aggiungi la pasta madre rinfrescata ({0011}) e impasta finché si incorpora. Poi aggiungi il sale ({0012}) e, se l'impasto ti sembra rigido, l'acqua di riserva ({0010}) poca alla volta. Impasta ancora qualche minuto.",
+          "ingredientRefs": [
+            "0010",
+            "0011",
+            "0012"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s4",
+          "group": "dough",
+          "title": "Pieghe",
+          "content": "Fai 4 serie di pieghe, una ogni 30 minuti. Con le mani bagnate tira un lembo d'impasto verso l'alto e ripiegalo sopra, girando la ciotola: 4 volte per serie. Tieni la ciotola coperta tra una serie e l'altra.",
+          "ingredientRefs": [],
+          "timerSeconds": 7200
+        },
+        {
+          "id": "s5",
+          "group": "dough",
+          "title": "Prima lievitazione",
+          "content": "Lascia lievitare coperto a temperatura ambiente finché il volume è cresciuto di circa il 50% (in tutto 4-5 ore dall'impasto a 22-24°C). Se in casa fa freddo può volerci di più: guarda il volume, non l'orologio.",
+          "ingredientRefs": [],
+          "timerSeconds": 9000
+        },
+        {
+          "id": "s6",
+          "group": "shaping",
+          "title": "Preparare la ciotola",
+          "content": "Fodera una ciotola di 22-24 cm con un canovaccio di cotone liscio o lino asciutto (non di spugna) e infarinalo bene con la farina di riso o segale ({0013}). In alternativa usa un cestino di lievitazione (rijsmand) con la fodera infarinata.",
+          "ingredientRefs": [
+            "0013"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s7",
+          "group": "shaping",
+          "title": "Formare la pagnotta",
+          "content": "Rovescia l'impasto sul piano leggermente infarinato e forma una palla ben tesa, ripiegando i bordi verso il centro e girandola. Se usi i semi di papavero ({0014}), inumidisci la superficie liscia e rotolala sui semi. Metti la pagnotta nella ciotola con la chiusura verso l'alto (lato liscio o con i semi verso il fondo).",
+          "ingredientRefs": [
+            "0014"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s8",
+          "group": "shaping",
+          "title": "Lievitazione in frigo",
+          "content": "Copri con un sacchetto o con la pellicola e metti in frigo fino al giorno dopo, per 12-16 ore (fino a circa 18 ore va bene).",
+          "ingredientRefs": [],
+          "timerSeconds": 50400
+        },
+        {
+          "id": "s9-castiron",
+          "group": "baking",
+          "title": "Preriscaldare la pentola di ghisa",
+          "methods": [
+            "oven-castiron"
+          ],
+          "content": "Metti la pentola di ghisa con il coperchio sul ripiano centrale del forno e preriscalda a 230°C statico. La ghisa deve essere rovente per dare alla pagnotta la spinta iniziale.",
+          "ingredientRefs": [],
+          "timerSeconds": 3600
+        },
+        {
+          "id": "s9",
+          "group": "baking",
+          "title": "Preriscaldare la pirofila",
+          "methods": [
+            "oven-covered"
+          ],
+          "content": "Metti la pirofila di vetro con il coperchio nel forno ancora freddo e accendi a 230°C statico, così si scaldano insieme. Non metterla mai in un forno già caldo.",
+          "ingredientRefs": [],
+          "timerSeconds": 3600
+        },
+        {
+          "id": "s9-steam",
+          "group": "baking",
+          "title": "Preriscaldare il forno con le teglie",
+          "methods": [
+            "oven-steam"
+          ],
+          "content": "Metti una teglia vuota sul ripiano centrale e una seconda teglia o pirofila di metallo sul ripiano più basso. Preriscalda a 230°C statico.",
+          "ingredientRefs": [],
+          "timerSeconds": 3600
+        },
+        {
+          "id": "s10-castiron",
+          "group": "baking",
+          "title": "Cottura coperta",
+          "methods": [
+            "oven-castiron"
+          ],
+          "content": "Rovescia la pagnotta, presa direttamente dal frigo, su un foglio di carta forno e fai un taglio deciso. Estrai la pentola con i guanti, cala dentro la pagnotta tenendo la carta forno, chiudi il coperchio e cuoci a 230°C.",
+          "ingredientRefs": [],
+          "timerSeconds": 1500
+        },
+        {
+          "id": "s10",
+          "group": "baking",
+          "title": "Cottura coperta",
+          "methods": [
+            "oven-covered"
+          ],
+          "content": "Rovescia la pagnotta, presa direttamente dal frigo, su un foglio di carta forno e fai un taglio deciso. Estrai la pirofila con guanti asciutti e appoggiala su un tagliere o un canovaccio asciutto, mai su superfici fredde o bagnate. Cala dentro la pagnotta tenendo la carta forno, chiudi il coperchio e cuoci a 230°C.",
+          "ingredientRefs": [],
+          "timerSeconds": 1500
+        },
+        {
+          "id": "s10-steam",
+          "group": "baking",
+          "title": "Cottura con vapore",
+          "methods": [
+            "oven-steam"
+          ],
+          "content": "Rovescia la pagnotta, presa direttamente dal frigo, su un foglio di carta forno, fai un taglio deciso e falla scivolare sulla teglia calda. Versa subito circa 200 ml di acqua bollente (o una manciata di cubetti di ghiaccio) nella teglia in basso e chiudi in fretta lo sportello. Cuoci a 230°C.",
+          "ingredientRefs": [],
+          "timerSeconds": 1500
+        },
+        {
+          "id": "s11-castiron",
+          "group": "baking",
+          "title": "Cottura scoperta",
+          "methods": [
+            "oven-castiron"
+          ],
+          "content": "Togli il coperchio e continua a 220°C finché la crosta è ben scura e, battendo sotto la pagnotta, il suono è vuoto (96-98°C al centro).",
+          "ingredientRefs": [],
+          "timerSeconds": 1320
+        },
+        {
+          "id": "s11",
+          "group": "baking",
+          "title": "Cottura scoperta",
+          "methods": [
+            "oven-covered"
+          ],
+          "content": "Togli il coperchio e continua a 220°C finché la crosta è ben scura e, battendo sotto la pagnotta, il suono è vuoto (96-98°C al centro).",
+          "ingredientRefs": [],
+          "timerSeconds": 1320
+        },
+        {
+          "id": "s11-steam",
+          "group": "baking",
+          "title": "Cottura senza vapore",
+          "methods": [
+            "oven-steam"
+          ],
+          "content": "Togli la teglia dell'acqua, apri un attimo lo sportello per far uscire il vapore e continua a 210-220°C finché la crosta è ben scura e, battendo sotto la pagnotta, il suono è vuoto (96-98°C al centro). Negli ultimi 5 minuti puoi lasciare lo sportello socchiuso per una crosta più croccante.",
+          "ingredientRefs": [],
+          "timerSeconds": 1620
+        },
+        {
+          "id": "s12",
+          "group": "baking",
+          "title": "Raffreddare",
+          "content": "Togli la pagnotta dal forno e lasciala raffreddare su una griglia almeno 1-2 ore prima di tagliarla: con le farine integrali la mollica finisce di assestarsi mentre si raffredda. Se hai usato la pirofila, lasciala raffreddare nel forno spento o su un tagliere di legno asciutto.",
+          "ingredientRefs": [],
+          "timerSeconds": 3600
+        }
+      ],
+      "cooking": {
+        "methods": [
+          {
+            "id": "oven-castiron",
+            "type": "oven",
+            "label": "Forno in pentola di ghisa (metodo originale)",
+            "default": true,
+            "settings": {
+              "temperatureCelsius": 230,
+              "temperatureCelsiusFan": null,
+              "mode": "statico",
+              "rack": "centrale",
+              "cookware": "pentola di ghisa con coperchio (dutch oven), almeno 24 cm",
+              "preheat": true
+            }
+          },
+          {
+            "id": "oven-covered",
+            "type": "oven",
+            "label": "Forno in pirofila di vetro con coperchio",
+            "default": false,
+            "settings": {
+              "temperatureCelsius": 230,
+              "temperatureCelsiusFan": null,
+              "mode": "statico",
+              "rack": "centrale",
+              "cookware": "pirofila di vetro (Pyrex) con coperchio, almeno 22-24 cm",
+              "preheat": true
+            }
+          },
+          {
+            "id": "oven-steam",
+            "type": "oven",
+            "label": "Forno su teglia con vapore",
+            "default": false,
+            "settings": {
+              "temperatureCelsius": 230,
+              "temperatureCelsiusFan": null,
+              "mode": "statico",
+              "rack": "centrale",
+              "cookware": "teglia + teglia per l'acqua sul ripiano basso",
+              "steam": true,
+              "preheat": true
+            }
+          }
+        ]
+      },
+      "notes": "Il metodo originale è la cottura in pentola di ghisa coperta, che trattiene il vapore nei primi minuti; la pirofila di vetro con coperchio e la teglia con vapore sono alternative valide se non hai la ghisa. Segale e orzo hanno poco glutine: tienili insieme sotto il 20-25% del totale, altrimenti la pagnotta viene bassa e compatta. Con la pirofila di vetro evita gli sbalzi di temperatura: mettila nel forno freddo, non bagnarla e non appoggiarla su superfici fredde quando è calda. Il canovaccio va usato asciutto e ben infarinato; se usi un rijsmand senza fodera restano i cerchi di farina sulla crosta. Gli orari si possono spostare: es. rinfresco alle 9, impasto alle 13-14, in frigo verso le 20, in forno la mattina dopo. Si conserva 3-4 giorni avvolta in un canovaccio, oppure si congela a fette. Si può fare insieme alla focaccia: stessa pasta madre e stessi tempi di prima lievitazione.",
+      "source": {
+        "type": "original",
+        "originalUrl": null,
+        "note": "Pagnotta rustica italiana con pasta madre e farine miste (tarwebloem, integrale, farro, segale, orzo). Cottura originale in pentola di ghisa coperta, con alternative in pirofila di vetro coperta o su teglia con vapore, per forno di casa (max 230°C)."
       }
     }
   ]
