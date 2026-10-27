@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T16:46:00+01:00",
+  "updatedAt": "2026-10-27T17:06:00+01:00",
   "recipes": [
     {
       "id": "kanelsnegle-001",
@@ -2046,7 +2046,7 @@
     {
       "id": "pagnotta-multicereale-001",
       "title": "Pagnotta Multicereale con Pasta Madre - Pane Rustico Italiano",
-      "description": "Pagnotta rustica a lunga lievitazione con pasta madre e cinque farine: tarwebloem, tarwe integrale, farro, segale e orzo. Crosta scura e croccante, mollica umida e profumata. Lievitazione finale in frigo per una notte.",
+      "description": "Pagnotta rustica a lunga lievitazione con pasta madre e quattro farine: tarwe integrale, farro, segale e orzo. Crosta scura e croccante, mollica umida e saporita. Lievitazione finale in frigo per una notte.",
       "origin": "Italia",
       "category": "pane",
       "tags": [
@@ -2063,92 +2063,55 @@
       ],
       "servings": {
         "amount": 1,
-        "unit": "pagnotta (circa 950 g)"
+        "unit": "pagnotta (circa 900 g)"
       },
       "prepTimeMinutes": 30,
-      "restTimeMinutes": 1515,
+      "restTimeMinutes": 1215,
       "cookTimeMinutes": 50,
-      "totalTimeMinutes": 1595,
+      "totalTimeMinutes": 1295,
       "groups": [
-        {
-          "id": "starter",
-          "name": "Rinfresco della pasta madre",
-          "ingredients": [
-            {
-              "id": "0001",
-              "name": "pasta madre presa dal frigo",
-              "amount": 50,
-              "unit": "g"
-            },
-            {
-              "id": "0002",
-              "name": "tarwebloem",
-              "amount": 100,
-              "unit": "g"
-            },
-            {
-              "id": "0003",
-              "name": "acqua tiepida (50 ml se la pasta madre è solida)",
-              "amount": 100,
-              "unit": "ml"
-            }
-          ]
-        },
         {
           "id": "dough",
           "name": "Impasto",
           "ingredients": [
             {
-              "id": "0004",
-              "name": "tarwebloem",
-              "amount": 200,
-              "unit": "g"
-            },
-            {
-              "id": "0005",
+              "id": "0001",
               "name": "farina di tarwe integrale (volkoren tarwemeel)",
-              "amount": 175,
+              "amount": 300,
               "unit": "g"
             },
             {
-              "id": "0006",
+              "id": "0002",
               "name": "farina di farro (speltmeel)",
-              "amount": 50,
-              "unit": "g"
-            },
-            {
-              "id": "0007",
-              "name": "farina di segale",
-              "amount": 40,
-              "unit": "g"
-            },
-            {
-              "id": "0008",
-              "name": "farina d'orzo",
-              "amount": 35,
-              "unit": "g"
-            },
-            {
-              "id": "0009",
-              "name": "acqua",
-              "amount": 360,
-              "unit": "ml"
-            },
-            {
-              "id": "0010",
-              "name": "acqua di riserva, se l'impasto è rigido",
-              "amount": 20,
-              "unit": "ml",
-              "optional": true
-            },
-            {
-              "id": "0011",
-              "name": "pasta madre rinfrescata",
               "amount": 100,
               "unit": "g"
             },
             {
-              "id": "0012",
+              "id": "0003",
+              "name": "farina di segale",
+              "amount": 50,
+              "unit": "g"
+            },
+            {
+              "id": "0004",
+              "name": "farina d'orzo",
+              "amount": 50,
+              "unit": "g"
+            },
+            {
+              "id": "0005",
+              "name": "acqua",
+              "amount": 380,
+              "unit": "ml"
+            },
+            {
+              "id": "0006",
+              "name": "pasta madre attiva (rinfrescata 4-6 ore prima)",
+              "amount": 100,
+              "unit": "g"
+            },
+            {
+              "id": "0007",
               "name": "sale fino",
               "amount": 10,
               "unit": "g"
@@ -2160,13 +2123,13 @@
           "name": "Formatura",
           "ingredients": [
             {
-              "id": "0013",
+              "id": "0008",
               "name": "farina di riso o di segale per spolverare",
               "amount": 2,
               "unit": "tbsp"
             },
             {
-              "id": "0014",
+              "id": "0009",
               "name": "semi di papavero",
               "amount": 2,
               "unit": "tbsp",
@@ -2183,45 +2146,31 @@
       "steps": [
         {
           "id": "s1",
-          "group": "starter",
-          "title": "Rinfrescare la pasta madre",
-          "content": "Mescola la pasta madre ({0001}) con la tarwebloem ({0002}) e l'acqua tiepida ({0003}). Copri e lascia a temperatura ambiente finché è raddoppiata e piena di bolle. Se dopo molti giorni in frigo è pigra e non raddoppia, ripeti il rinfresco. Ne servono 100 g: il resto torna in frigo.",
+          "group": "dough",
+          "title": "Autolisi",
+          "content": "In una ciotola grande mescola le farine ({0001}, {0002}, {0003}, {0004}) con l'acqua ({0005}), solo finché non resta farina asciutta. Copri e lascia riposare.",
           "ingredientRefs": [
             "0001",
             "0002",
-            "0003"
-          ],
-          "timerSeconds": 18000
-        },
-        {
-          "id": "s2",
-          "group": "dough",
-          "title": "Autolisi",
-          "content": "In una ciotola grande mescola le farine ({0004}, {0005}, {0006}, {0007}, {0008}) con l'acqua ({0009}), senza l'acqua di riserva, solo finché non resta farina asciutta. Copri e lascia riposare.",
-          "ingredientRefs": [
+            "0003",
             "0004",
-            "0005",
-            "0006",
-            "0007",
-            "0008",
-            "0009"
+            "0005"
           ],
           "timerSeconds": 2700
         },
         {
-          "id": "s3",
+          "id": "s2",
           "group": "dough",
           "title": "Pasta madre e sale",
-          "content": "Aggiungi la pasta madre rinfrescata ({0011}) e impasta finché si incorpora. Poi aggiungi il sale ({0012}) e, se l'impasto ti sembra rigido, l'acqua di riserva ({0010}) poca alla volta. Impasta ancora qualche minuto.",
+          "content": "Aggiungi la pasta madre ({0006}) e impasta finché si incorpora. Poi aggiungi il sale ({0007}) e impasta ancora qualche minuto.",
           "ingredientRefs": [
-            "0010",
-            "0011",
-            "0012"
+            "0006",
+            "0007"
           ],
           "timerSeconds": null
         },
         {
-          "id": "s4",
+          "id": "s3",
           "group": "dough",
           "title": "Pieghe",
           "content": "Fai 4 serie di pieghe, una ogni 30 minuti. Con le mani bagnate tira un lembo d'impasto verso l'alto e ripiegalo sopra, girando la ciotola: 4 volte per serie. Tieni la ciotola coperta tra una serie e l'altra.",
@@ -2229,35 +2178,35 @@
           "timerSeconds": 7200
         },
         {
-          "id": "s5",
+          "id": "s4",
           "group": "dough",
           "title": "Prima lievitazione",
-          "content": "Lascia lievitare coperto a temperatura ambiente finché il volume è cresciuto di circa il 50% (in tutto 4-5 ore dall'impasto a 22-24°C). Se in casa fa freddo può volerci di più: guarda il volume, non l'orologio.",
+          "content": "Lascia lievitare coperto a temperatura ambiente finché il volume è cresciuto di circa il 50% (in tutto 4-6 ore dall'impasto a 22-24°C). Se in casa fa freddo può volerci di più: guarda il volume, non l'orologio.",
           "ingredientRefs": [],
           "timerSeconds": 9000
         },
         {
-          "id": "s6",
+          "id": "s5",
           "group": "shaping",
           "title": "Preparare la ciotola",
-          "content": "Fodera una ciotola di 22-24 cm con un canovaccio di cotone liscio o lino asciutto (non di spugna) e infarinalo bene con la farina di riso o segale ({0013}). In alternativa usa un cestino di lievitazione (rijsmand) con la fodera infarinata.",
+          "content": "Fodera una ciotola di 22-24 cm con un canovaccio di cotone liscio o lino asciutto (non di spugna) e infarinalo bene con la farina di riso o segale ({0008}). In alternativa usa un cestino di lievitazione (rijsmand) con la fodera infarinata.",
           "ingredientRefs": [
-            "0013"
+            "0008"
+          ],
+          "timerSeconds": null
+        },
+        {
+          "id": "s6",
+          "group": "shaping",
+          "title": "Formare la pagnotta",
+          "content": "Rovescia l'impasto sul piano leggermente infarinato e forma una palla ben tesa, ripiegando i bordi verso il centro e girandola. Se usi i semi di papavero ({0009}), inumidisci la superficie liscia e rotolala sui semi. Metti la pagnotta nella ciotola con la chiusura verso l'alto (lato liscio o con i semi verso il fondo).",
+          "ingredientRefs": [
+            "0009"
           ],
           "timerSeconds": null
         },
         {
           "id": "s7",
-          "group": "shaping",
-          "title": "Formare la pagnotta",
-          "content": "Rovescia l'impasto sul piano leggermente infarinato e forma una palla ben tesa, ripiegando i bordi verso il centro e girandola. Se usi i semi di papavero ({0014}), inumidisci la superficie liscia e rotolala sui semi. Metti la pagnotta nella ciotola con la chiusura verso l'alto (lato liscio o con i semi verso il fondo).",
-          "ingredientRefs": [
-            "0014"
-          ],
-          "timerSeconds": null
-        },
-        {
-          "id": "s8",
           "group": "shaping",
           "title": "Lievitazione in frigo",
           "content": "Copri con un sacchetto o con la pellicola e metti in frigo fino al giorno dopo, per 12-16 ore (fino a circa 18 ore va bene).",
@@ -2265,7 +2214,7 @@
           "timerSeconds": 50400
         },
         {
-          "id": "s9-castiron",
+          "id": "s8-castiron",
           "group": "baking",
           "title": "Preriscaldare la pentola di ghisa",
           "methods": [
@@ -2276,7 +2225,7 @@
           "timerSeconds": 3600
         },
         {
-          "id": "s9",
+          "id": "s8",
           "group": "baking",
           "title": "Preriscaldare la pirofila",
           "methods": [
@@ -2287,7 +2236,7 @@
           "timerSeconds": 3600
         },
         {
-          "id": "s9-steam",
+          "id": "s8-steam",
           "group": "baking",
           "title": "Preriscaldare il forno con le teglie",
           "methods": [
@@ -2298,7 +2247,7 @@
           "timerSeconds": 3600
         },
         {
-          "id": "s10-castiron",
+          "id": "s9-castiron",
           "group": "baking",
           "title": "Cottura coperta",
           "methods": [
@@ -2309,7 +2258,7 @@
           "timerSeconds": 1500
         },
         {
-          "id": "s10",
+          "id": "s9",
           "group": "baking",
           "title": "Cottura coperta",
           "methods": [
@@ -2320,7 +2269,7 @@
           "timerSeconds": 1500
         },
         {
-          "id": "s10-steam",
+          "id": "s9-steam",
           "group": "baking",
           "title": "Cottura con vapore",
           "methods": [
@@ -2331,7 +2280,7 @@
           "timerSeconds": 1500
         },
         {
-          "id": "s11-castiron",
+          "id": "s10-castiron",
           "group": "baking",
           "title": "Cottura scoperta",
           "methods": [
@@ -2342,7 +2291,7 @@
           "timerSeconds": 1320
         },
         {
-          "id": "s11",
+          "id": "s10",
           "group": "baking",
           "title": "Cottura scoperta",
           "methods": [
@@ -2353,7 +2302,7 @@
           "timerSeconds": 1320
         },
         {
-          "id": "s11-steam",
+          "id": "s10-steam",
           "group": "baking",
           "title": "Cottura senza vapore",
           "methods": [
@@ -2364,7 +2313,7 @@
           "timerSeconds": 1620
         },
         {
-          "id": "s12",
+          "id": "s11",
           "group": "baking",
           "title": "Raffreddare",
           "content": "Togli la pagnotta dal forno e lasciala raffreddare su una griglia almeno 1-2 ore prima di tagliarla: con le farine integrali la mollica finisce di assestarsi mentre si raffredda. Se hai usato la pirofila, lasciala raffreddare nel forno spento o su un tagliere di legno asciutto.",
@@ -2419,11 +2368,11 @@
           }
         ]
       },
-      "notes": "Il metodo originale è la cottura in pentola di ghisa coperta, che trattiene il vapore nei primi minuti; la pirofila di vetro con coperchio e la teglia con vapore sono alternative valide se non hai la ghisa. Segale e orzo hanno poco glutine: tienili insieme sotto il 20-25% del totale, altrimenti la pagnotta viene bassa e compatta. Con la pirofila di vetro evita gli sbalzi di temperatura: mettila nel forno freddo, non bagnarla e non appoggiarla su superfici fredde quando è calda. Il canovaccio va usato asciutto e ben infarinato; se usi un rijsmand senza fodera restano i cerchi di farina sulla crosta. Gli orari si possono spostare: es. rinfresco alle 9, impasto alle 13-14, in frigo verso le 20, in forno la mattina dopo. Si conserva 3-4 giorni avvolta in un canovaccio, oppure si congela a fette. Si può fare insieme alla focaccia: stessa pasta madre e stessi tempi di prima lievitazione.",
+      "notes": "Il metodo originale è la cottura in pentola di ghisa coperta, che trattiene il vapore nei primi minuti; la pirofila di vetro con coperchio e la teglia con vapore sono alternative valide se non hai la ghisa. La pasta madre va rinfrescata 4-6 ore prima e usata quando è raddoppiata e piena di bolle. Segale e orzo hanno poco glutine: tienili insieme sotto il 20-25% del totale, altrimenti la pagnotta viene bassa e compatta. Per una pagnotta più alveolata puoi sostituire 100-150 g di farina integrale con tarwebloem. Con la pirofila di vetro evita gli sbalzi di temperatura: mettila nel forno freddo, non bagnarla e non appoggiarla su superfici fredde quando è calda. Il canovaccio va usato asciutto e ben infarinato; se usi un rijsmand senza fodera restano i cerchi di farina sulla crosta. Gli orari si possono spostare: es. impasto alle 13-14, in frigo verso le 20, in forno la mattina dopo. Si conserva 3-4 giorni avvolta in un canovaccio, oppure si congela a fette.",
       "source": {
         "type": "original",
         "originalUrl": null,
-        "note": "Pagnotta rustica italiana con pasta madre e farine miste (tarwebloem, integrale, farro, segale, orzo). Cottura originale in pentola di ghisa coperta, con alternative in pirofila di vetro coperta o su teglia con vapore, per forno di casa (max 230°C)."
+        "note": "Pagnotta rustica italiana con pasta madre e farine integrali miste (tarwe integrale, farro, segale, orzo). Cottura originale in pentola di ghisa coperta, con alternative in pirofila di vetro coperta o su teglia con vapore, per forno di casa (max 230°C)."
       }
     }
   ]
